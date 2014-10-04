@@ -31,6 +31,8 @@
 (define-key input-decode-map "\e[1;9B" [M-down])
 (define-key input-decode-map "\e[1;9C" [M-right])
 (define-key input-decode-map "\e[1;9D" [M-left])
+(define-key input-decode-map "\e[1;12C" [M-C-right])
+(define-key input-decode-map "\e[1;12D" [M-C-left])
 ;; CIDER auto-completion
 (global-company-mode)
 ;; Install ElDoc
@@ -93,3 +95,59 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+;; Renames current buffer and file it is visiting. 
+;; http://whattheemacsd.com/
+(defun rename-current-buffer-file ()
+  "Renames current buffer and file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (if (get-buffer new-name)
+            (error "A buffer named '%s' already exists!" new-name)
+          (rename-file filename new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil)
+          (message "File '%s' successfully renamed to '%s'"
+                   name (file-name-nondirectory new-name)))))))
+
+(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+;; Toggle between horizontal and vertical layout of two windows.
+;; http://whattheemacsd.com/
+(defun toggle-window-split ()
+  (interactive)
+  (if (= (count-windows) 2)
+      (let* ((this-win-buffer (window-buffer))
+             (next-win-buffer (window-buffer (next-window)))
+             (this-win-edges (window-edges (selected-window)))
+             (next-win-edges (window-edges (next-window)))
+             (this-win-2nd (not (and (<= (car this-win-edges)
+                                         (car next-win-edges))
+                                     (<= (cadr this-win-edges)
+                                         (cadr next-win-edges)))))
+             (splitter
+              (if (= (car this-win-edges)
+                     (car (window-edges (next-window))))
+                  'split-window-horizontally
+                'split-window-vertically)))
+        (delete-other-windows)
+        (let ((first-win (selected-window)))
+          (funcall splitter)
+          (if this-win-2nd (other-window 1))
+          (set-window-buffer (selected-window) this-win-buffer)
+          (set-window-buffer (next-window) next-win-buffer)
+          (select-window first-win)
+          (if this-win-2nd (other-window 1))))))
+;; Making paredit work with delete-selection-mode
+;; C-w on highlighted region will no longer delete only
+;; one side of the parentheses.
+;; http://whattheemacsd.com/
+(put 'paredit-forward-delete 'delete-selection 'supersede)
+(put 'paredit-backward-delete 'delete-selection 'supersede)
+(put 'paredit-open-round 'delete-selection t)
+(put 'paredit-open-square 'delete-selection t)
+(put 'paredit-doublequote 'delete-selection t)
+(put 'paredit-newline 'delete-selection t)
