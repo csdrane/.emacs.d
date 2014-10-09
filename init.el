@@ -15,6 +15,7 @@
  '(org-agenda-files (quote ("~/Documents/Personal/GTD/GTD Review.org")))
  '(org-completion-use-ido t)
  '(org-outline-path-complete-in-steps nil)
+ '(server-mode t)
  '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
