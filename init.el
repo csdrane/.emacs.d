@@ -13,7 +13,6 @@
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(iswitchb-mode nil)
- '(org-agenda-files (quote ("~/Documents/Personal/GTD/GTD Review.org")))
  '(org-completion-use-ido t)
  '(org-habit-graph-column 80)
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
@@ -41,9 +40,20 @@ your recently and most frequently used commands.")
 ;; Hacks courtesy of http://pages.sachachua.com/.emacs.d/Sacha.html
 ;; 
 
+(use-package guide-key
+  :init
+  (setq guide-key/guide-key-sequence '("C-x" "C-x r" "C-x 4" "C-c"))
+  (guide-key-mode 1))  ; Enable guide-key-mode
+
+;; Pop to mark
+;; Handy way of getting back to previous places.
+(bind-key "C-x p" 'pop-to-mark-command)
+(setq set-mark-command-repeat-pop t)
+
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq vc-make-backup-files t)
 (setq sentence-end-double-space nil)
+
 (require 'use-package)
 ;; Windmove lets you move between windows with something more natural than cycling through C-x o (other-window). Windmove doesn't behave well with Org, so we need to use different keybindings.
 (use-package windmove
@@ -52,8 +62,10 @@ your recently and most frequently used commands.")
    ("<f2> <left>" . windmove-left)
    ("<f2> <up>" . windmove-up)
    ("<f2> <down>" . windmove-down)))
+
 (remove-hook 'text-mode-hook #'turn-on-auto-fill)
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
 ;; Note about below: would want to replace C-k binding with kill-region.
 ;; Choosing not to install below in order to preserve paredit kill line hack below.
 ;; (defadvice kill-region (before slick-cut activate compile)
@@ -156,9 +168,10 @@ your recently and most frequently used commands.")
      '(define-key org-mode-map "\C-c[" 'org-agenda-file-to-front)
      '(define-key org-mode-map "\C-c]" 'org-remove-file)))
 
-;; Properties
-(add-to-list 'org-global-properties
-	     '("Effort_ALL". "0:05 0:15 0:30 1:00 2:00 3:00 4:00"))
+(setq org-catch-invisible-edits 'smart)
+(setq org-startup-indented t)
+(setq org-global-properties
+      '(("Effort_ALL". "0:05 0:15 0:30 1:00 2:00 3:00 4:00")))
 
 ;; Track TODO state changes
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#Tracking-TODO-state-changes
@@ -169,7 +182,9 @@ your recently and most frequently used commands.")
 			   (org-agenda-files :maxlevel . 2)))
 ;; Org-capture
 (setq org-directory "~/Documents/Personal/GTD")
-(setq org-default-notes-file (concat org-directory "/capture-notes.org"))
+(setq org-agenda-files '("~/Documents/Personal/GTD/GTD Review.org" "~/Documents/Personal/GTD/journal.org"))
+
+(setq org-default-capture-file (concat org-directory "/capture-notes.org"))
 (defvar chris/org-basic-task-template "* TODO %^{Task}    
 SCHEDULED: %^t
 %?
@@ -177,10 +192,12 @@ SCHEDULED: %^t
 :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
 :END:" "Basic task data")
 (setq org-capture-templates
-      `(("t" "Task" entry (file org-default-notes-file)
-	 ,chris/org-basic-task-template)  
-	("n" "Note" entry (file org-default-notes-file)
-	 "")))
+      `(("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+	 "* %?\nEntered on %U\n  %i\n  %a")  
+	("n" "Note" entry (file+headline (concat org-directory "/GTD Review.org") "Notes")
+	 "")
+	("t" "Task" entry (file org-default-capture-file)
+	 ,chris/org-basic-task-template)))
 
 ;;
 ;; Misc. hacks
