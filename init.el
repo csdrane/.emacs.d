@@ -212,6 +212,9 @@ SCHEDULED: %^t
 ;; Misc. hacks
 ;;
 
+;; C-n adds newline
+(setq next-line-add-newlines t)
+
 ;; Renames current buffer and file it is visiting. 
 ;; http://whattheemacsd.com/
 (defun rename-current-buffer-file ()
