@@ -9,9 +9,6 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(ido-buffer-disable-smart-matches nil)
- '(ido-enable-flex-matching t)
- '(ido-everywhere t)
  '(iswitchb-mode nil)
  '(org-completion-use-ido t)
  '(org-habit-graph-column 80)
@@ -26,13 +23,22 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(autoload 'smex "smex"
-  "Smex is a M-x enhancement for Emacs, it provides a convenient interface to
-your recently and most frequently used commands.")
-(global-set-key (kbd "M-x") 'smex)
+
+(require 'use-package)
+(use-package smex
+  :bind
+  ("M-x" . smex))
+
 (require 'ido)
 (ido-mode t)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(setq ido-everywhere t)
+(setq ido-buffer-disable-smart-matches nil)
+(setq ido-enable-flex-matching t)
+(setq ido-use-filename-at-point 'guess)
+(setq ido-use-url-at-point t)
+(setq ido-create-new-buffer 'always)
+
+(bind-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -40,13 +46,16 @@ your recently and most frequently used commands.")
 ;; Hacks courtesy of http://pages.sachachua.com/.emacs.d/Sacha.html
 ;; 
 
-(use-package guide-key
-  :init
-  (setq guide-key/guide-key-sequence '("C-x" "C-x r" "C-x 4" "C-c"))
-  (guide-key-mode 1))  ; Enable guide-key-mode
+;; Don't care for this mode. Maybe try increasing time before help window pops up?
+;; C-x page takes up half the screen.
+;; (use-package guide-key
+;;   :init
+;;   (setq guide-key/guide-key-sequence '("C-x" "C-x r" "C-x 4" "C-c"))
+;;   (guide-key-mode 1))  ; Enable guide-key-mode
 
 ;; Pop to mark
 ;; Handy way of getting back to previous places.
+
 (bind-key "C-x p" 'pop-to-mark-command)
 (setq set-mark-command-repeat-pop t)
 
@@ -54,7 +63,7 @@ your recently and most frequently used commands.")
 (setq vc-make-backup-files t)
 (setq sentence-end-double-space nil)
 
-(require 'use-package)
+
 ;; Windmove lets you move between windows with something more natural than cycling through C-x o (other-window). Windmove doesn't behave well with Org, so we need to use different keybindings.
 (use-package windmove
   :bind
@@ -158,10 +167,10 @@ your recently and most frequently used commands.")
 
 ;; Suggested Org Mode global keybindings
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Activation.html#Activation
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(bind-key "\C-cl" 'org-store-link)
+(bind-key "\C-cc" 'org-capture)
+(bind-key "\C-ca" 'org-agenda)
+(bind-key "\C-cb" 'org-iswitchb)
 ;; Local keybindings
 (eval-after-load 'org-mode
   '(progn
@@ -221,7 +230,7 @@ SCHEDULED: %^t
           (set-buffer-modified-p nil)
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
-(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+(bind-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
 ;; Toggle between horizontal and vertical layout of two windows.
 ;; http://whattheemacsd.com/
