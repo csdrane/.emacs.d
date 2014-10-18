@@ -1,6 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
+  '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -9,6 +9,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(erc-nick "csd_")
  '(iswitchb-mode nil)
  '(org-completion-use-ido t)
  '(org-habit-graph-column 80)
@@ -25,6 +26,7 @@
  )
 
 (require 'use-package)
+(setq use-package-verbose t)
 (use-package smex
   :bind
   ("M-x" . smex))
@@ -181,7 +183,13 @@
 (setq org-startup-indented t)
 (setq org-global-properties
       '(("Effort_ALL". "0:05 0:15 0:30 1:00 2:00 3:00 4:00")))
-
+;; Clocking
+(setq org-log-done 'time)
+(setq org-log-into-drawer "LOGBOOK")
+(setq org-clock-into-drawer 1)
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+(setq org-clock-report-include-clocking-task t)
 ;; Track TODO state changes
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#Tracking-TODO-state-changes
 (setq org-todo-keywords
@@ -192,21 +200,26 @@
 ;; Org-capture
 (setq org-directory "~/Documents/Personal/GTD")
 (setq org-agenda-files '("~/Documents/Personal/GTD/GTD Review.org" "~/Documents/Personal/GTD/journal.org"))
-
 (setq org-default-capture-file (concat org-directory "/capture-notes.org"))
-(defvar chris/org-basic-task-template "* TODO %^{Task}    
+
+(defvar chris/org-task-template "* TODO %^{Task}    
 SCHEDULED: %^t
 %?
 :PROPERTIES:
 :Effort: %^{effort|1:00|0:05|0:15|0:30|2:00|4:00}
 :END:" "Basic task data")
+
+(defvar chris/org-someday-template "* SOMEDAY %^{Someday}    
+%?
+:END:" "Basic Someday/Maybe data")
 (setq org-capture-templates
       `(("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
 	 "* %?\nEntered on %U\n  %i\n  %a")  
 	("n" "Note" entry (file+headline (concat org-directory "/GTD Review.org") "Notes")
 	 "")
+	("s" "Someday" entry (file org-default-capture-file) ,chris/org-someday-template)
 	("t" "Task" entry (file org-default-capture-file)
-	 ,chris/org-basic-task-template)))
+	 ,chris/org-task-template)))
 
 ;;
 ;; Misc. hacks
@@ -329,3 +342,7 @@ SCHEDULED: %^t
 
 ;; Replaces default binding tab-to-tab-stop
 (bind-key (kbd "M-i") 'ido-goto-symbol)
+
+
+
+
