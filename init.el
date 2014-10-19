@@ -179,6 +179,7 @@
      '(define-key org-mode-map "\C-c[" 'org-agenda-file-to-front)
      '(define-key org-mode-map "\C-c]" 'org-remove-file)))
 
+(setq org-return-follows-link t)
 (setq org-catch-invisible-edits 'smart)
 (setq org-startup-indented t)
 (setq org-global-properties
