@@ -1,6 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/"))
+  '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -10,10 +10,11 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(erc-nick "csd_")
+ '(ido-max-prospects 6)
  '(iswitchb-mode nil)
  '(org-completion-use-ido t)
  '(org-habit-graph-column 80)
- '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
+ '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-table org-vm org-wl org-w3m)))
  '(org-outline-path-complete-in-steps nil)
  '(server-mode t)
  '(visible-bell t)
@@ -32,7 +33,9 @@
   ("M-x" . smex))
 
 (require 'ido)
+(require 'ido-ubiquitous)
 (ido-mode t)
+(ido-ubiquitous-mode t)
 (setq ido-everywhere t)
 (setq ido-buffer-disable-smart-matches nil)
 (setq ido-enable-flex-matching t)
@@ -58,6 +61,7 @@
 ;; Pop to mark
 ;; Handy way of getting back to previous places.
 
+(fset 'yes-or-no-p 'y-or-n-p)
 (bind-key "C-x p" 'pop-to-mark-command)
 (setq set-mark-command-repeat-pop t)
 
@@ -106,6 +110,7 @@
 (define-key input-decode-map "\e[1;9D" [M-left])
 (define-key input-decode-map "\e[1;12C" [M-C-right])
 (define-key input-decode-map "\e[1;12D" [M-C-left])
+
 ;; CIDER auto-completion
 (global-company-mode)
 ;; Install ElDoc
@@ -194,7 +199,12 @@
 ;; Track TODO state changes
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#Tracking-TODO-state-changes
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+      '((sequence "PROJ(p!)" "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+(setq org-todo-keyword-faces
+      '(("PROJ" . (:foreground "green" :weight bold))
+        ("DONE" . (:foreground "cyan" :weight bold))
+        ("WAIT" . (:foreground "red" :weight bold))))
+
 ;; Org-refile
 (setq org-refile-targets '((nil :maxlevel . 2)
 			   (org-agenda-files :maxlevel . 2)))
@@ -248,6 +258,21 @@ SCHEDULED: %^t
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
 (bind-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
+;; C-d on an empty line in the shell terminates the process. 
+;; With this snippet, another press of C-d will kill the buffer.
+;; It's pretty nice, since you then just tap C-d twice to get rid of the shell and go on about your merry way.
+;; http://whattheemacsd.com/
+(defun comint-delchar-or-eof-or-kill-buffer (arg)
+  (interactive "p")
+  (if (null (get-buffer-process (current-buffer)))
+      (kill-buffer)
+    (comint-delchar-or-maybe-eof arg)))
+
+(add-hook 'shell-mode-hook
+          (lambda ()
+            (define-key shell-mode-map
+              (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
 
 ;; Toggle between horizontal and vertical layout of two windows.
 ;; http://whattheemacsd.com/
