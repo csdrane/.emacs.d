@@ -153,7 +153,6 @@
 (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 ;; Install Solarized
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-color-theme-solarized")
-(setq solarized-termcolors 256)
 (load-theme 'solarized-dark t)
 ;; Better indentation for Compojure macros
 ;; https://github.com/weavejester/compojure/wiki/Emacs-indentation 
@@ -199,11 +198,24 @@
 ;; Track TODO state changes
 ;; https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#Tracking-TODO-state-changes
 (setq org-todo-keywords
-      '((sequence "PROJ(p!)" "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+      '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")
+	(sequence "PROJ(p!)")))
 (setq org-todo-keyword-faces
       '(("PROJ" . (:foreground "green" :weight bold))
         ("DONE" . (:foreground "cyan" :weight bold))
         ("WAIT" . (:foreground "red" :weight bold))))
+
+(setq org-tag-alist '(("@work" . ?b) 
+                      ("@home" . ?h) 
+                      ("@writing" . ?w)
+                      ("@errands" . ?e) 
+		      ("@coding" . ?c)
+                      ("@phone" . ?p)
+                      ("@reading" . ?r)
+                      ("@computer" . ?l)
+                      ("quantified" . ?q)
+                      ("lowenergy" . ?0)
+                      ("highenergy" . ?1)))
 
 ;; Org-refile
 (setq org-refile-targets '((nil :maxlevel . 2)
@@ -228,8 +240,9 @@ SCHEDULED: %^t
 	 "* %?\nEntered on %U\n  %i\n  %a")  
 	("n" "Note" entry (file+headline (concat org-directory "/GTD Review.org") "Notes")
 	 "")
-	("s" "Someday" entry (file org-default-capture-file) ,chris/org-someday-template)
-	("t" "Task" entry (file org-default-capture-file)
+	("s" "Someday" entry (file+headline (concat org-directory "/GTD Review.org") "Inbox, Someday/Myabe") 
+	 ,chris/org-someday-template)
+	("t" "Task" entry (file+headline (concat org-directory "/GTD Review.org") "Inbox, Tasks") 
 	 ,chris/org-task-template)))
 
 ;;
