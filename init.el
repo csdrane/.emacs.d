@@ -7,8 +7,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (manoj-dark)))
  '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(erc-autojoin-channels-alist (quote (("freenode.net" "#emacs" "#clojure"))))
  '(erc-nick "csd_")
  '(ido-max-prospects 6)
  '(iswitchb-mode nil)
@@ -16,6 +16,8 @@
  '(org-habit-graph-column 80)
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-table org-vm org-wl org-w3m)))
  '(org-outline-path-complete-in-steps nil)
+ '(reb-re-syntax (quote string))
+ '(send-mail-function (quote sendmail-send-it))
  '(server-mode t)
  '(visible-bell t)
  '(winner-mode t))
@@ -24,7 +26,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(cider-stacktrace-face ((t (:inherit default :background "black" :foreground "white"))) t))
 
 (require 'use-package)
 (setq use-package-verbose t)
@@ -45,6 +47,42 @@
 
 (bind-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/yasnippet-snippets/"
+        "~/emacs-dev/yasnippets/"))
+
+(require 'flycheck)
+
+(defun chris/paredit-nonlisp ()
+  "Turn on paredit mode for non-lisps."
+  (interactive)
+  (set (make-local-variable 'paredit-space-for-delimiter-predicates)
+       '((lambda (endp delimiter) nil)))
+  (paredit-mode 1))
+
+;; Set up Javascript development environment
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20141111.2346/dict")
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'js-mode-hook 'chris/javascript-hook)
+(add-hook 'js-mode-hook 'chris/paredit-nonlisp)
+
+(setq-default indent-tabs-mode nil)
+
+(defun chris/javascript-hook ()
+  (company-mode -1)
+  (auto-complete-mode 1)
+  (flycheck-mode t))
+
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(eval-after-load 'js-mode
+  '(progn 
+    (define-key js-mode-map "{" 'paredit-open-curly)
+    (define-key js-mode-map "}" 'paredit-close-curly-and-newline)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -111,7 +149,10 @@
 (define-key input-decode-map "\e[1;12C" [M-C-right])
 (define-key input-decode-map "\e[1;12D" [M-C-left])
 
-;; CIDER auto-completion
+(use-package magit
+  :init
+  (setq magit-diff-options '("-b"))) ; ignore whitespace
+;; Enable CIDER auto-completion
 (global-company-mode)
 ;; Install ElDoc
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
@@ -154,6 +195,7 @@
 ;; Install Solarized
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
+(set-face-background 'secondary-selection "yellow")
 ;; Better indentation for Compojure macros
 ;; https://github.com/weavejester/compojure/wiki/Emacs-indentation 
 (require 'clojure-mode)
