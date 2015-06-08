@@ -1,21 +1,42 @@
+(global-hl-line-mode 1)
 (require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (package-initialize)
+(setq tramp-default-method "ssh")
+(setq dired-auto-revert-buffer t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(erc-autojoin-channels-alist (quote (("freenode.net" "#emacs" "#clojure"))))
+ '(ansi-color-names-vector
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
+ '(background-color "#002b36")
+ '(background-mode dark)
+ '(company-idle-delay 0)
+ '(company-minimum-prefix-length 2)
+ '(cursor-color "#839496")
+ '(custom-safe-themes
+   (quote
+    ("6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "acb039d6f2c41b3bd852b448351b2979f44ef488026c95dd5228d2f6da57f574" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(erc-autojoin-channels-alist (quote (("freenode.net"))))
  '(erc-nick "csd_")
+ '(foreground-color "#839496")
+ '(graphviz-dot-indent-width 2)
+ '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
  '(ido-max-prospects 6)
  '(iswitchb-mode nil)
  '(org-completion-use-ido t)
+ '(org-drill-optimal-factor-matrix (quote ((1 (2.6 . 4.14)))))
  '(org-habit-graph-column 80)
- '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-table org-vm org-wl org-w3m)))
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-drill org-table org-w3m)))
  '(org-outline-path-complete-in-steps nil)
+ '(org-src-fontify-natively t)
  '(reb-re-syntax (quote string))
  '(send-mail-function (quote sendmail-send-it))
  '(server-mode t)
@@ -26,35 +47,86 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(cider-stacktrace-face ((t (:inherit default :background "black" :foreground "white"))) t))
+ '(cider-stacktrace-face ((t (:inherit default :background "black" :foreground "white")))))
+
+(setq-default indent-tabs-mode nil)
+;; C-n adds newline
+(setq next-line-add-newlines t)
+
+(if (string-equal system-type "darwin")
+    (progn
+      (menu-bar-mode -1) 
+      (toggle-scroll-bar -1) 
+      (tool-bar-mode -1)
+      (add-to-list 'exec-path "/usr/local/bin")
+      (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))) 
 
 (require 'use-package)
 (setq use-package-verbose t)
+
+;; (use-package smart-mode-line
+;;   :init
+;;   (progn
+;;     (sml/setup)
+;;     (sml/apply-theme 'respectful)
+;;     (setq-default
+;;      mode-line-format
+;;      '("%e"
+;;        mode-line-front-space
+;;        mode-line-mule-info
+;;        mode-line-client
+;;        mode-line-modified
+;;        mode-line-remote
+;;        mode-line-frame-identification
+;;        mode-line-buffer-identification
+;;        "   "
+;;        mode-line-position
+;;        (vc-mode vc-mode)
+;;        "  "
+;;        mode-line-modes
+;;        mode-line-misc-info
+;;        mode-line-end-spaces))))
+
+(use-package haskell
+  :init
+  (progn
+    (autoload 'ghc-init "ghc" nil t)
+    (autoload 'ghc-debug "ghc" nil t)
+    (add-hook 'haskell-mode-hook (lambda () (ghc-init)))))
+
 (use-package smex
   :bind
   ("M-x" . smex))
 
-(require 'ido)
-(require 'ido-ubiquitous)
-(ido-mode t)
-(ido-ubiquitous-mode t)
-(setq ido-everywhere t)
-(setq ido-buffer-disable-smart-matches nil)
-(setq ido-enable-flex-matching t)
-(setq ido-use-filename-at-point 'guess)
-(setq ido-use-url-at-point t)
-(setq ido-create-new-buffer 'always)
+(use-package ido
+  :bind ("M-i" . ido-goto-symbol)
+  :init
+  (progn
+    (ido-mode t)
+    (ido-ubiquitous-mode t)
+    (setq ido-everywhere t)
+    (setq ido-buffer-disable-smart-matches nil)
+    (setq ido-enable-flex-matching t)
+    (setq ido-use-filename-at-point 'guess)
+    (setq ido-use-url-at-point t)
+    (setq ido-create-new-buffer 'always)))
+
+(use-package ido-ubiquitous)
+(use-package projectile)
 
 (bind-key (kbd "C-x C-b") 'ibuffer)
+(bind-key (kbd "C-x C-d") 'dired)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
-(require 'yasnippet)
-(yas-global-mode 1)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/yasnippet-snippets/"
-        "~/emacs-dev/yasnippets/"))
+(use-package yasnippet
+  :init
+  (progn
+    (yas-global-mode 1)
+    (setq yas-snippet-dirs
+          '("~/.emacs.d/yasnippet-snippets/"
+            "~/emacs-dev/yasnippets/"))))
 
-(require 'flycheck)
+(use-package flycheck)
 
 (defun chris/paredit-nonlisp ()
   "Turn on paredit mode for non-lisps."
@@ -62,27 +134,6 @@
   (set (make-local-variable 'paredit-space-for-delimiter-predicates)
        '((lambda (endp delimiter) nil)))
   (paredit-mode 1))
-
-;; Set up Javascript development environment
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20141111.2346/dict")
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-hook 'js-mode-hook 'chris/javascript-hook)
-(add-hook 'js-mode-hook 'chris/paredit-nonlisp)
-
-(setq-default indent-tabs-mode nil)
-
-(defun chris/javascript-hook ()
-  (company-mode -1)
-  (auto-complete-mode 1)
-  (flycheck-mode t))
-
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(eval-after-load 'js-mode
-  '(progn 
-    (define-key js-mode-map "{" 'paredit-open-curly)
-    (define-key js-mode-map "}" 'paredit-close-curly-and-newline)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -131,83 +182,126 @@
 
 ;; Fix Shift-Up bug with iTerm2
 ;; Solution per  https://groups.google.com/forum/#!topic/gnu.emacs.help/rR478H4BDU8
-(define-key input-decode-map "\e[1;2A" [S-up])
-(if (equal "xterm" (tty-type))
-    (define-key input-decode-map "\e[1;2A" [S-up]))
-(defadvice terminal-init-xterm (after select-shift-up activate)
-  (define-key input-decode-map "\e[1;2A" [S-up]))
-;; iTerm2 key configs
-(define-key input-decode-map "\e[1;10A" [M-S-up])
-(define-key input-decode-map "\e[1;10B" [M-S-down])
-(define-key input-decode-map "\e[1;10C" [M-S-right])
-(define-key input-decode-map "\e[1;10D" [M-S-left])
-(define-key input-decode-map "\e[1;13Q" [M-S-return])
-(define-key input-decode-map "\e[1;9A" [M-up])
-(define-key input-decode-map "\e[1;9B" [M-down])
-(define-key input-decode-map "\e[1;9C" [M-right])
-(define-key input-decode-map "\e[1;9D" [M-left])
-(define-key input-decode-map "\e[1;12C" [M-C-right])
-(define-key input-decode-map "\e[1;12D" [M-C-left])
 
-(use-package magit
-  :init
-  (setq magit-diff-options '("-b"))) ; ignore whitespace
+(if (tty-type)
+    (progn
+      (define-key input-decode-map "\e[1;2A" [S-up])
+      (if (equal "xterm" (tty-type))
+          (define-key input-decode-map "\e[1;2A" [S-up]))
+      (defadvice terminal-init-xterm (after select-shift-up activate)
+        (define-key input-decode-map "\e[1;2A" [S-up]))
+      ;; iTerm2 key configs
+      (define-key input-decode-map "\e[1;10A" [M-S-up])
+      (define-key input-decode-map "\e[1;10B" [M-S-down])
+      (define-key input-decode-map "\e[1;10C" [M-S-right])
+      (define-key input-decode-map "\e[1;10D" [M-S-left])
+      (define-key input-decode-map "\e[1;13Q" [M-S-return])
+      (define-key input-decode-map "\e[1;9A" [M-up])
+      (define-key input-decode-map "\e[1;9B" [M-down])
+      (define-key input-decode-map "\e[1;9C" [M-right])
+      (define-key input-decode-map "\e[1;9D" [M-left])
+      (define-key input-decode-map "\e[1;12C" [M-C-right])
+      (define-key input-decode-map "\e[1;12D" [M-C-left]))
+
+  (use-package magit
+    :init
+    (setq magit-diff-options '("-b")))) ; ignore whitespace
 ;; Enable CIDER auto-completion
-(global-company-mode)
+
 ;; Install ElDoc
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 ;; Integrate with CIDER / Clojure
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-;; Install ParEdit
-(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
-(add-hook 'clojure-mode-hook          #'enable-paredit-mode)
-(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
-(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+(use-package paredit
+  :init
+  (progn
+    (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+    (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
+    (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+    (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+    (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+    (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+    (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+    (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+    (add-hook 'cider-repl-mode-hook 'paredit-mode)
+    (add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)))
+
+;; (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+;; (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
+;; (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+;; (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+;; (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+;; (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+;; (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+;; (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 ;; To use ParEdit with ElDoc, you should make ElDoc aware of ParEdit’s most used commands:
 (require 'eldoc) ; if not already loaded
 (eldoc-add-command
  'paredit-backward-delete
  'paredit-close-round)
 ;; ParEdit in REPL sessions 
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
+
 ;; Stop SLIME's REPL from grabbing DEL,
 ;; which is annoying when backspacing over a '('
 (defun override-slime-repl-bindings-with-paredit ()
   (define-key slime-repl-mode-map
     (read-kbd-macro paredit-backward-delete-key)
     nil))
-(add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
+
 ;; Show Paren Mode
 ;; When point is on one of the paired characters, the other is highlighted. 
 ;; http://www.emacswiki.org/emacs/ShowParenMode
 (show-paren-mode 1)
-(add-hook 'clojure-mode-hook 'show-paren-mode) 
+
 ;; Install Rainbow Delimiters
-(require 'rainbow-delimiters)
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+(use-package rainbow-delimiters
+  :init
+  (progn
+    (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+    (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+    (add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+    (add-hook 'python-mode-hook 'rainbow-delimiters-mode)))
+
+(use-package undo-tree
+  :defer t
+  :ensure t
+  :diminish undo-tree-mode
+  :idle
+  (progn
+    (global-undo-tree-mode)
+    (setq undo-tree-visualizer-timestamps t)
+    (setq undo-tree-visualizer-diff t)))
+
 ;; Install Solarized
 (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/emacs-color-theme-solarized")
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 (set-face-background 'secondary-selection "yellow")
-;; Better indentation for Compojure macros
-;; https://github.com/weavejester/compojure/wiki/Emacs-indentation 
-(require 'clojure-mode)
-(define-clojure-indent
-  (defroutes 'defun)
-  (GET 2)
-  (POST 2)
-  (PUT 2)
-  (DELETE 2)
-  (HEAD 2)
-  (ANY 2)
-  (context 2))
+
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'clojure-mode-hook 'company-mode)
+  (add-hook 'cider-repl-mode-hook 'company-mode)
+  (add-hook 'emacs-lisp-mode-hook 'company-mode))
+
+(use-package clojure-mode
+  :init
+  (progn
+ ;   (add-hook 'clojure-mode-hook 'show-paren-mode)
+    ;; Better indentation for Compojure macros
+    ;; https://github.com/weavejester/compojure/wiki/Emacs-indentation 
+    (define-clojure-indent
+      (defroutes 'defun)
+      (GET 2)
+      (POST 2)
+      (PUT 2)
+      (DELETE 2)
+      (HEAD 2)
+      (ANY 2)
+      (context 2))))
 
 ;;
 ;; Org Mode
@@ -290,9 +384,6 @@ SCHEDULED: %^t
 ;;
 ;; Misc. hacks
 ;;
-
-;; C-n adds newline
-(setq next-line-add-newlines t)
 
 ;; Renames current buffer and file it is visiting. 
 ;; http://whattheemacsd.com/
@@ -420,10 +511,5 @@ SCHEDULED: %^t
                         (string= (car imenu--rescan-item) name))
               (add-to-list 'symbol-names name)
 	      (add-to-list 'name-and-pos (cons name position))))))))
-
-;; Replaces default binding tab-to-tab-stop
-(bind-key (kbd "M-i") 'ido-goto-symbol)
-
-
 
 
