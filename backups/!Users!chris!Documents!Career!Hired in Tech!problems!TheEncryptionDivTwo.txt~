@@ -1,0 +1,41 @@
+# TheEncryptionDivTwo
+# http://community.topcoder.com/stat?c=problem_statement&pm=10509
+
+# Self-assessment
+
+Wrote solution quickly and easily.
+
+# Constraints
+
+(1) Message will contain 1 - 50 characters
+(2) Message will only contain lowercase letters
+
+# Ideas
+
+(let [rel {'a 'z, 'q 'b}
+      next-letter 'c])
+if letter in rel, concat val to res, else add combo of next letter in message
+and next-letter to res, and then increment next-letter.
+
+Complexity: time O(N), memory O(N)
+
+# Code
+
+(defn encrypt [message]
+  (loop [map' {}
+              next-letter \a
+              i 0
+              res ""]
+        (if (>= i (count message))
+            res
+          (if-let [letter (get map' (nth message i))]
+              (recur map' next-letter (inc i) (str res letter))
+            (recur (assoc map' (nth message i) next-letter)
+                   (char (inc (int next-letter)))
+                   (inc i)
+                   (str res next-letter))))))
+
+# Tests
+
+"a" -> "a"
+"aa" -> "aa"

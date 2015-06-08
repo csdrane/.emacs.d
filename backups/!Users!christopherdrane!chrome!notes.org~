@@ -1,0 +1,9 @@
+* Extensions
+** https://github.com/KartikTalwar/gmail.js/
+- Lots of api methods to work with gmail. Useful for chrome extensions.
+- Bypass for CSP issue
+  - https://github.com/KartikTalwar/gmail.js/issues/75
+  - https://github.com/KartikTalwar/gmail-chrome-extension-boilerplate
+* Potential Issues To Be Aware Of
+- Content Security Policy (CSP)
+  - 

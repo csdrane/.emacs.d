@@ -1,0 +1,41 @@
+module Exercises where
+
+data MyEither a b = MyLeft a | MyRight b
+
+data Pair a = Pair a a
+
+data ITree a = Leaf (Int -> a) 
+             | Node (ITree a)
+
+instance Functor (MyEither a) where
+  fmap _ (MyLeft x) = MyLeft x
+  fmap g (MyRight x) = MyRight (g x)
+
+-- instance Functor ((->) a) where
+--   fmap = (.)
+
+-- instance Functor ((,) a) where
+--   fmap g (x, y) = (x, g y)
+
+instance Functor Pair where
+  fmap g (Pair a b) = Pair (g a) (g b)
+
+instance Functor ITree where
+  fmap g (Leaf x) = Leaf (g . x)
+  fmap g (Node x) = fmap g x
+
+
+
+-- 4. Give an example of a type of kind * -> * which cannot be made an instance of Functor (without using undefined).
+
+-- Anything that restricts a or b in (a -> b) -> F a -> F b. E.g. set which restricts 
+-- a and b to members of Ord
+
+-- 5. Is this statement true or false?
+-- The composition of two Functors is also a Functor.
+
+-- Yes e.g. Just [1, 2, 3]
+-- see http://stackoverflow.com/questions/19774564/what-does-it-mean-to-compose-two-functors
+
+
+  

@@ -1,0 +1,266 @@
+-- TODO complex & rational numbers, backquote
+
+module Main where
+import Control.Applicative ((<*>), (<*), (*>), (<$>))
+import Control.Monad
+import Data.Array
+import Data.Char hiding (isSymbol, isNumber)
+import Data.Complex
+import Data.Ratio
+import Data.Typeable
+import Numeric
+import Text.ParserCombinators.Parsec hiding (spaces)
+import System.Environment
+
+data LispVal = Atom String
+             | Bool Bool
+             | Character Char
+             | Complex (Complex Double)
+             | Float Double
+             | List [LispVal]
+             | DottedList [LispVal] LispVal
+             | Number Integer
+             | String String
+             | Ratio Rational
+             | Vector (Array Int LispVal)
+
+showVal :: LispVal -> String
+showVal (Atom name) = name
+showVal (Bool True) = "#t"
+showVal (Bool False) = "#f"
+showVal (Character contents) = show contents
+showVal (Complex contents) = show contents
+showVal (Float contents) = show contents
+showVal (Number contents) = show contents
+showVal (Ratio contents) = show contents
+showVal (String contents) = "\\" ++ contents ++ "\\"
+showVal (Vector contents) = show contents
+showVal (List contents) = "(" ++ unwordsList contents ++ ")"
+showVal (DottedList head tail) = "(" ++ unwordsList head ++ " . " ++ showVal tail ++ ")"
+
+unwordsList :: [LispVal] -> String
+unwordsList = unwords . map showVal
+
+instance Show LispVal where show = showVal
+
+eval :: LispVal -> LispVal
+eval val@(Atom _) = val
+eval val@(String _) = val
+eval val@(Number _) = val
+eval val@(Bool _) = val
+eval (List [Atom "quote", val]) = val
+eval (List (Atom func : args)) = apply func $ map eval args
+
+apply :: String -> [LispVal] -> LispVal
+apply func args = maybe (Bool False) ($ args) $ lookup func primitives
+
+primitives :: [(String, [LispVal] -> LispVal)]
+primitives = [("+", numericBinop (+)),
+              ("-", numericBinop (-)),
+              ("*", numericBinop (*)),
+              ("/", numericBinop div),
+              ("mod", numericBinop mod),
+              ("quotient", numericBinop quot),
+              ("remainder", numericBinop rem),
+              ("symbol?", isSymbol),
+              ("string?", isString),
+              ("number?", isNumber),
+              ("string->symbol", stringToSymbol),
+              ("symbol->string", symbolToString)]
+
+isSymbol :: [LispVal] -> LispVal
+isSymbol [Atom _] = Bool True
+isSymbol [_] = Bool False
+
+isString :: [LispVal] -> LispVal
+isString [String _] = Bool True
+isString [_] = Bool False 
+
+isNumber :: [LispVal] -> LispVal
+isNumber [Number _] = Bool True
+isNumber [_] = Bool False
+
+stringToSymbol :: [LispVal] -> LispVal
+stringToSymbol [String val] = Atom val
+stringToSymbol _ = Atom ""
+
+symbolToString :: [LispVal] -> LispVal
+symbolToString [Atom val] = String val
+symbolToString _ = String ""
+
+numericBinop :: (Integer -> Integer -> Integer) -> [LispVal] -> LispVal
+numericBinop op params = Number $ foldl1 op $ map unpackNum params
+
+unpackNum :: LispVal -> Integer
+unpackNum (Number n) = n
+unpackNum _ = 0
+
+parseList :: Parser LispVal
+parseList = liftM List $ sepBy parseExpr spaces
+
+parseDottedList :: Parser LispVal
+parseDottedList = do
+  head <- endBy parseExpr spaces
+  tail <- char '.' >> spaces >> parseExpr
+  return $ DottedList head tail
+
+parseVector :: Parser LispVal
+parseVector = do 
+  arrayValues <- sepBy parseExpr spaces
+  return $ Vector (listArray (0, (length arrayValues - 1)) arrayValues)
+
+parseQuoted :: Parser LispVal
+parseQuoted = do
+  char '\''
+  x <- parseExpr
+  return $ List [Atom "quote", x]
+
+parseQuasiQuoted :: Parser LispVal
+parseQuasiQuoted = do
+  char '`'
+  x <- parseExpr
+  return $ List [Atom "quasiquote", x]
+
+parseUnquote :: Parser LispVal
+parseUnquote = do
+  char ','
+  x <- parseExpr
+  return $ List [Atom "unquote", x]
+
+parseAtom :: Parser LispVal
+parseAtom = do 
+  first <- letter <|> symbol
+  rest <- many (letter <|> digit <|> symbol)
+  let atom = first:rest
+  return $ (Atom atom)
+
+parseBool :: Parser LispVal
+parseBool = do
+  char '#'
+  (char 't' >> return (Bool True)) <|> (char 'f' >> return (Bool False))
+
+parseChar :: Parser LispVal
+parseChar = do
+  try $ string "#\\"
+  value <- try (string "newline" <|> string "space")
+           <|> do { x <- anyChar; notFollowedBy alphaNum; return [x]}
+  return $ Character $ case value of 
+    "newline" -> '\n'
+    "space" -> ' '
+    otherwise -> (value !! 0)
+
+toDouble :: LispVal -> Double
+toDouble(Float f) = f
+toDouble(Number n) = fromIntegral n
+
+parseComplex :: Parser LispVal
+parseComplex = do
+  x <- (try parseFloat <|> parseDecimal)
+  char '+'
+  y <- (try parseFloat <|> parseDecimal)
+  char 'i'
+  return $ Complex (toDouble x :+ toDouble y)
+
+parseRatio :: Parser LispVal
+parseRatio = 
+  do x <- many1 digit
+     char '/'
+     y <- many1 digit
+     return $ Ratio ((read x) % (read y))
+
+parseFloat :: Parser LispVal
+parseFloat = do 
+  x <- many1 digit
+  char '.'
+  y <- many1 digit
+  return $ Float (fst . head $ readFloat (x ++ "." ++ y))
+
+parseHex :: Parser LispVal
+parseHex = do try $ string "#x"
+              digits <- many1 hexDigit
+              return $ (Number . fst . head . readHex) digits
+
+parseOct :: Parser LispVal
+parseOct  = do try $ string "#o"
+               digits <- many1 octDigit
+               return $ (Number . fst . head . readOct) digits
+
+parseBin :: Parser LispVal
+parseBin = do try $ string "#b"
+              digits <- (many1 . oneOf) "01"
+              return $ (Number . fst . head . readBin) digits
+  where 
+    readBin = readInt 2 isBinDigit digitToInt
+    isBinDigit x
+      | (x == '0') || (x == '1') = True
+      | otherwise = False
+
+parseDecimalPrefixed :: Parser LispVal
+parseDecimalPrefixed  = do
+   try $ string "#d"
+   digits <- many1 digit
+   return $ (Number . rd) digits
+   where rd = read :: String -> Integer
+
+parseDecimal :: Parser LispVal
+parseDecimal = many1 digit >>= (\x -> (return . Number . rd) x)
+  where rd = read :: String -> Integer
+
+parseNumber :: Parser LispVal
+parseNumber = parseHex <|> parseOct <|> parseBin <|> parseDecimalPrefixed <|> parseDecimal
+
+parseEscaped :: Parser Char
+parseEscaped = do
+  char '\\'
+  x <- oneOf "\"\\nrt"
+  return $ case x of
+    '\\' -> x
+    '\"' -> x
+    'r' -> '\r'
+    'n' -> '\n'
+    't' -> '\t'
+
+parseString :: Parser LispVal
+parseString = do
+  char '"'
+  x <- many $ noneOf "\"\\" <|> parseEscaped
+  char '"'
+  return $ String x
+
+symbol :: Parser Char
+symbol = oneOf "!$%&|*+-/:<=>?@^_~"
+
+spaces :: Parser ()
+spaces = skipMany1 space
+
+parseExpr :: Parser LispVal
+parseExpr = parseAtom
+            <|> try parseString
+            <|> try parseComplex
+            <|> try parseFloat
+            <|> try parseRatio
+            <|> try parseNumber
+            <|> try parseBool
+            <|> try parseChar
+            <|> try parseQuoted
+            <|> try parseQuasiQuoted
+            <|> try parseUnquote
+            <|> try (do string "#("
+                        x <- parseVector
+                        char ')'
+                        return x)
+            <|> do char '('
+                   x <- try parseList <|> parseDottedList
+                   char ')'
+                   return x
+
+readExpr :: String -> LispVal
+readExpr input = case parse parseExpr "lisp" input of
+  Left err -> String $ "No match: " ++ show err
+  Right val -> val
+
+main :: IO ()
+main = getArgs >>= print . eval . readExpr . head
+
+
+

@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "Forget Thee Not",
+    "description": "This extension reminds a gmail user when specified contacts haven't been contacted within a certain amount of time..",
+    "version": "0.1.2",
+    "minimum_chrome_version": "29",
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "chrome://favicon/",
+        "storage",
+        "identity"
+    ],
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "oauth2": {
+        "client_id": "710445922832-sp0nlkgev3vdcukmin6j6a7b32t93m6c.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/gmail.readonly"
+        ]
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkdMDD1InK+ft9j6ti0PWEOO9XAcjmyrC0S9mq37BLS4dpu716E8UsYrGLSX5ujsXkQDRlgi/3y5Zq1OgiC5A/50enFAlWoOt1shTCVCTt3V2xnh7Q/1Zn+2V1AFFhirU8K8w3vHYjLCNEah72FSUrpa6Mbx3Fs6cf1vOtH45KMM081UDqUdGyG8EEQ2DnksiLA8Vy8DjgHawRjPnqBpGU+OGBt12EfapMQZBuxzOEwlps6xYdmqSRCbat18tgyclJQ4UVgWNiKR7ErUZL40Cn3uc9pyxPHZ1yur/Eepock0cv9f+pm+MkzansggisGzwNut3ORgStrOas/lgmzGpXQIDAQAB"
+}

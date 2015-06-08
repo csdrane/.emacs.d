@@ -1,0 +1,37 @@
+module Sublist (Sublist(Equal, Sublist, Superlist, Unequal), sublist) where
+
+data Sublist = Equal
+             | Unequal
+             | Sublist
+             | Superlist
+               deriving (Eq, Show)
+
+sublist :: (Eq a) => [a] -> [a] -> Sublist
+sublist x y 
+  | length x == length y = isEqual x y
+  | length x > length y = isSuperlist x y
+  | otherwise = isSublist x y
+
+isEqual :: (Eq a) => [a] -> [a] -> Sublist
+isEqual x y = if x == y then Equal else Unequal
+
+isSuperlist :: (Eq a) => [a] -> [a] -> Sublist
+isSuperlist x y = helper (take (length y) x)  0
+  where 
+    helper x' n
+      | n > diff = Unequal
+      | x' == y = Superlist
+      | otherwise =  helper (shiftSub (n + 1) (length y) x) (n + 1)
+    diff = length x - length y
+
+isSublist :: (Eq a) => [a] -> [a] -> Sublist
+isSublist x y = helper (take (length x) y) 0
+  where 
+    helper y' n
+      | n > diff = Unequal
+      | x == y' = Sublist
+      | otherwise =  helper (shiftSub (n + 1) (length x) y) (n + 1)
+    diff = length y - length x
+
+shiftSub :: (Eq a) => Int -> Int -> [a] -> [a]
+shiftSub shiftn len xs = drop shiftn $ take (shiftn + len) xs

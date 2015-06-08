@@ -1,0 +1,331 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/chris/Programming/python/" . "SmashTheStack/")
+ ("/Users/chris/Documents/Career/Resume/Tech/" . "stylesheets/")
+ ("/Users/chris/Documents/Career/Resume/" . "Tech/")
+ ("/Users/chris/Documents/Career/" . "Resume/")
+ ("/Users/chris/Programming/clojure/amzn-tracker/src/" . "hackerati_interval_web_app/")
+ ("/Users/chris/Programming/clojure/amzn-tracker/" . "src/")
+ ("/Users/chris/exercism/haskell/" . "bob/")
+ ("/Users/chris/exercism/" . "haskell/")
+ ("/Users/chris/Programming/haskell/learn-yourself-a-scheme/" . "ch5/")
+ ("/Users/chris/Programming/clojure/cljly/src/" . "cljly/")
+ ("/Users/chris/Programming/clojure/cljly/" . "src/")
+ ("/Users/chris/Programming/haskell/" . "Web Scraping/")
+ ("/Users/chris/Programming/clojure/irc-server/test/" . "irc_server/")
+ ("/Users/chris/Programming/clojure/irc-server/src/" . "irc_server/")
+ ("/Users/chris/Programming/clojure/irc-server/" . "src/")
+ ("/Users/chris/Programming/clojure/crack-the-coding-interview/src/" . "ctci/")
+ ("/Users/chris/Programming/clojure/crack-the-coding-interview/" . "src/")
+ ("/Users/chris/Programming/clojure/game-of-life/src/clj/" . "game_of_life/")
+ ("/Users/chris/Programming/clojure/game-of-life-cljs/src/" . "game_of_life_cljs/")
+ ("/Users/chris/Programming/clojure/game-of-life-cljs/" . "src/")
+ ("/Users/chris/Programming/clojure/cljs-test/src/" . "cljs_test/")
+ ("/Users/chris/Programming/clojure/cljs-test/" . "src/")
+ ("/Users/chris/Programming/clojure/modern-cljs/src/clj/modern_cljs/" . "templates/")
+ ("/Users/chris/Programming/clojure/modern-cljs/src/brepl/" . "modern_cljs/")
+ ("/Users/chris/Programming/clojure/game-of-life/src/cljs/" . "game_of_life/")
+ ("/Users/chris/Programming/clojure/modern-cljs/test/cljs/" . "modern_cljs/")
+ ("/Users/chris/Programming/clojure/modern-cljs/test/clj/modern_cljs/" . "shopping/")
+ ("/Users/chris/Programming/clojure/modern-cljs/test/clj/" . "modern_cljs/")
+ ("/Users/chris/Programming/clojure/modern-cljs/test/" . "clj/")
+ ("/Users/chris/Programming/clojure/modern-cljs/resources/public/" . "js/")
+ ("/Users/chris/Programming/clojure/modern-cljs/src/clj/" . "modern_cljs/")
+ ("/Users/chris/Programming/clojure/modern-cljs/resources/" . "public/")
+ ("/Users/chris/Programming/clojure/modern-cljs/src/cljs/" . "modern_cljs/")
+ ("/Users/chris/Programming/clojure/modern-cljs/src/" . "cljs/")
+ ("/Users/chris/Programming/clojure/modern-cljs/" . "src/")
+ ("/Users/chris/Programming/clojure/game-of-life/src/" . "clj/")
+ ("/Users/chris/Programming/clojure/game-of-life/" . "src/")
+ ("/Users/chris/Programming/clojure/zulip-bot/src/" . "zulip_bot/")
+ ("/Users/chris/Programming/clojure/zulip-bot/" . "src/")
+ ("/Users/chris/Programming/clojure/cryptopals/src/" . "cryptopals/")
+ ("/Users/chris/Programming/clojure/hackerati-interval-web-app/src/" . "hackerati_interval_web_app/")
+ ("/Users/chris/.emacs.d/elpa/" . "cider-20141116.1221/")
+ ("/Users/chris/.emacs.d/" . "elpa/")
+ ("/Users/chris/Documents/Personal/" . "GTD/")
+ ("/Users/chris/Documents/" . "Career/")
+ ("/Users/chris/Programming/clojure/cryptopals/test/" . "cryptopals/")
+ ("/Users/chris/Programming/clojure/cryptopals/" . "test/")
+ ("/Users/chris/Programming/clojure/hackerati-interval-web-app/test/" . "hackerati_interval_web_app/")
+ ("/Users/chris/Programming/clojure/hackerati-interval-web-app/" . "test/")
+ ("/Users/chris/Programming/clojure/" . "irc-server/")
+ ("/Users/chris/Programming/" . "python/")
+ ("/Users/chris/" . "Desktop/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/chris/Documents/Personal/GTD/"
+ "/Users/chris/Desktop/"
+ "/Users/chris/Programming/python/SmashTheStack/"
+ "/Users/chris/Programming/clojure/irc-server/src/irc_server/"
+ "/Users/chris/.emacs.d/"
+ "/Users/chris/Documents/Career/"
+ "/Users/chris/Programming/clojure/irc-server/"
+ "/Users/chris/Programming/python/Project Euler/"
+ "/Users/chris/Programming/clojure/zulip-bot/"
+ "/Users/chris/Programming/clojure/amzn-tracker/"
+ "/Users/chris/Programming/haskell/glassdoor/"
+ "/Users/chris/Programming/clojure/irc-server/resources/"
+ "/Users/chris/Programming/clojure/irc-server/test/irc_server/"
+ "/Users/chris/Documents/Career/Resume/Tech/stylesheets/"
+ "/Users/chris/Documents/Career/Resume/Tech/cv/"
+ "/Users/chris/.lein/"
+ "/Users/chris/Programming/haskell/glassdoor/.git/"
+ "/Users/chris/Documents/Career/Job-Hunt/"
+ "/Users/chris/"
+ "/Users/chris/Programming/haskell/typeclassopedia/"
+ "/Users/chris/exercism/haskell/bob/"
+ "/Users/chris/exercism/haskell/sublist/"
+ "/Users/chris/exercism/haskell/leap/"
+ "/Users/chris/exercism/haskell/rna-transcription/"
+ "/Users/chris/Programming/clojure/cryptopals/"
+ "/Users/chris/Programming/clojure/game-of-life-cljs/"
+ "/Users/chris/Programming/haskell/"
+ "/Users/chris/Programming/clojure/hackerati-interval-web-app/"
+ "/Users/chris/Programming/clojure/zulip-bot/src/zulip_bot/"
+ "/Users/chris/exercism/haskell/gigasecond/"
+ "/Users/chris/exercism/haskell/grains/"
+ "/Users/chris/Programming/haskell/99_questions/"
+ "/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch5/"
+ "/Users/chris/exercism/haskell/accumulate/"
+ "/Users/chris/Programming/clojure/recursion-problems/"
+ "/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch3/"
+ "/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch2/"
+ "/Users/chris/Programming/haskell/learn-yourself-a-scheme/"
+ "/Users/chris/Programming/haskell/pearls/"
+ "/Users/chris/Programming/clojure/"
+ "/Users/chris/Programming/clojure/cljly/src/cljly/"
+ "/Users/chris/Programming/clojure/cljly/"
+ "/Users/chris/hadean-lands/"
+ "/Users/chris/Programming/clojure/game-of-life-cljs/src/game_of_life_cljs/"
+ "/Users/chris/Programming/clojure/hackerati-interval-web-app/test/hackerati_interval_web_app/"
+ "/Users/chris/Programming/clojure/cryptopals/test/cryptopals/"
+ "/Users/chris/Programming/clojure/cryptopals/src/cryptopals/"
+ "/Users/chris/Programming/clojure/crack-the-coding-interview/"
+ "/Users/chris/Programming/clojure/crack-the-coding-interview/src/ctci/"
+ "/Users/chris/Programming/clojure/game-of-life/src/clj/game_of_life/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Weight Log.org"
+ "out.txt"
+ "solution.c"
+ "level06_alt_solution.py"
+ "level06_alt.notes"
+ "level06_alt.c"
+ "level06_alt.disassem"
+ "socket.clj"
+ "state.clj"
+ "core.clj"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/chris/Documents/Career/Job-Hunt/" (21831 26488 0 0) "Work Search Log.numbers" "Venmo/" "Spring/" "CampusJob/" "Avaaz/" "Archive/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/.lein/" (21813 18240 0 0) "repl-history" "profiles.clj~" "profiles.clj" ".lein-env" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/test/irc_server/" (21794 50462 0 0) "connection_test.clj" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/" (21824 60647 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-env" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Documents/Career/" (21829 7663 0 0) "The 10 Secrets of a Master Networker.pdf" "Resume/" "Job-Hunt/" "interview-prep.org" "interview-prep.html" "Hotard/" "Hired in Tech/" "Hacker School (2013)/" "Fullstack App.txt" "Cover letter/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/.emacs.d/" (21824 60647 0 0) "yasnippet-snippets/" "url/" "tramp" "thumbs/" "recentf" "org-clock-save.el" "init.el" "ido.last~" "ido.last" "eshell/" "elpa/" "bookmarks" "backups/" "auto-save-list/" "ac-comphist.dat" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Documents/Personal/GTD/" (21831 26365 0 0) "work search log.org~" "work search log.org" "Weight Log.org" "style.css" "Pomodoro.org" "journal.org" "Job question for internet 2014-10-16.txt" "habits.org" "GTD Review.org_archive~" "GTD Review.org_archive" "GTD Review.org" "data/" "coding.log" "CLJS_notes.org" "capture-notes.org~" "capture-notes.org_archive" "capture-notes.org" ".lein-env" ".gitignore~" ".gitignore" ".git/" ".DS_Store" "#temp.clj#" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/src/irc_server/" (21824 60643 0 0) "state.clj" "socket.clj" "logging.clj" "demo.clj" "core.clj" "connection.clj" "#core.clj#" "../" "./")
+
+ ("/Users/chris/Programming/python/SmashTheStack/" (21798 57669 0 0) "solution.c" "pattern-object.py" "level06_alt_solution.py" "level06_alt.pass" "level06_alt.notes" "level06_alt.disassem" "level06_alt.c" "level06_alt" "../" "./")
+
+ ("/Users/chris/Desktop/" (21829 3288 0 0) "Verizon log.rtf" "How to Talk Good.rtfd/" "goals.org" "facebook interview process.rtf" "]\\-=091/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/chris/" (21831 59601 0 0) "VirtualBox VMs/" "some/" "Security/" "Public/" "Projects/" "Programming/" "Pictures/" "Music/" "Movies/" "Library/" "hadean-lands/" "exercism/" "emacs-dev/" "Downloads/" "Documents/" "Desktop/" "Colossal Order/" "COBRA Confirmation 2015-01-01.pdf" "Applications/" ".wireshark/" ".wapi/" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".swt/" ".subversion/" ".ssh/" ".smex-items" ".sh_history" ".pythonhist" ".pylint.d/" ".pip/" ".pdbrc" ".npm/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".lein_history" ".lein-env" ".lein/" ".java.policy" ".ispell_english" ".ipython/" ".gitconfig" ".git-completion.bash" ".ghci" ".ghc/" ".gervill/" ".gem/" ".exercism.json" ".emacs.d/" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bashrc" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/chris/Documents/" (21805 32343 0 0) "TV Shows/" "Router/" "Receipts/" "Reading/" "Personal/" "Notes/" "Movies/" "Investing/" "Instructional Videos/" "Digital Editions/" "Career/" "Anki/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/python/" (21790 59298 0 0) "yahoo finance thing.py" "tic-tac-toe.py" "tic-tac-toe v2.py" "ThinkComplexity/" "SmashTheStack/" "Project Euler/" "nicholas-drane/" "Misc_Interview_Problems/" "Leetcode/" "InterviewCake/" "HowToThinkAboutAlgorithms/" "HackerRank/" "HackerNewsWhosHiring/" "cramer_temp.py" "cramer.txt" "cramer.py" "chrisdrane.com/" "CB&FF/" "AlgorithmDesignManual/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/" (21782 62805 0 0) "temp-git-intro/" "python/" "haskell/" "clojure/" "chrome/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Downloads/" (21783 27435 0 0) "What is the name of this book/" "Viet Cong Viet Cong [2015] 320/" "Venture Bros/" "Tool - Lateralus/" "Tool - AEnima/" "TLCL-13.07.pdf" "TheComputerScienceHandbook.pdf" "The.Venture.Bros.S05.Season.5.720p.WEB-DL.H264-iT00NZ [PublicHD]/" "The.Stanley.Parable.MacOSX-ACTiVATED.dmg" "The.Guest.2014.LIMITED.BRRip.XviD-AQOS/" "The Shins - Oh, Inverted World/" "The Passionate Programmer (2009) - (Malestrom).pdf" "The magnetic fields - 69 Love Songs - 1999 (3CD)/" "The Bug/" "The Barefoot Contessa Cookbook (404)/" "The Art of Computer Programming/" "Talk Talk - Laughing Stock/" "t._cormen_-_introduction_to_algorithms_3rd_edition.pdf" "Stevie-Wonder---Innervisions-(1973)-httpmargiano.blogspot.rar" "Steely.Dan.1977.Aja.MP3.rar" "Squarepusher - Music Is Rotted One Note (MP3)/" "Sly & the Family Stone - There-s A Riot Goin- On (1971).rar" "Skiena.-.TheAlgorithmDesignManual.pdf" "sg1.c" "Season 4/" "Schneier - Applied Cryptography 2ed - Wiley.pdf" "Run The Jewels 2/" "Relatos Salvajes 2014 WEB-DL 1080p x264 AC3 Castellano Y Latino URBiN4HD.srt" "Rapeman - Two Nuns And A Pack Mule.zip" "Purely Functional Data Structures.PlentyofeBooks.net.rar" "programming-in-haskell-Hutton.pdf" "Pomodoro technique.pdf" "pierce_types_and_programming_languages_2002.pdf" "photo.JPG" "photo (7).JPG" "photo (6).JPG" "photo (5).JPG" "photo (4).JPG" "photo (3).JPG" "photo (2).JPG" "photo (1).JPG" "PDF_Course_Advanced_Malware_Analysis.pdf" "Panda Bear Panda Bear Meets The Grim Reaper [2015] VØ CDRIP/" "Order_statistics.ppt" "Nick Bostrom - Superintelligence. Paths, Dangers, Strategies [2014][A]/" "NetLogo 5.1.0/" "mit-csail-tr-2009-002.pdf" "Lecture4.ppt" "Lecture06.ppt" "Kendrick Lamar -To Pimp a Butterfly (2015) [WEB]/" "Kendrick Lamar - To Pimp a Butterfly [2015-Web-MP3-V0(VBR)].torrent" "Kendrick Lamar - To Pimp a Butterfly [2015-Web-MP3-V0(VBR)] (1).torrent" "interview-prep.org" "interview-prep.html" "HowToThinkAboutAlgorithms-Edmonds.pdf" "how to think about algorithms.pdf" "HOMEMOVIES/" "HadeanLands-Mac/" "Hacking_a_Google_Interview_Handout_2.pdf" "Hacking_a_Google_Interview_Handout_1.pdf" "Godspeed You! Black Emperor/" "Functional Pearls Concurrency.pdf" "function2009.pdf" "fractalppt.pdf" "Fela Kuti - Expensive Shit - 1975/" "Father John Misty - I Love You, Honeybear {2015}/" "exploit-exercises-nebula-5.iso" "edutalk-w2015-150108135958-conversion-gate01.pdf" "Doets&VanEijck04_HaskellRoad-LogiMathProgramming.pdf" "Dinosaur Jr - Bug (1988)/" "Design Patterns - Elements of Reusable Object Oriented Software - 431 pages.pdf" "Death Grips - Jenny Death (2015) [MP3 320]/" "Dan Deacon - America (2012)/" "Curtis Mayfield - Superfly (1972)/" "Clojure CA - signed.pdf" "Charlie Parker  Charlie Parker With Strings(jazz)(mp3@320)[rogercc][h33t]/" "Charles Mingus - The Black Saint And The Sinner Lady (1963)/" "Charles Mingus - Mingus Ah Um (1959)/" "C-Mass.pdf" "Broad.City.S02E04.HDTV.x264-ASAP[ettv]/" "Broad.City.S02E03.HDTV.x264-KILLERS[ettv]/" "Broad.City.S02E02.HDTV.x264-KILLERS[ettv]/" "Broad.City.S02E01.HDTV.x264-KILLERS[ettv]/" "Black Messiah/" "Bird_Wadler. Introduction to Functional Programming.1ed.pdf" "Bird_Wadler. Introduction to Functional Programming.1ed (1).pdf" "Bartender (1.2.28) Mac OS X | Elixør/" "Barefoot Contessa Foolproof_ Recipes You Can Trust - Ina Garten/" "Barefoot Contessa Family Style.pdf" "Aphex Twin (2015) Computer Controlled Acoustic Instruments pt2 EP/" "Anthropic Bias - Observation Selection Effects in Science and Philosophy (excerpt).pdf" "American Water/" "ALL THIS AND GARGANTUA-2 with epilogue.mkv" "Ali Smith - novels & short stories/" "a_poor_man's_concurrency_monad.pdf" "243859377-Smullyan-To-Mock-a-Mockingbird-pdf.pdf" ".localized" ".DS_Store" ".#sg1.c" "../" "./")
+
+ ("/Users/chris/Programming/clojure/crack-the-coding-interview/" (21750 6450 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-env" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/chris/.emacs.d/auto-save-list/" (21764 15232 0 0) "../" "./")
+
+ ("/Users/chris/Programming/python/Project Euler/" (21748 56973 0 0) "Problem 8.py" "Problem 7.py" "Problem 5.py" "Problem 4.py" "Problem 13.py" "Problem 12.py" "Problem 11.py" "Problem 10.py" "Problem 1.py" "08.py" "07.py" "06.py" "05.py" "04.py" "03.py" "02.py" "../" "./")
+
+ ("/Users/chris/Programming/haskell/glassdoor/.git/" (21747 31554 0 0) "refs/" "objects/" "logs/" "info/" "index" "hooks/" "HEAD" "FETCH_HEAD" "description" "config" "COMMIT_EDITMSG" "../" "./")
+
+ ("/Users/chris/Programming/clojure/amzn-tracker/" (21747 32749 0 0) "test/" "target/" "src/" "resources/" "README.md" "project_notes.org~" "project_notes.org" "project_ideas.org~" "project_ideas.org" "project.clj~" "project.clj" "profiles.clj" "Procfile" "LICENSE" "doc/" ".secret" ".nrepl-port" ".lein-repl-history" ".lein-env" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" "#scratch2#" "../" "./")
+
+ ("/Users/chris/Programming/haskell/glassdoor/" (21747 31501 0 0) "README.md" "output.txt" "main.o" "main.hs" "main.hi" "companies.txt" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/chris/Programming/python/CB&FF/single file py/dev/" (21747 30622 0 0) "templates/" "static/" "README.md" "main.pyc" "main.py" "cobff.pyc" "cobff.py" "__init__.py" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/chris/Programming/python/CB&FF/single file py/" (21007 46514 0 0) "dev/" "archive/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/python/CB&FF/" (21080 34908 0 0) "sqla test/" "single file py/" "share/" "Notes.py" "man/" "login info" "lib/" "include/" "flot/" "COBFF Findings.ipynb" "cobff -- multi file under progress/" "bin/" ".Python" ".ipynb_checkpoints/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/game-of-life-cljs/" (21745 64205 0 0) "src/" "resources/" "README.md" "project.clj" "LICENSE" "figwheel_server.log" ".lein-env" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cryptopals/" (21745 63773 0 0) "test/" "target/" "src/" "README.md" "project.clj" "LICENSE" ".lein-env" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/" (21743 22882 0 0) "zulip-bot/" "xterm-colors/" "what-does-tools-trace-do.clj" "tools/" "temp/" "sicp/" "scratch-work-4clojure.clj" "salarly-scrape/" "regex-parse/" "recursion-problems/" "project.clj" "pom.xml" "overtone-tutorial/" "notes/" "modern-cljs/" "logic-tutorial/" "land-of-lisp/" "irc-server/" "graphs-and-trees/" "game-of-life-cljs/" "game-of-life/" "enlive-tutorial/" "cryptopals/" "crack-the-coding-interview/" "clojure-koans/" "clojure-cookbook/" "cljly/" "ChmodBPF.tar.gz" "ChmodBPF/" "ants.clj" "amzn-tracker/" ".lein-repl-history" ".lein-env" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/resources/" (21743 26754 0 0) "state.png" "state.dot" "server.png" "server.dot" "message-handling.png" "message-handling.dot" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/modern-cljs/src/clj/modern_cljs/" (21696 9159 0 0) "utils.clj" "templates/" "shopping/" "remotes.clj" "login.clj" "login/" "core.clj" "../" "./")
+
+ ("/Users/chris/Programming/clojure/modern-cljs/src/clj/modern_cljs/templates/" (21695 589 0 0) "shopping.clj" "../" "./")
+
+ ("/Users/chris/Documents/Career/Resume/Tech/cv/" (21739 31927 0 0) "public.md" "private.md" "images/" "cv.md" "../" "./")
+
+ ("/Users/chris/Documents/Career/Resume/Tech/stylesheets/" (21739 31101 0 0) "style.scss" "_settings.scss" "_mixins.scss" "_layouts.scss" "_fonts.scss" "_fa-var.scss" "../" "./")
+
+ ("/Users/chris/Documents/Career/Resume/Tech/" (21739 22421 0 0) "templates/" "stylesheets/" "scaffolds/" "README.md" "Makefile" "fonts/" "dist/" "cv/" "changelog" "build/" ".sass-cache/" "../" "./")
+
+ ("/Users/chris/Documents/Career/Resume/" (21739 22104 0 0) "Tech resume-2014-09-07.doc" "Tech/" "Sent to employers/" "Old/" "Morgan Stanley/" "Chris Drane.pdf" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/target/" (21705 1081 0 0) "base+system+user+dev+repl/" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/cider-0.8.2/" (21736 57875 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-repl.elc" "cider-repl.el" "cider-pkg.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/Users/chris/Documents/Career/Hacker School (2013)/" (21422 3986 0 0) "Coding Essay.docx" "../" "./")
+
+ ("/Users/chris/Programming/haskell/Web Scraping/" (21369 18536 0 0) "BasicScraper.hs" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/cider-20141116.1221/" (21622 25006 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-repl.elc" "cider-repl.el" "cider-pkg.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/Users/chris/Programming/haskell/" (21734 30534 0 0) "Web Scraping/" "typeclassopedia/" "turtle-demo/" "temp/" "SimpleJSON.hs" "Real World Haskell/" "quux.txt" "Project Euler/" "pearls/" "parsing/" "papers/" "main.hs" "learn-yourself-a-scheme/" "intro-to-fp/" "glassdoor/" "concurrent-programming/" "99_questions/" "20IntermediateQs.hs" ".DS_Store" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/company-0.8.5/" (21530 5930 0 0) "company.elc" "company.el" "company-yasnippet.el" "company-xcode.elc" "company-xcode.el" "company-tempo.elc" "company-tempo.el" "company-template.elc" "company-template.el" "company-semantic.elc" "company-semantic.el" "company-ropemacs.elc" "company-ropemacs.el" "company-pysmell.elc" "company-pysmell.el" "company-pkg.elc" "company-pkg.el" "company-oddmuse.elc" "company-oddmuse.el" "company-nxml.elc" "company-nxml.el" "company-keywords.elc" "company-keywords.el" "company-ispell.elc" "company-ispell.el" "company-gtags.elc" "company-gtags.el" "company-files.elc" "company-files.el" "company-etags.elc" "company-etags.el" "company-elisp.elc" "company-elisp.el" "company-eclim.elc" "company-eclim.el" "company-dabbrev.elc" "company-dabbrev.el" "company-dabbrev-code.elc" "company-dabbrev-code.el" "company-css.elc" "company-css.el" "company-cmake.elc" "company-cmake.el" "company-clang.elc" "company-clang.el" "company-capf.elc" "company-capf.el" "company-bbdb.elc" "company-bbdb.el" "company-autoloads.el~" "company-autoloads.el" "company-abbrev.elc" "company-abbrev.el" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/test/" (21723 41492 0 0) "irc_server/" "../" "./")
+
+ ("/Users/chris/.emacs.d/yasnippet-snippets/" (21630 24011 0 0) "yaml-mode/" "udev-mode/" "typerex-mode/" "tuareg-mode/" "text-mode/" "sql-mode/" "snippet-mode/" "sh-mode/" "scala-mode/" "ruby-mode/" "rst-mode/" "rename_add_contr.py" "README.md" "python-mode/" "prog-mode/" "perl-mode/" "org-mode/" "octave-mode/" "nxml-mode/" "nsis-mode/" "nesc-mode/" "ned-mode/" "markdown-mode/" "makefile-mode/" "makefile-gmake-mode/" "makefile-bsdmake-mode/" "makefile-automake-mode/" "m4-mode/" "lua-mode/" "lisp-interaction-mode/" "LICENSE" "latex-mode/" "js2-mode/" "js-mode/" "java-mode/" "html-mode/" "haskell-mode/" "groovy-mode/" "go-mode/" "git-commit-mode/" "fundamental-mode/" "f90-mode/" "erlang-mode/" "erc-mode/" "ensime-mode/" "enh-ruby-mode/" "emacs-lisp-mode/" "css-mode/" "csharp-mode/" "cpp-omnet-mode/" "cperl-mode/" "CONTRIBUTORS.txt" "conf-unix-mode/" "cmake-mode/" "chef-mode/" "cc-mode/" "c-mode/" "c++-mode/" "applescript-mode/" "antlr-mode/" ".nosearch" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/chris/Programming/haskell/Project Euler/" (21365 26590 0 0) "Problem3.hs" "Problem2.hs" ".DS_Store" "../" "./")
+
+ ("/Users/" (21666 59970 0 0) "Shared/" "chris/" ".localized" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/auto-complete-20141111.2346/" (21628 44579 0 0) "dict/" "auto-complete.elc" "auto-complete.el" "auto-complete-pkg.el" "auto-complete-config.elc" "auto-complete-config.el" "auto-complete-autoloads.el" "../" "./")
+
+ ("/Users/chris/Programming/clojure/modern-cljs/resources/public/" (21694 42689 0 0) "simple.html" "shopping.html" "shopping-pre.html" "shopping-dbg.html" "login.html" "login-pre.html" "login-dbg.html" "js/" "css/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/modern-cljs/src/cljs/modern_cljs/" (21694 41749 0 0) "shopping.cljs" "modern.cljs" "login.cljs" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cryptopals/src/cryptopals/" (21688 10293 0 0) "text.clj" "set2.clj" "set1.clj" ".#temp.clj" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cryptopals/test/cryptopals/" (21685 28419 0 0) "set2_test.clj" "set1_test.clj" "8.txt" "7.txt" "6.txt" "4.txt" "10.txt" "../" "./")
+
+ ("/usr/" (21667 4691 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "../" "./")
+
+ ("/usr/local/" (21703 49635 0 0) "var/" "SUPPORTERS.md" "share/" "README.md" "opt/" "LICENSE.txt" "Library/" "lib/" "include/" "Frameworks/" "etc/" "CONTRIBUTING.md" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".yardopts" ".gitignore" ".git/" "../" "./")
+
+ ("/usr/local/Cellar/" (21721 6644 0 0) "yasm/" "xvid/" "x264/" "wireshark/" "tree/" "texi2html/" "sqlite/" "rlwrap/" "readline/" "qt/" "python/" "protobuf/" "pkg-config/" "phantomjs/" "openssl/" "node/" "nmap/" "nettle/" "netcat/" "mysql/" "media-info/" "libvo-aacenc/" "libtasn1/" "libpng/" "libgpg-error/" "libgcrypt/" "libffi/" "leiningen/" "lame/" "intltool/" "graphviz/" "gnutls/" "gmp/" "glib/" "git/" "ghc/" "gettext/" "geoip/" "gdbm/" "ffmpeg/" "faac/" "exercism/" "emacs/" "d-bus/" "cabal-install/" "c-ares/" "brew-cask/" "bash-completion/" "automake/" "autoconf/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/" (21672 17271 0 0) "HEAD/" ".DS_Store" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/" (21672 17386 0 0) "var/" "share/" "README" "libexec/" "INSTALL_RECEIPT.json" "homebrew.mxcl.emacs.plist" "Emacs.app/" "COPYING" "ChangeLog" "bin/" ".DS_Store" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/share/" (21667 5241 0 0) "man/" "info/" "icons/" "emacs/" "applications/" "appdata/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/share/emacs/" (21667 5252 0 0) "site-lisp/" "25.0.50/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/share/emacs/25.0.50/" (21667 5252 0 0) "site-lisp/" "lisp/" "etc/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/share/emacs/25.0.50/lisp/" (21667 5260 0 0) "xt-mouse.elc" "xt-mouse.el.gz" "xml.elc" "xml.el.gz" "x-dnd.elc" "x-dnd.el.gz" "woman.elc" "woman.el.gz" "winner.elc" "winner.el.gz" "window.elc" "window.el.gz" "windmove.elc" "windmove.el.gz" "widget.elc" "widget.el.gz" "wid-edit.elc" "wid-edit.el.gz" "wid-browse.elc" "wid-browse.el.gz" "whitespace.elc" "whitespace.el.gz" "wdired.elc" "wdired.el.gz" "w32-vars.elc" "w32-vars.el.gz" "w32-fns.elc" "w32-fns.el.gz" "vt100-led.elc" "vt100-led.el.gz" "vt-control.elc" "vt-control.el.gz" "view.elc" "view.el.gz" "version.elc" "version.el.gz" "vcursor.elc" "vcursor.el.gz" "vc/" "userlock.elc" "userlock.el.gz" "url/" "uniquify.elc" "uniquify.el.gz" "type-break.elc" "type-break.el.gz" "tutorial.elc" "tutorial.el.gz" "tree-widget.elc" "tree-widget.el.gz" "tooltip.elc" "tooltip.el.gz" "tool-bar.elc" "tool-bar.el.gz" "tmm.elc" "tmm.el.gz" "timezone.elc" "timezone.el.gz" "time.elc" "time.el.gz" "time-stamp.elc" "time-stamp.el.gz" "thumbs.elc" "thumbs.el.gz" "thingatpt.elc" "thingatpt.el.gz" "textmodes/" "term.elc" "term.el.gz" "term/" "tempo.elc" "tempo.el.gz" "tar-mode.elc" "tar-mode.el.gz" "talk.elc" "talk.el.gz" "tabify.elc" "tabify.el.gz" "t-mouse.elc" "t-mouse.el.gz" "subr.elc" "subr.el.gz" "subdirs.el" "strokes.elc" "strokes.el.gz" "startup.elc" "startup.el.gz" "speedbar.elc" "speedbar.el.gz" "soundex.elc" "soundex.el.gz" "sort.elc" "sort.el.gz" "skeleton.elc" "skeleton.el.gz" "simple.elc" "simple.el.gz" "shell.elc" "shell.el.gz" "shadowfile.elc" "shadowfile.el.gz" "ses.elc" "ses.el.gz" "server.elc" "server.el.gz" "select.elc" "select.el.gz" "scroll-lock.elc" "scroll-lock.el.gz" "scroll-bar.elc" "scroll-bar.el.gz" "scroll-all.elc" "scroll-all.el.gz" "sb-image.elc" "sb-image.el.gz" "saveplace.elc" "saveplace.el.gz" "savehist.elc" "savehist.el.gz" "ruler-mode.elc" "ruler-mode.el.gz" "rot13.elc" "rot13.el.gz" "rfn-eshadow.elc" "rfn-eshadow.el.gz" "reveal.elc" "reveal.el.gz" "reposition.elc" "reposition.el.gz" "replace.elc" "replace.el.gz" "repeat.elc" "repeat.el.gz" "register.elc" "register.el.gz" "rect.elc" "rect.el.gz" "recentf.elc" "recentf.el.gz" "README" "ps-samp.elc" "ps-samp.el.gz" "ps-print.elc" "ps-print.el.gz" "ps-mule.elc" "ps-mule.el.gz" "ps-def.elc" "ps-def.el.gz" "ps-bdf.elc" "ps-bdf.el.gz" "progmodes/" "profiler.elc" "profiler.el.gz" "proced.elc" "proced.el.gz" "printing.elc" "printing.el.gz" "play/" "pcomplete.elc" "pcomplete.el.gz" "pcmpl-x.elc" "pcmpl-x.el.gz" "pcmpl-unix.elc" "pcmpl-unix.el.gz" "pcmpl-rpm.elc" "pcmpl-rpm.el.gz" "pcmpl-linux.elc" "pcmpl-linux.el.gz" "pcmpl-gnu.elc" "pcmpl-gnu.el.gz" "pcmpl-cvs.elc" "pcmpl-cvs.el.gz" "password-cache.elc" "password-cache.el.gz" "paren.elc" "paren.el.gz" "outline.elc" "outline.el.gz" "org/" "obsolete/" "nxml/" "novice.elc" "novice.el.gz" "notifications.elc" "notifications.el.gz" "newcomment.elc" "newcomment.el.gz" "net/" "mwheel.elc" "mwheel.el.gz" "msb.elc" "msb.el.gz" "mpc.elc" "mpc.el.gz" "mouse.elc" "mouse.el.gz" "mouse-drag.elc" "mouse-drag.el.gz" "mouse-copy.elc" "mouse-copy.el.gz" "misearch.elc" "misearch.el.gz" "misc.elc" "misc.el.gz" "minibuffer.elc" "minibuffer.el.gz" "minibuf-eldef.elc" "minibuf-eldef.el.gz" "midnight.elc" "midnight.el.gz" "mh-e/" "menu-bar.elc" "menu-bar.el.gz" "md4.elc" "md4.el.gz" "mb-depth.elc" "mb-depth.el.gz" "master.elc" "master.el.gz" "man.elc" "man.el.gz" "makesum.elc" "makesum.el.gz" "mail/" "macros.elc" "macros.el.gz" "ls-lisp.elc" "ls-lisp.el.gz" "lpr.elc" "lpr.el.gz" "locate.elc" "locate.el.gz" "loadup.el" "loadhist.elc" "loadhist.el.gz" "loaddefs.el" "linum.elc" "linum.el.gz" "let-alist.elc" "let-alist.el.gz" "leim/" "ldefs-boot.el" "language/" "kmacro.elc" "kmacro.el.gz" "kermit.elc" "kermit.el.gz" "json.elc" "json.el.gz" "jka-compr.elc" "jka-compr.el.gz" "jka-cmpr-hook.elc" "jka-cmpr-hook.el.gz" "jit-lock.elc" "jit-lock.el.gz" "isearchb.elc" "isearchb.el.gz" "isearch.elc" "isearch.el.gz" "international/" "informat.elc" "informat.el.gz" "info.elc" "info.el.gz" "info-xref.elc" "info-xref.el.gz" "info-look.elc" "info-look.el.gz" "indent.elc" "indent.el.gz" "imenu.elc" "imenu.el.gz" "image.elc" "image.el.gz" "image-mode.elc" "image-mode.el.gz" "image-file.elc" "image-file.el.gz" "image-dired.elc" "image-dired.el.gz" "iimage.elc" "iimage.el.gz" "ielm.elc" "ielm.el.gz" "ido.elc" "ido.el.gz" "icomplete.elc" "icomplete.el.gz" "ibuffer.elc" "ibuffer.el.gz" "ibuf-macs.elc" "ibuf-macs.el.gz" "ibuf-ext.elc" "ibuf-ext.el.gz" "htmlfontify.elc" "htmlfontify.el.gz" "hl-line.elc" "hl-line.el.gz" "hippie-exp.elc" "hippie-exp.el.gz" "hilit-chg.elc" "hilit-chg.el.gz" "hi-lock.elc" "hi-lock.el.gz" "hfy-cmap.elc" "hfy-cmap.el.gz" "hexl.elc" "hexl.el.gz" "hex-util.elc" "hex-util.el.gz" "help.elc" "help.el.gz" "help-mode.elc" "help-mode.el.gz" "help-macro.elc" "help-macro.el.gz" "help-fns.elc" "help-fns.el.gz" "help-at-pt.elc" "help-at-pt.el.gz" "gs.elc" "gs.el.gz" "gnus/" "generic-x.elc" "generic-x.el.gz" "fringe.elc" "fringe.el.gz" "frameset.elc" "frameset.el.gz" "frame.elc" "frame.el.gz" "forms.elc" "forms.el.gz" "format.elc" "format.el.gz" "format-spec.elc" "format-spec.el.gz" "font-lock.elc" "font-lock.el.gz" "font-core.elc" "font-core.el.gz" "follow.elc" "follow.el.gz" "foldout.elc" "foldout.el.gz" "flow-ctrl.elc" "flow-ctrl.el.gz" "finder.elc" "finder.el.gz" "finder-inf.el" "find-lisp.elc" "find-lisp.el.gz" "find-file.elc" "find-file.el.gz" "find-dired.elc" "find-dired.el.gz" "find-cmd.elc" "find-cmd.el.gz" "filesets.elc" "filesets.el.gz" "files.elc" "files.el.gz" "files-x.elc" "files-x.el.gz" "filenotify.elc" "filenotify.el.gz" "filecache.elc" "filecache.el.gz" "ffap.elc" "ffap.el.gz" "faces.elc" "faces.el.gz" "facemenu.elc" "facemenu.el.gz" "face-remap.elc" "face-remap.el.gz" "ezimage.elc" "ezimage.el.gz" "expand.elc" "expand.el.gz" "eshell/" "erc/" "epg.elc" "epg.el.gz" "epg-config.elc" "epg-config.el.gz" "epa.elc" "epa.el.gz" "epa-mail.elc" "epa-mail.el.gz" "epa-hook.elc" "epa-hook.el.gz" "epa-file.elc" "epa-file.el.gz" "epa-dired.elc" "epa-dired.el.gz" "env.elc" "env.el.gz" "emulation/" "emacs-lock.elc" "emacs-lock.el.gz" "emacs-lisp/" "elide-head.elc" "elide-head.el.gz" "electric.elc" "electric.el.gz" "elec-pair.elc" "elec-pair.el.gz" "ehelp.elc" "ehelp.el.gz" "edmacro.elc" "edmacro.el.gz" "echistory.elc" "echistory.el.gz" "ebuff-menu.elc" "ebuff-menu.el.gz" "dynamic-setting.elc" "dynamic-setting.el.gz" "double.elc" "double.el.gz" "dos-w32.elc" "dos-w32.el.gz" "dos-vars.elc" "dos-vars.el.gz" "dos-fns.elc" "dos-fns.el.gz" "dom.elc" "dom.el.gz" "doc-view.elc" "doc-view.el.gz" "dnd.elc" "dnd.el.gz" "disp-table.elc" "disp-table.el.gz" "dirtrack.elc" "dirtrack.el.gz" "dired.elc" "dired.el.gz" "dired-x.elc" "dired-x.el.gz" "dired-aux.elc" "dired-aux.el.gz" "dframe.elc" "dframe.el.gz" "desktop.elc" "desktop.el.gz" "descr-text.elc" "descr-text.el.gz" "delsel.elc" "delsel.el.gz" "delim-col.elc" "delim-col.el.gz" "dabbrev.elc" "dabbrev.el.gz" "custom.elc" "custom.el.gz" "cus-theme.elc" "cus-theme.el.gz" "cus-start.elc" "cus-start.el.gz" "cus-load.el" "cus-face.elc" "cus-face.el.gz" "cus-edit.elc" "cus-edit.el.gz" "cus-dep.elc" "cus-dep.el.gz" "COPYING" "composite.elc" "composite.el.gz" "completion.elc" "completion.el.gz" "comint.elc" "comint.el.gz" "color.elc" "color.el.gz" "cmuscheme.elc" "cmuscheme.el.gz" "chistory.elc" "chistory.el.gz" "cedet/" "cdl.elc" "cdl.el.gz" "case-table.elc" "case-table.el.gz" "calendar/" "calculator.elc" "calculator.el.gz" "calc/" "button.elc" "button.el.gz" "buff-menu.elc" "buff-menu.el.gz" "bs.elc" "bs.el.gz" "bookmark.elc" "bookmark.el.gz" "bindings.elc" "bindings.el.gz" "battery.elc" "battery.el.gz" "avoid.elc" "avoid.el.gz" "autorevert.elc" "autorevert.el.gz" "autoinsert.elc" "autoinsert.el.gz" "autoarg.elc" "autoarg.el.gz" "array.elc" "array.el.gz" "arc-mode.elc" "arc-mode.el.gz" "apropos.elc" "apropos.el.gz" "ansi-color.elc" "ansi-color.el.gz" "allout.elc" "allout.el.gz" "allout-widgets.elc" "allout-widgets.el.gz" "align.elc" "align.el.gz" "abbrev.elc" "abbrev.el.gz" "../" "./")
+
+ ("/usr/local/Cellar/emacs/HEAD/share/emacs/25.0.50/lisp/emacs-lisp/" (21667 5253 0 0) "warnings.elc" "warnings.el.gz" "unsafep.elc" "unsafep.el.gz" "trace.elc" "trace.el.gz" "tq.elc" "tq.el.gz" "timer.elc" "timer.el.gz" "testcover.elc" "testcover.el.gz" "tcover-unsafep.elc" "tcover-unsafep.el.gz" "tcover-ses.elc" "tcover-ses.el.gz" "tabulated-list.elc" "tabulated-list.el.gz" "syntax.elc" "syntax.el.gz" "subr-x.elc" "subr-x.el.gz" "smie.elc" "smie.el.gz" "shadow.elc" "shadow.el.gz" "seq.elc" "seq.el.gz" "rx.elc" "rx.el.gz" "ring.elc" "ring.el.gz" "regi.elc" "regi.el.gz" "regexp-opt.elc" "regexp-opt.el.gz" "re-builder.elc" "re-builder.el.gz" "pp.elc" "pp.el.gz" "pcase.elc" "pcase.el.gz" "package.elc" "package.el.gz" "package-x.elc" "package-x.el.gz" "nadvice.elc" "nadvice.el.gz" "map-ynp.elc" "map-ynp.el.gz" "macroexp.elc" "macroexp.el.gz" "lisp.elc" "lisp.el.gz" "lisp-mode.elc" "lisp-mode.el.gz" "lisp-mnt.elc" "lisp-mnt.el.gz" "inline.elc" "inline.el.gz" "helper.elc" "helper.el.gz" "gv.elc" "gv.el.gz" "generic.elc" "generic.el.gz" "float-sup.elc" "float-sup.el.gz" "find-func.elc" "find-func.el.gz" "ewoc.elc" "ewoc.el.gz" "ert.elc" "ert.el.gz" "ert-x.elc" "ert-x.el.gz" "elp.elc" "elp.el.gz" "elint.elc" "elint.el.gz" "eldoc.elc" "eldoc.el.gz" "eieio.elc" "eieio.el.gz" "eieio-speedbar.elc" "eieio-speedbar.el.gz" "eieio-opt.elc" "eieio-opt.el.gz" "eieio-datadebug.elc" "eieio-datadebug.el.gz" "eieio-custom.elc" "eieio-custom.el.gz" "eieio-core.elc" "eieio-core.el.gz" "eieio-base.elc" "eieio-base.el.gz" "edebug.elc" "edebug.el.gz" "easymenu.elc" "easymenu.el.gz" "easy-mmode.elc" "easy-mmode.el.gz" "disass.elc" "disass.el.gz" "derived.elc" "derived.el.gz" "debug.elc" "debug.el.gz" "crm.elc" "crm.el.gz" "copyright.elc" "copyright.el.gz" "cl.elc" "cl.el.gz" "cl-seq.elc" "cl-seq.el.gz" "cl-macs.elc" "cl-macs.el.gz" "cl-loaddefs.el" "cl-lib.elc" "cl-lib.el.gz" "cl-indent.elc" "cl-indent.el.gz" "cl-extra.elc" "cl-extra.el.gz" "checkdoc.elc" "checkdoc.el.gz" "check-declare.elc" "check-declare.el.gz" "chart.elc" "chart.el.gz" "cconv.elc" "cconv.el.gz" "bytecomp.elc" "bytecomp.el.gz" "byte-run.elc" "byte-run.el.gz" "byte-opt.elc" "byte-opt.el.gz" "bindat.elc" "bindat.el.gz" "benchmark.elc" "benchmark.el.gz" "backquote.elc" "backquote.el.gz" "avl-tree.elc" "avl-tree.el.gz" "autoload.elc" "autoload.el.gz" "advice.elc" "advice.el.gz" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/" (21734 3081 0 0) "zenburn-theme-20141112.923/" "yasnippet-20141117.327/" "web-beautify-20131118.226/" "use-package-readme.txt" "use-package-20140918.1333/" "smex-readme.txt~" "smex-readme.txt" "smex-20140425.1314/" "skewer-mode-20140702.647/" "simple-httpd-20140908.1908/" "s-1.9.0/" "refheap-20140902.1402/" "rainbow-delimiters-1.3.11/" "queue-0.1.1/" "projectile-readme.txt" "projectile-20150216.843/" "projectile-0.11.0/" "popwin-20140902.1727/" "popup-20141120.1742/" "pkg-info-0.5/" "paredit-23/" "monokai-theme-20150112.442/" "markdown-mode-20150121.1229/" "magit-readme.txt" "magit-20141228.1413/" "leuven-theme-20150114.703/" "js2-mode-readme.txt" "js2-mode-20140908.1242/" "ido-ubiquitous-20140904.1547/" "heroku-theme-readme.txt" "heroku-readme.txt" "heroku-20120629.1113/" "haskell-mode-20150202.632/" "guide-key-readme.txt" "guide-key-20140828.807/" "graphviz-dot-mode-20140303.1301/" "git-rebase-mode-20140928.1547/" "git-commit-mode-20141014.1634/" "ghci-completion-20140316.2331/" "ghc-imported-from-20141124.1132/" "ghc-20141130.1848/" "flycheck-readme.txt" "flycheck-20141204.1135/" "epl-0.7/" "emacs-color-theme-solarized/" "eldoc-eval-0.1/" "edit-server-readme.txt~" "edit-server-readme.txt" "diminish-20091203.1012/" "dash-2.8.0/" "company-readme.txt~" "company-readme.txt" "company-ghc-20141230.715/" "company-0.8.5/" "color-theme-sanityinc-solarized-readme.txt" "clojure-mode-3.0.0/" "clojure-cheatsheet-readme.txt" "cider-readme.txt~" "cider-readme.txt" "cider-20141116.1221/" "bind-key-readme.txt" "bind-key-20140620.1343/" "auto-complete-20141111.2346/" "archives/" "anti-zenburn-theme-20141113.1233/" "ada-ref-man-readme.txt" "ac-js2-20140809.2217/" "ac-cider-readme.txt" "2048-game-readme.txt" "../" "./")
+
+ ("/Users/chris/.emacs.d/elpa/projectile-20150216.843/" (21734 3085 0 0) "projectile.elc" "projectile.el" "projectile-pkg.el" "projectile-autoloads.el" "../" "./")
+
+ ("/Users/chris/Programming/chrome/" (21673 50763 0 0) "chrome-identity-demos/" "browser-extention-project/" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Documents/Personal/" (21541 32159 0 0) "Writings/" "Vacation/" "Unemployment Benefits/" "Taxes/" "SecureSafeRecoveryCode.pdf" "Photos/" "Morgan Stanley/" "Lists/" "Insurance/" "GTD/" "Apartment/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/exercism/haskell/bob/" (21724 52991 0 0) "README.md" "bob_test.hs" "bob.hs" "../" "./")
+
+ ("/Users/chris/Programming/haskell/typeclassopedia/" (21733 1008 0 0) "exercises.hs" "../" "./")
+
+ ("/Users/chris/exercism/haskell/sublist/" (21722 37741 0 0) "sublist_test.hs" "sublist.o" "sublist.hs" "sublist.hi" "README.md" "../" "./")
+
+ ("/Users/chris/exercism/haskell/leap/" (21722 34957 0 0) "README.md" "LeapYear.o" "leapyear.hs" "LeapYear.hi" "leap_test.o" "leap_test.hs" "leap_test.hi" "leap_test" "../" "./")
+
+ ("/Users/chris/exercism/haskell/rna-transcription/" (21722 34814 0 0) "rna-transcription_test.hs" "README.md" "dna.hs" "../" "./")
+
+ ("/Users/chris/Programming/clojure/zulip-bot/" (21722 32954 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "profiles.clj" "LICENSE" "doc/" ".lein-env" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/amzn-tracker/src/hackerati_interval_web_app/" (21605 1057 0 0) "views/" "util.clj" "scrape.clj" "schema.clj" "jdbc.clj" "dbutility.clj" "core.clj" "../" "./")
+
+ ("/Users/chris/Programming/clojure/amzn-tracker/src/" (21532 17502 0 0) "hackerati_interval_web_app/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/hackerati-interval-web-app/" (21604 53796 0 0) "test/" "target/" "src/" "resources/" "README.md" "project_notes.org~" "project_notes.org" "project_ideas.org~" "project_ideas.org" "project.clj~" "project.clj" "profiles.clj" "Procfile" "LICENSE" "doc/" ".secret" ".nrepl-port" ".lein-repl-history" ".lein-env" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" "#scratch2#" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cryptopals/.git/" (21704 8294 0 0) "refs/" "ORIG_HEAD" "objects/" "logs/" "info/" "index" "hooks/" "HEAD" "description" "config" "COMMIT_EDITMSG" "../" "./")
+
+ ("/Users/chris/Programming/haskell/parsing/" (21722 28753 0 0) "bencoding.hs" "../" "./")
+
+ ("/Users/chris/Programming/clojure/zulip-bot/src/zulip_bot/" (21721 6305 0 0) "core.clj" "../" "./")
+
+ ("/Users/chris/Programming/haskell/turtle-demo/" (21720 56394 0 0) "cabal.sandbox.config" ".cabal-sandbox/" "../" "./")
+
+ ("/Users/chris/exercism/haskell/gigasecond/" (21719 57256 0 0) "README.md" "gigasecond_test.hs" "gigasecond.hs" "../" "./")
+
+ ("/Users/chris/exercism/haskell/" (21719 57312 0 0) "sublist/" "rna-transcription/" "leap/" "grains/" "gigasecond/" "bob/" "accumulate/" "../" "./")
+
+ ("/Users/chris/exercism/haskell/grains/" (21719 55898 0 0) "README.md" "grains_test.hs" "grains.hs" "../" "./")
+
+ ("/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch5/" (21717 22911 0 0) "01.o" "01.hs" "01.hi" "01" "../" "./")
+
+ ("/Users/chris/exercism/haskell/accumulate/" (21718 30588 0 0) "README.md" "accumulate_test.hs" "accumulate.hs" "../" "./")
+
+ ("/Users/chris/exercism/" (21718 28072 0 0) "swift/" "scala/" "ruby/" "python/" "plsql/" "perl5/" "ocaml/" "objective-c/" "lua/" "lisp/" "javascript/" "java/" "haskell/" "go/" "fsharp/" "erlang/" "elixir/" "csharp/" "cpp/" "coffeescript/" "clojure/" "../" "./")
+
+ ("/Users/chris/Programming/haskell/learn-yourself-a-scheme/" (21717 20934 0 0) "ch5/" "ch4/" "ch3/" "ch2/" "cabal.sandbox.config" ".cabal-sandbox/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/recursion-problems/" (21717 17297 0 0) "scratch.clj" "../" "./")
+
+ ("/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch3/" (21717 18065 0 0) "01.o" "01.hs" "01.hi" "01" "../" "./")
+
+ ("/Users/chris/Programming/haskell/learn-yourself-a-scheme/ch2/" (21715 52419 0 0) "hi" "5.o" "5.hs" "5.hi" "5" "4.o" "4.hs" "4.hi" "3.o" "3.hs" "3.hi" "2.o" "2.hs" "2.hi" "1_2.o" "1_2.hs" "1_2.hi" "1_2" "1_1.hs" "../" "./")
+
+ ("/Users/chris/Programming/clojure/zulip-bot/src/" (21714 47843 0 0) "zulip_bot/" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/haskell/99_questions/" (21713 17895 0 0) "q18.hs" "q17.hs" "q16.hs" "q15.hs" "q14.hs" "q13.hs" "q12.hs" "09.hs" "08.hs" "07.hs" "06.hs" "05.hs" "04.hs" "03.hs" "02.hs" "01.o" "01.hs" "01.hi" ".DS_Store" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cljly/" (21711 40094 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-env" ".gitignore" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cljly/src/cljly/" (21707 59504 0 0) "db.clj" "core.clj" "../" "./")
+
+ ("/Users/chris/Programming/haskell/pearls/" (21710 44335 0 0) "02.hs" "01.hs" "../" "./")
+
+ ("/Users/chris/Programming/haskell/Real World Haskell/" (21362 50135 0 0) "ch16/" "ch11/" "ch10/" "ch09/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/cljly/src/" (21707 46578 0 0) "cljly/" "../" "./")
+
+ ("/Users/chris/hadean-lands/" (21705 42625 0 0) "puzzles.org" "graph.png" "graph.dot" "../" "./")
+
+ ("/Users/chris/Programming/clojure/irc-server/src/" (21703 49469 0 0) "irc_server/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/game-of-life-cljs/src/game_of_life_cljs/" (21702 30899 0 0) "core.cljs" "../" "./")
+
+ ("/Users/chris/Programming/clojure/crack-the-coding-interview/src/ctci/" (21701 23673 0 0) "sort.clj" "search.clj" "graph.clj" "../" "./")
+
+ ("/Users/chris/Programming/clojure/crack-the-coding-interview/src/" (21699 56364 0 0) "ctci/" "../" "./")
+
+ ("/Users/chris/Programming/clojure/game-of-life/src/clj/game_of_life/" (21697 27224 0 0) "core.clj" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

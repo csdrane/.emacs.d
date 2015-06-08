@@ -1,0 +1,625 @@
+% Created 2014-10-14 Tue 11:58
+\documentclass[11pt]{article}
+\usepackage[AUTO]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{GTD Review}
+\author{Chris}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.9.3f}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+\section{Next Actions, Unemployment Related \textbf{:unemployment:}}
+\label{sec-1}
+\subsection{\textbf{TODO} Message project managers on LinkedIn for coffee \textbf{:jobhunt:networking:}}
+\label{sec-1-1}
+
+   \texttt{SCHEDULED:} \textit{2014-10-15 Wed}
+
+\begin{itemize}
+\item 10/13/2014 messaged 2 people found on LinkedIn
+\begin{itemize}
+\item Searched LinkedIn with following query:
+\begin{itemize}
+\item NYC
+\item Query ``Project Manager''
+\item Viewed through 3 pages of results
+\end{itemize}
+\end{itemize}
+\item 10/9/2014 messaged 2 people via LinkedIn
+\begin{itemize}
+\item Searched LinkedIn with following query:
+\begin{itemize}
+\item 1st and 2nd Connections
+\item NYC
+\item IT, Internet, and Computer Software industries
+\item Query ``Project Manager''
+\item Viewed through page 3 of results
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsection{\textbf{WAIT} Email startups asking about interships [75\%] \textbf{:jobhunt:}}
+\label{sec-1-2}
+
+\texttt{SCHEDULED:} \textit{2014-10-15 Wed}
+
+\begin{itemize}
+\item State ``WAIT''       from ``TODO''       \textit{2014-10-12 Sun 09:53} \\
+Waiting to hear back from companies before emailing additional ones.
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 18:42}
+\item $\boxtimes$ Quirky
+\begin{itemize}
+\item Response received. Mentioned summer internship program.
+\end{itemize}
+\item $\boxtimes$ Bonobos
+\begin{itemize}
+\item Response received. Mentioned summer internship program and that right now looking for experienced hires in engineering.
+\end{itemize}
+\item $\boxtimes$ Bitly
+\item $\boxtimes$ Flavorpill
+\item $\boxtimes$ OK Cupid
+\item $\boxtimes$ Kickstarter
+\item $\Box$ Foursquare
+\item $\Box$ Meetup
+\end{itemize}
+\subsection{\textbf{TODO} Post career question online [0\%] \textbf{:jobhunt:}}
+\label{sec-1-3}
+
+   \texttt{SCHEDULED:} \textit{2014-10-15 Wed}
+
+\begin{itemize}
+\item $\Box$ Hacker News
+\item $\Box$ MetaFilter
+\item $\Box$ Quora
+\end{itemize}
+\subsection{\textbf{TODO} See what other Quirky jobs I might want to apply for}
+\label{sec-1-4}
+
+   \texttt{SCHEDULED:} \textit{2014-10-14 Tue}
+
+   \textit{2014-10-10 Fri}
+   \href{file:///Users/christopherdrane/Documents/Personal/GTD/GTD Review.org}{Apply for jobs with Quirky}
+\subsection{\textbf{TODO} Look again into Dev Bootcamp}
+\label{sec-1-5}
+
+   \texttt{SCHEDULED:} \textit{2014-10-18 Sat}
+
+   \textit{2014-10-11 Sat}
+   \href{file:///Users/christopherdrane/Documents/Personal/GTD/GTD Review.org}{GTD Weekly Review}
+\section{Next Actions, Personal \textbf{:personal:}}
+\label{sec-2}
+\subsection{\textbf{DONE} Christmas airfare \textbf{:buy:}}
+\label{sec-2-1}
+
+\texttt{SCHEDULED:} \textit{2014-10-12 Sun}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 18:02}
+\end{itemize}
+\begin{itemize}
+\item State ``TODO''       from ``WAIT''       \textit{2014-10-12 Sun 17:34}
+\item State ``WAIT''       from ``TODO''       \textit{2014-10-12 Sun 15:46} \\
+Waiting for Jen to respond about Jan 3 wedding.
+\end{itemize}
+\subsection{\textbf{TODO} Clean cabinets above stove \textbf{:cleaning:home:}}
+\label{sec-2-2}
+
+   \texttt{SCHEDULED:} \textit{2014-10-19 Sun}
+\subsection{\textbf{TODO} Pick up dry cleaning}
+\label{sec-2-3}
+
+   \texttt{SCHEDULED:} \textit{2014-10-18 Sat}
+\subsection{\textbf{DONE} Cash Jen's check}
+\label{sec-2-4}
+
+   \texttt{SCHEDULED:} \textit{2014-10-12 Sun}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 08:55}
+\end{itemize}
+\subsection{\textbf{DONE} Grocery shopping [11/11] \textbf{:neighborhood:groceries:}}
+\label{sec-2-5}
+
+   \texttt{SCHEDULED:} \textit{2014-10-12 Sun}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 15:18}
+\item Use EBT
+\item $\boxtimes$ Apples
+\item $\boxtimes$ Potato
+\item $\boxtimes$ Salad
+\begin{itemize}
+\item $\boxtimes$ Greens
+\item $\boxtimes$ Fetac
+\item $\boxtimes$ Olives
+\end{itemize}
+\item $\boxtimes$ Butter
+\item $\boxtimes$ Eggs
+\item $\boxtimes$ Milk
+\item $\boxtimes$ Cheese
+\item $\boxtimes$ Bacon
+\item $\boxtimes$ Almond Butter
+\item $\boxtimes$ Peanut Butter
+\item $\boxtimes$ Chocolate
+\end{itemize}
+\subsection{\textbf{WAIT} Order more starch \textbf{:buy:}}
+\label{sec-2-6}
+
+\texttt{SCHEDULED:} \textit{2014-10-19 Sun}
+
+\begin{itemize}
+\item State ``WAIT''       from ``TODO''       \textit{2014-10-12 Sun 09:33} \\
+Decided to wait until my stock runs out to see if I feel differently from how I do now.
+ \textit{2014-10-11 Sat}
+ \href{file:///Users/christopherdrane/Documents/Personal/GTD/GTD Review.org}{Update work search log}
+\item Mix it up this time. Maybe some  plantain flour?
+\end{itemize}
+\section{Next Actions, Jen \textbf{:jen:}}
+\label{sec-3}
+
+\begin{itemize}
+\item Buy her something using foodstamps, e.g. icecream
+\end{itemize}
+\section{Next Actions, Other}
+\label{sec-4}
+\subsection{\textbf{TODO} Look into YMCA financial assistance}
+\label{sec-4-1}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue}
+\subsection{\textbf{TODO} Check out key chord and Prelude's default implementation of it. (e.g. jj and JJ) \textbf{:downtime:unimportant:emacs:}}
+\label{sec-4-2}
+
+\texttt{SCHEDULED:} \textit{2014-10-18 Sat}
+
+\textit{2014-10-10 Fri}
+\subsection{\textbf{DONE} Make search wrap from bottom to top instead of having to hit C-r? \textbf{:unimportant:}:downtime:emacs:}
+\label{sec-4-3}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 16:40}
+\item Just hit C-s twice
+\end{itemize}
+\textit{2014-10-11 Sat}
+\subsection{\textbf{DONE} Check out TimeStats for Chrome \textbf{:unimportant:downtime:}}
+\label{sec-4-4}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 16:48}
+\end{itemize}
+\textit{2014-10-11 Sat}
+\subsection{\textbf{DONE} Fix capture templates \textbf{:unimportant:downtime:}:emacs:}
+\label{sec-4-5}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 19:17}
+\end{itemize}
+\textit{2014-10-11 Sat}
+\section{Waiting For}
+\label{sec-5}
+\subsection{Vibram check (6/4)}
+\label{sec-5-1}
+
+\begin{itemize}
+\item Final approval hearing scheduled for October
+\end{itemize}
+\subsection{Jen book appointment with Dr. Fidler (9/12)}
+\label{sec-5-2}
+\subsection{September Moss invoice}
+\label{sec-5-3}
+\subsection{DogVacay (10/10)}
+\label{sec-5-4}
+
+\begin{itemize}
+\item Management supposedly to call
+\end{itemize}
+\subsection{Jerry / DogVacay (10/10) -- said will call to discuss dog issues}
+\label{sec-5-5}
+
+\begin{itemize}
+\item Also to pick up bowls
+\item \href{http://ask.metafilter.com/269775/Bad-dog}{http://ask.metafilter.com/269775/Bad-dog}
+\end{itemize}
+\subsection{Christmas airfare check (10/12)}
+\label{sec-5-6}
+
+     
+\section{Someday / Maybe}
+\label{sec-6}
+\subsection{Climbing \textbf{:climbing:}}
+\label{sec-6-1}
+\subsubsection{Join Appalachian Mountain Club (AMC); sign up for climbing class in Dec/Jan}
+\label{sec-6-1-1}
+\subsubsection{Find climbing partners on ClimbFind / Facebook}
+\label{sec-6-1-2}
+\subsubsection{Text Dave Hanold about climbing}
+\label{sec-6-1-3}
+\subsubsection{Cliffs at LIC}
+\label{sec-6-1-4}
+\subsubsection{Climb outdoors}
+\label{sec-6-1-5}
+\subsubsection{Take more classes at BKB}
+\label{sec-6-1-6}
+\subsection{Home}
+\label{sec-6-2}
+\subsubsection{Picture frame for Alice \& Wonderland thing}
+\label{sec-6-2-1}
+\subsubsection{Hang artwork}
+\label{sec-6-2-2}
+\subsubsection{Clean bird shit off bedroom window screen}
+\label{sec-6-2-3}
+\subsubsection{New tree…Ficus? (Jen suggested floor plants for living}
+\label{sec-6-2-4}
+\subsubsection{Research cheap healthy recipes to eat for lunch/dinner}
+\label{sec-6-2-5}
+\subsubsection{Look into filing insurance claim with DogVacay over wood floors}
+\label{sec-6-2-6}
+
+   \textit{2014-10-11 Sat}
+   \href{file:///Users/christopherdrane/Documents/Personal/GTD/GTD Review.org}{GTD Weekly Review}
+\subsection{Personal}
+\label{sec-6-3}
+\subsubsection{Repair/sell watch}
+\label{sec-6-3-1}
+\subsubsection{Put lenses in glasses}
+\label{sec-6-3-2}
+\subsubsection{Use REI Gift Card (Fitbit? Climbing pants?)}
+\label{sec-6-3-3}
+\subsubsection{Find tan corduroys}
+\label{sec-6-3-4}
+\subsubsection{Board games with Taylor}
+\label{sec-6-3-5}
+
+\begin{itemize}
+\item Need someone else to round out the group
+\begin{itemize}
+\item Alan maybe?
+\end{itemize}
+\end{itemize}
+\subsubsection{Import Google Keep notes to Org}
+\label{sec-6-3-6}
+
+\textit{2014-10-11 Sat}
+\subsection{Projects}
+\label{sec-6-4}
+
+\begin{enumerate}
+\item Exercism / Smash The Stack / Micro Corruption / Hacking Lab / CryptoPals / 
+     4Clojure / HackerRank / Project Euler
+\item Health Care business idea
+\item Android HTTP Relay
+\item Write reg-ex parser
+\item Rip salary data from salar.ly
+\item Ubiquitous message boards (for your building, your block, your neighborhood, etc)
+\item Teach? (Brainery, Skill Share, General Assembly)
+\end{enumerate}
+\subsection{Download \& watch}
+\label{sec-6-5}
+
+\begin{enumerate}
+\item Jodorosky’s Dune (2013)
+\item Red Dawn
+\end{enumerate}
+\subsection{Read}
+\label{sec-6-6}
+
+\begin{enumerate}
+\item Public Burning, and other books on “20th Century’s Greatest Hits”
+\item Getting Things Done (again)
+\item Why Don’t Zebras Get Ulcers?
+\item Alan Watts
+\begin{itemize}
+\item Lectures listened to
+\begin{itemize}
+\item Introduction to Meditation
+\item Money, Guilt, and the Machine
+\item Zen Bones
+\item Zen Tales
+\end{itemize}
+\end{itemize}
+\item Org Mode manual
+\item Operating Systems: Three Easy Pieces
+\begin{itemize}
+\item \href{http://pages.cs.wisc.edu/~remzi/OSTEP/}{http://pages.cs.wisc.edu/\~remzi/OSTEP/}
+\end{itemize}
+\end{enumerate}
+\subsection{Things to get rid of}
+\label{sec-6-7}
+
+\begin{enumerate}
+\item Sell PS3 – post add on Craigslist again
+\item Get rid of old clothes in suitcase (Drop at bin next to flower shop. 
+     Alternatively: Salvation Army, Good Will, or curb side; difficult to drop off 
+     and Beacon’s Closet doesn’t want. Also don’t want to throw out.)
+\item Ankle brace \& crutches (curb side)
+\end{enumerate}
+\subsection{Things to buy}
+\label{sec-6-8}
+
+\begin{enumerate}
+\item Dry cleaning bag
+\item Fountain pen
+\end{enumerate}
+\subsection{Blog post ideas}
+\label{sec-6-9}
+
+\begin{enumerate}
+\item The true meaning of Luddism
+\end{enumerate}
+\section{Business Ideas \textbf{:ideas:}}
+\label{sec-7}
+\subsection{Business idea: turn key weddings}
+\label{sec-7-1}
+
+\begin{itemize}
+\item Pick the experience you want!
+\begin{itemize}
+\item Catholic traditional, rustic chic, etc\ldots{}
+\end{itemize}
+\end{itemize}
+\subsection{Business card for sparestub--looks like concert ticket}
+\label{sec-7-2}
+
+\begin{itemize}
+\item Justin recommends checking out Piggyback Letterpress
+\item Jen thinks she might know someone too
+\begin{itemize}
+\item Said she would forward to Nick?
+\end{itemize}
+\end{itemize}
+\section{Notes \textbf{:notes:}}
+\label{sec-8}
+\subsection{Career}
+\label{sec-8-1}
+\subsubsection{Real estate project management}
+\label{sec-8-1-1}
+
+\begin{itemize}
+\item What's the difference between this and property management?
+\item The bios and the people behind them look really boring
+\item I think I'm looking more for project management at the business level, rather than the property level
+\item It's the building stuff that seems really boring
+\begin{itemize}
+\item Drafting RFPs
+\item Reading and leveling bids
+\item Invoices
+\item Managing construction projects (you know what goes into that.)
+\end{itemize}
+\end{itemize}
+\subsubsection{Job / career feelings}
+\label{sec-8-1-2}
+
+Came across a NYTimes article \hyperref[http-www.nytimes.com-2014-10-14-us-web-era-trade-schools-feeding-a-need-for-code.html-assetType-3Dnyt_now-gwh-3DA572DC9B308EC2F4F8E17D6CF0CEFA6B-gwt-3Dpay-assetType-3Dnyt_now-_r-3D0]{link}] \hyperref[https-news.ycombinator.com-item-id-3D8452758]{HN}] on programming bootcamps. The piece caused a feeling of sadness in me. Maybe it hit a nerve with my contrarian side. In my mind, the best path through life is the one less taken. 
+
+The article talked about how popular these schools have become. 
+
+It quotes a seamstress:
+
+\begin{quote}
+“It’s a lot of hours, it’s exhausting, and each week I think I can’t do it anymore,” said Shakrah Yves, 31, who three months ago was working as a seamstress. “But each week I learn so much, and it’s so exciting to be able to build your own app.”
+\end{quote}
+
+I feel like I am repeating my ill-fated attempt to break into finance. I am competing against a bunch of also-rans. Further, I view the tech labor market today as fragile. Easy venture capital money is fueling a lot of startups that otherwise might not exist. I can't say when, but at some point this trend will reverse itself. Just like it did for the tech industry 14 years ago. 
+
+At the risk of sounding elitist: the people entering tech right now are the people that do not belong there. They are chasing what looks like an easily available job. Easy VC money. They aren't there because of an interest in technology.
+
+When the bubble pops, there's going to be a glut of people skilled in cobbling together code to make web apps, and little demand to do so. 
+
+[[file:~/clojure/hackerati-interval-web-app/test/hackerati_interval_web_app/schema_test.clj::(list%20{:url%20"http://foo.com"%20:description%20"Description%201"}))))][file:~/clojure/hackerati-interval-web-app/test/hackerati_interval_web_app/schema_test.clj::(list {:url "http://foo.com" :description "Description 1"}))))]]
+\subsection{Clojure libraries}
+\label{sec-8-2}
+
+\begin{itemize}
+\item Swiss Arrows
+\begin{itemize}
+\item \href{https://github.com/rplevy/swiss-arrows}{https://github.com/rplevy/swiss-arrows}
+\item The diamond arrow is particularly neat.
+    [[file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/schema.clj::(as->%20form][file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/schema.clj::(as-> form]]
+\end{itemize}
+\end{itemize}
+\subsection{Emacs}
+\label{sec-8-3}
+
+\begin{itemize}
+\item CIDER error text color
+\item Company mode (?) periodically freezing emacs
+\item Text color during query and replace
+\item Ibuffer search bug (see question I posted to stack exchange)
+\item Define stuck projects
+\item It shouldn't be possible to edit the text within a collapsed subtree
+\end{itemize}
+\subsection{Movies}
+\label{sec-8-4}
+\subsubsection{Gone Girl (2014)}
+\label{sec-8-4-1}
+
+\begin{itemize}
+\item Saw 10/13/2014 with Jen. Enjoyed this very much. Creepy movie. Very
+  entertaining.
+\end{itemize}
+\subsection{Restaurants}
+\label{sec-8-5}
+\subsubsection{Gorilla Coffee (Bergen)}
+\label{sec-8-5-1}
+
+\begin{itemize}
+\item really bad, but can serve as a substitute for working when Hungry Ghost is full
+\end{itemize}
+\subsubsection{Hoja Santa}
+\label{sec-8-5-2}
+
+\begin{itemize}
+\item with Lindsay, Jared, and Jen
+\item pretty good food, had a great time
+\end{itemize}
+\subsubsection{Prosperity Dumplings}
+\label{sec-8-5-3}
+
+\begin{itemize}
+\item with Nick
+\item pretty darn good and super cheap. nick got a meal for \$3.25
+\end{itemize}
+\section{Feelgood}
+\label{sec-9}
+\subsection{Kaaterskill falls}
+\label{sec-9-1}
+\subsection{George}
+\label{sec-9-2}
+\subsection{Hoja Santa with Jen, Lindsay and Jared}
+\label{sec-9-3}
+\section{Emails, Calls, And Texts \textbf{:email:}}
+\label{sec-10}
+\section{Habits \textbf{:habit:}}
+\label{sec-11}
+\subsection{\textbf{TODO} Take out garbage in the morning}
+\label{sec-11-1}
+
+\texttt{SCHEDULED:} \textit{2014-10-15 Wed .+1d}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-14 Tue 09:39}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 09:44}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 14:43}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 14:33}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-10 Fri 23:03}
+\end{itemize}
+\subsection{\textbf{TODO} Do dishes before bed}
+\label{sec-11-2}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue .+1d}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 21:06}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 23:08}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 22:55}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-10 Fri 23:03}
+\end{itemize}
+\subsection{\textbf{TODO} Nag Jen about foot exercises}
+\label{sec-11-3}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue .+1d}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 22:12}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 23:08}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 21:13}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-10 Fri 23:03}
+\end{itemize}
+\subsection{\textbf{TODO} Sweep under bed / clean floors}
+\label{sec-11-4}
+
+\texttt{SCHEDULED:} \textit{2014-10-19 Sun ++1w}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 11:21}
+\end{itemize}
+\subsection{\textbf{TODO} Do laundry}
+\label{sec-11-5}
+
+\texttt{SCHEDULED:} \textit{2014-10-18 Sat .+1w/2w}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 14:33}
+\end{itemize}
+\subsection{\textbf{TODO} Put away clean laundry}
+\label{sec-11-6}
+
+\texttt{SCHEDULED:} \textit{2014-10-19 Sun ++1w}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 23:55}
+\end{itemize}
+\subsection{\textbf{TODO} Update work search log}
+\label{sec-11-7}
+
+\texttt{SCHEDULED:} \textit{2014-10-17 Fri ++1w}
+
+\begin{itemize}
+\item New log is org file, saved with the others
+\item $\Box$ Add conversations with Taylor and Alan
+\end{itemize}
+\subsection{\textbf{TODO} GTD Weekly Review}
+\label{sec-11-8}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 18:05}
+\item $\Box$ Gmail inbox, @ACTION, and @WAITING
+\item $\Box$ Any.Do
+\item $\Box$ Google Keep notes
+\item $\Box$ Calendar, one week back, one week forward
+\item $\Box$ Capture file
+\item $\Box$ Mail on table / dresser
+\end{itemize}
+\texttt{SCHEDULED:} \textit{2014-10-17 Fri .+6d/8d}
+\subsection{\textbf{TODO} Go climbing}
+\label{sec-11-9}
+
+\texttt{SCHEDULED:} \textit{2014-10-15 Wed .+2d/4d}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-13 Mon 11:52}
+\end{itemize}
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-11 Sat 14:33}
+\end{itemize}
+\subsection{\textbf{TODO} Call parents}
+\label{sec-11-10}
+
+\texttt{SCHEDULED:} \textit{2014-10-19 Sun .+1w/2w}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 15:45}
+\end{itemize}
+\subsection{\textbf{TODO} Reach back out to old Villanova friends}
+\label{sec-11-11}
+
+\texttt{SCHEDULED:} \textit{2014-10-14 Tue +2d}
+
+\begin{itemize}
+\item State ``DONE''       from ``TODO''       \textit{2014-10-12 Sun 09:03}
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{llll}
+ Person         &  In NYC?   &  Contacted?  &  Reason To / Not To Contact                   \\
+\hline
+ Ryan Kielty    &  Yes       &  10/12       &  Couldn't hurt                                \\
+ Chris Tedesco  &  Yes       &              &  Couldn't hurt                                \\
+ Brian Kneis    &  No?       &              &  Couldn't hurt                                \\
+ Mike Bacci     &  No        &              &  Reached out not too long ago                 \\
+ Dan Jago       &  No (NJ)?  &              &  Couldn't hurt                                \\
+ Jenna          &  No (NJ)   &              &  Couldn't hurt                                \\
+ Emily          &  Yes       &              &  Could be weird but couldn't hurt ultimately  \\
+ Drew           &  Yes       &              &  Couldn't hurt but likely awkward             \\
+\end{tabular}
+\end{center}
+
+\end{document}

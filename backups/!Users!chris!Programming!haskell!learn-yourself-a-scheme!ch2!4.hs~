@@ -1,0 +1,125 @@
+module Main where
+import Control.Monad
+import Data.Char
+import Numeric
+import Text.ParserCombinators.Parsec hiding (spaces)
+import System.Environment
+
+data LispVal = Atom String
+             | Character Char
+             | List [LispVal]
+             | DottedList [LispVal] LispVal
+             | Number Integer
+             | String String
+             | Bool Bool
+             deriving (Show)
+
+parseAtom :: Parser LispVal
+parseAtom = do 
+  first <- letter <|> symbol
+  rest <- many (letter <|> digit <|> symbol)
+  let atom = first:rest
+  return $ case atom of 
+    "#t" -> Bool True
+    "#f" -> Bool False
+    _    -> Atom atom
+
+parseChar :: Parser LispVal
+parseChar = do
+  prefix <- string "#\\"
+  remainder <- parseWord <|> parseCharRem <|> parseCharNil
+  return remainder
+
+parseWord :: Parser LispVal
+parseWord = do
+  word <- string "space" <|> string "newline"
+  return $ (Character . p) word
+  where
+    p w 
+      | w == "space" = ' '
+      | w == "newline" = '\n'
+
+parseCharRem :: Parser LispVal
+parseCharRem = do
+  rem <- letter <|> char '('
+  return $ (Character . p) rem
+  where 
+    p x
+      | isAlpha x = x
+      | x == '(' = '('
+      | otherwise = ' '
+    stringify x = [x]
+
+parseCharNil :: Parser LispVal
+parseCharNil = do
+  rem <- notFollowedBy alphaNum
+  return $ Character ' '
+
+parseHex :: Parser LispVal
+parseHex = do
+  prefix <- try $ string "#x"
+  digits <- (many1 . oneOf) "1234567890abcdefABCDEF"
+  return $ (Number . fst . head . readHex) digits
+
+parseOct :: Parser LispVal
+parseOct  = do
+  prefix <- try $ string "#o"
+  digits <- (many1 . oneOf) "12345678"
+  return $ (Number . fst . head . readOct) digits
+
+parseBin :: Parser LispVal
+parseBin = do
+  prefix <- try $ string "#b"
+  digits <- (many1 . oneOf) "01"
+  return $ (Number . fst . head . readBin) digits
+  where 
+    readBin = readInt 2 isBinDigit digitToInt
+    isBinDigit x
+      | (x == '0') || (x == '1') = True
+      | otherwise = False
+
+parseDec :: Parser LispVal
+parseDec = do
+  prefix <- try $ string "#d"
+  digits <- many1 digit
+  return $ (Number . read) digits
+  
+parseNumber :: Parser LispVal
+parseNumber = parseHex <|> parseOct <|> parseBin <|> parseDec
+
+parseSafeChar :: Parser String
+parseSafeChar = (escapedChars <|> many1 (noneOf "\""))
+  where
+    escapedChars = choice $ map string ["\\\"", "\n", "\r", "\t", "\\"]
+
+parseEscapedQuote :: Parser String
+parseEscapedQuote = string "\\\""
+
+parseString :: Parser LispVal
+parseString = do
+  char '"'
+  x <- many parseSafeChar
+  char '"'
+  return $ (String . concat) x
+
+symbol :: Parser Char
+symbol = oneOf "!$%&|*+-/:<=>?@^_~"
+
+spaces :: Parser ()
+spaces = skipMany1 space
+
+parseExpr :: Parser LispVal
+parseExpr = try parseAtom
+            <|> try parseNumber
+            <|> try parseString
+
+
+readExpr :: String -> String
+readExpr input = case parse parseExpr "lisp" input of
+  Left err -> "No match: " ++ show err
+  Right val -> "Found value: " ++ show val
+
+main :: IO ()
+main = do
+  args <- getArgs
+  putStrLn (readExpr (args !! 0))

@@ -1,0 +1,17 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   LICENSE
+#	new file:   README.md
+#	new file:   project.clj
+#	new file:   resources/public/css/style.css
+#	new file:   resources/public/index.html
+#	new file:   resources/public/js/compiled/game_of_life_cljs.js
+#	new file:   src/game_of_life_cljs/core.cljs
+#

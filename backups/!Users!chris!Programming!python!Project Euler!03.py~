@@ -1,0 +1,10 @@
+from math import sqrt
+
+def sieve(n):
+	bound = sqrt(n)
+	p = 2
+	range_ = set(range(2, bound)))
+	while p < bound:
+		map(range_.discard, filter(lambda x: x % p == 0))
+		p += 1
+	return range_ 

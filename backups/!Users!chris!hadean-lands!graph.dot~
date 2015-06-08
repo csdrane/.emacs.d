@@ -1,0 +1,8 @@
+digraph {
+  elemental_fire -> sublime_synthesis;
+  orichalcum -> viridigris;
+  invoke_dragon -> great_marriage;
+  marchers_location -> great_marriage;
+  four_elements -> great_marriage;
+  
+}

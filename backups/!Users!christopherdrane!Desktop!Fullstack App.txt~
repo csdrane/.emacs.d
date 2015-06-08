@@ -1,0 +1,33 @@
+
+LinkedIn URL
+https://www.linkedin.com/profile/view?id=14105013&trk=spm_pic
+
+GitHub URL (Or any other source control used)
+https://github.com/prunes
+
+Any other links we should look at? Feel free to explain.
+
+Below is my twitter, blog, and personal website. The blog runs Word Press. I designed the theme. chrisdrane.com is written in vanilla html. I haven't updated any of these in a while, but they should give you a good sense of my personality.
+
+https://twitter.com/dogwillhunting
+http://blog.chrisdrane.com
+http://http://chrisdrane.com
+
+Following are two web apps that I've written. I wrote the apps were writen in the fall of 2014 and 2013 respectively. 
+
+https://amzn-scrape.herokuapp.com
+
+This app takes links to products on Amazon. It then scrapes their prices each day and tracks and charts how prices change over time.
+
+I wrote the backend to this app in Clojure. It uses a MySQL database. The frontend is bootstrap + x-editable, dygraph for charting, and a bit of jQuery. 
+
+http://cobff.chrisdrane.com
+
+This app was inspired by an investing message board that I used to post on. Investment ideas were posted to their own threads in a structured format. This allowed me to write a webscraper that navigated through the forum history extracting investment ideas. The app then pulled the corresponding Yahoo stock price data. This data was saved to a MySQL database that tracked stock performance and who posted the idea. The code for this is very sloppy, and it reflects my desire to get the project over with as quickly as possible. I do not have this code on my Github for this reason. I can make it available upon request, however. The MySQL database is ~100 MB. The scraping process was too resource intensive to do on my DreamHost account. Instead I had to scrape on my local machine and then upload the database to the remote server.  
+
+What have you tried so far in learning to code? 
+
+See above under "any other links" for specific coding projects that I have worked on. 
+
+More broadly, I have experience with Clojure and Python. I can hack my way through JavaScript but try to rely as much as I can on what I find via Google + preexisting packages. I have experience working with jQuery. I understand HTML and the higher-level CSS concepts (I tend to trip over the finer points of CSS syntax). I studied Haskell for a few weeks before I lost interest. I also have some familiarity with C and, to a lesser extent, C++. 
+

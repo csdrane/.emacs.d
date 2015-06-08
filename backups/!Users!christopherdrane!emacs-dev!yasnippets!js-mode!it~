@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: it
+# key: it
+# --
+
+it('${1:description}', function(${2:args}) {
+  $0
+});

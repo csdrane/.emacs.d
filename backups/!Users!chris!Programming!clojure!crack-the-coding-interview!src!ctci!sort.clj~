@@ -1,0 +1,29 @@
+(ns ctci.search)
+
+(defn merge-sort [x]
+  (letfn [(merge [left right]
+            (loop [left left
+                   right right
+                   result []]
+              (cond
+               (not (or (> (count left) 0)
+                        (> (count right) 0))) result
+               (and (> (count left) 0)
+                    (> (count right) 0)) (if (<= (first left)
+                                                 (first right))
+                    (recur (rest left) right (conj result (first left)))
+                    (recur left (rest right) (conj result (first right))))
+               (> (count left) 0) (recur (rest left) right (conj result (first left)))
+               (> (count right) 0) (recur left (rest right) (conj result (first right)))
+               :else (println "Error has occurred!"))))]
+    (if (< (count x) 2)
+      x
+      (let [middle (/ (count x) 2)
+            left (take middle x)
+            right (drop middle x)
+            new-left (merge-sort left)
+            new-right (merge-sort right)
+            result (merge new-left new-right)]
+        result))))
+
+

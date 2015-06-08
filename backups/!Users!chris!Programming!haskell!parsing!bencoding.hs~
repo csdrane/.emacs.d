@@ -1,0 +1,138 @@
+module Parser where
+
+import Prelude hiding (or, take)
+import qualified Prelude
+
+import Control.Applicative (Applicative(..))
+import qualified Control.Applicative as A
+import Control.Monad (ap)
+import Data.Char
+
+newtype Parser a = Parser { runParser :: String -> Maybe (a, String) }
+
+instance Functor Parser where
+    fmap f p = Parser $ \input ->
+        case runParser p input of
+            Nothing -> Nothing
+            Just (a, rest) -> Just (f a, rest)
+
+instance Applicative Parser where
+    pure = return
+    (<*>) = ap
+
+instance Monad Parser where
+    return a = Parser $ \input -> Just (a, input)
+    p >>= f = Parser $ \input ->
+        case runParser p input of
+            Nothing -> Nothing
+            Just (result, rest) ->
+                 let newParser = f result
+                 in runParser newParser rest
+
+item :: Parser Char
+item = Parser snagFirst
+  where
+    snagFirst :: String -> Maybe (Char, String)
+    snagFirst [] = Nothing
+    snagFirst (c:cs) = Just (c, cs)
+
+satisfies :: (Char -> Bool) -> Parser Char
+satisfies p = Parser snagIf
+  where
+    snagIf :: String -> Maybe (Char, String)
+    snagIf [] = Nothing
+    snagIf (c:cs) = if p c then Just (c, cs) else Nothing
+
+or :: Parser a -> Parser a -> Parser a
+or pa pb = Parser $ \input ->
+    case runParser pa input of
+        Nothing -> runParser pb input
+        Just (a, rest) -> Just (a, rest)
+
+digit :: Parser Int
+digit = fmap (read . (: [])) (satisfies isNumber)
+
+twoDigits :: Parser (Int, Int)
+twoDigits = do
+    d1 <- digit
+    d2 <- digit
+    return (d1, d2)
+
+twoDigitsDesugared = 
+    -- p :: Parser Int
+    -- f :: Int -> Parser (Int, Int)
+    -- p >>= f :: Parser (Int, Int)
+    digit >>= (\d1 ->
+        digit >>= (\d2 ->
+            return (d1, d2)))
+
+char :: Char -> Parser Char
+char c = satisfies (== c)
+
+string :: String -> Parser String
+string [] = return []
+string (c:cs) = do
+    char c
+    string cs
+    return (c:cs)
+
+-- oneOf :: String -> Parser Char
+
+atLeastOne :: Parser a -> Parser [a]
+atLeastOne p = do
+    a <- p
+    as <- many p
+    return (a:as)
+
+many :: Parser a -> Parser [a]
+many p = atLeastOne p `or` return []
+
+bigEndian :: [Int] -> Int
+bigEndian = foldl (\acc d -> acc * 10 + d) 0
+
+int :: Parser Int
+int = fmap bigEndian (many digit)
+
+data B = I Int
+       | S String
+       | L [B]
+       | D [(String, B)]
+       deriving (Show, Eq)
+
+b :: Parser B
+b = (fmap I bInt) `or` (fmap S bStr) `or` (fmap L bLst) `or` (fmap D bDict)
+
+bInt :: Parser Int
+bInt = do
+    char 'i'
+    num <- int
+    char 'e'
+    return num
+
+bStr :: Parser String
+bStr = do
+    num <- int
+    char ':'
+    take num
+
+bLst :: Parser [B]
+bLst = do
+    char 'l'
+    bs <- many b
+    char 'e'
+    return bs
+
+bDict :: Parser [(String, B)]
+bDict = do
+    char 'd'
+    let kv = A.liftA2 (,) bStr b
+    kvs <- many kv
+    char 'e'
+    return kvs
+
+take :: Int -> Parser String
+take 0 = return []
+take n = do
+    c <- item
+    cs <- take (n - 1)
+    return (c:cs)

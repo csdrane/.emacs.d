@@ -1,0 +1,2 @@
+myMax :: Ord a => [a] -> a
+myMax [x] = x

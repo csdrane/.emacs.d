@@ -1,0 +1,16 @@
+{
+  "name": "Identity API Sample",
+  "version": "3.1.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "29",
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "permissions": ["identity", "https://accounts.google.com/*", "https://www.googleapis.com/*"],
+  "oauth2": {
+  "client_id": "710445922832-sp0nlkgev3vdcukmin6j6a7b32t93m6c.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/plus.login"]
+  }
+}

@@ -1,0 +1,18 @@
+module SumOfMultiples (sumOfMultiplesDefault, sumOfMultiples) where
+
+isMult :: Int -> Int -> Bool
+isMult divisand divisor = divisand `mod` divisor == 0
+
+getMultsN :: Int -> Int -> [Int]
+getMultsN divisand divisor = 
+  filter (\x -> isMult x divisor) [3..(divisand - 1)]
+
+getMultsList :: Int -> [Int] -> [Int]
+getMultsList divisand divisors = 
+  filter (\x -> or (map (isMult x) divisors)) [1..(divisand - 1)]
+
+sumOfMultiplesDefault :: Int -> Int
+sumOfMultiplesDefault = sumOfMultiples [3, 5]
+
+sumOfMultiples :: [Int] -> Int -> Int
+sumOfMultiples l i = sum $ getMultsList i l 

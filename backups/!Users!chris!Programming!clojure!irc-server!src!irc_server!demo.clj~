@@ -1,0 +1,14 @@
+(ns irc-server.demo
+  (:refer-clojure :exclude [send])
+  (:require [irc-server.connection :refer [server-coordinator new-connect]]
+            [irc-server.logging :as logging]
+            [irc-server.socket :refer [receive send socket-map]]
+            [irc-server.state :refer [->State]]
+            [clojure.java.io :as io]
+            [clojure.core.async :refer [>! <! chan go]]
+            [taoensso.timbre :as timbre])
+  (:import [java.net InetAddress ServerSocket SocketException]))
+
+(defn -main []
+  (let [max-connections 10]
+    ))

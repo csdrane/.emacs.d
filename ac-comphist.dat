@@ -1,0 +1,6 @@
+((("console" .
+   [2 0 0 0 0 0 0])
+  ("getEmailDateSent" .
+   [0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
+  ("newestEmail" .
+   [2 0 0 0 0 0 0 0 0 0 0])))

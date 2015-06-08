@@ -1,0 +1,7 @@
+module SumOfMultiples (sumOfMultiplesDefault) where
+
+isMult :: Int -> Int -> Bool
+isMult divisand divisor = divisand `mod` divisor == 0
+
+sumOfMultiplesDefault :: Int -> Int
+sumOfMultiplesDefault 1 = 0

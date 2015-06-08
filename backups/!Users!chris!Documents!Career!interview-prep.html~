@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Interview prep</title>
+<!-- 2015-03-11 Wed 14:47 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Chris Drane" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> <style type="text/css">body{ max-width: 55%; margin: 0 auto;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Interview prep</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Algorithms</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Binary Search</a></li>
+<li><a href="#sec-1-2">1.2. Sorting</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. Mergesort</a></li>
+<li><a href="#sec-1-2-2">1.2.2. Quicksort</a></li>
+<li><a href="#sec-1-2-3">1.2.3. Radix sort</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3. Hash Table Algorithms</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1. Collision Resolution</a></li>
+<li><a href="#sec-1-3-2">1.3.2. Hashing Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Data Structures</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Binary Search Tree</a></li>
+<li><a href="#sec-2-2">2.2. Hash Table</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. Why should hash functions use a prime number modulus?</a></li>
+<li><a href="#sec-2-2-2">2.2.2. Algorithms</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Linked List</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1. How do you find a cycle in a singly-linked list?</a></li>
+<li><a href="#sec-2-3-2">2.3.2. How do you delete a node in a singly-linked list when you are given <b>only</b> the variable pointing to that node?</a></li>
+<li><a href="#sec-2-3-3">2.3.3. How do you reverse a singly-linked list?</a></li>
+<li><a href="#sec-2-3-4">2.3.4. How do you find the kth element of a singly-linked list?</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-4">2.4. Queue</a></li>
+<li><a href="#sec-2-5">2.5. Trie</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Classic Questions</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Ransom Note</a></li>
+<li><a href="#sec-3-2">3.2. Reverse the words in a string</a></li>
+<li><a href="#sec-3-3">3.3. Coin Puzzle</a></li>
+<li><a href="#sec-3-4">3.4. Write a function to convert a string into an integer</a></li>
+<li><a href="#sec-3-5">3.5. Find the kth element of an unsorted array</a></li>
+<li><a href="#sec-3-6">3.6. How can we ensure that deadlock does not occur?</a></li>
+<li><a href="#sec-3-7">3.7. Cycle in a linked list</a></li>
+<li><a href="#sec-3-8">3.8. Nearest neighbor</a></li>
+<li><a href="#sec-3-9">3.9. How many zeros are in 100!</a></li>
+<li><a href="#sec-3-10">3.10. Find a path between two nodes of a binary tree</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Programming Languages</a>
+<ul>
+<li><a href="#sec-4-1">4.1. What are first class functions?</a></li>
+<li><a href="#sec-4-2">4.2. Static vs. dynamic typing</a></li>
+<li><a href="#sec-4-3">4.3. Type inference</a></li>
+<li><a href="#sec-4-4">4.4. Compiled vs. interpreted languages</a></li>
+<li><a href="#sec-4-5">4.5. Is python compiled or interpreted?</a></li>
+<li><a href="#sec-4-6">4.6. Does Python support polymorphism?</a></li>
+<li><a href="#sec-4-7">4.7. What is duck-typing?</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Design Patterns</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Listener/Observer Pattern</a></li>
+<li><a href="#sec-5-2">5.2. Singleton Pattern</a></li>
+<li><a href="#sec-5-3">5.3. Model­View­Controller</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Object Oriented</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Aggregation vs Composition</a></li>
+<li><a href="#sec-6-2">6.2. Give me an example of some design patterns</a></li>
+<li><a href="#sec-6-3">6.3. What is polymorphism?</a>
+<ul>
+<li><a href="#sec-6-3-1">6.3.1. One answer</a></li>
+<li><a href="#sec-6-3-2">6.3.2. Another answer</a></li>
+</ul>
+</li>
+<li><a href="#sec-6-4">6.4. What is a class vs. an object?</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Tools</a>
+<ul>
+<li><a href="#sec-7-1">7.1. What language do you use most and why?</a></li>
+<li><a href="#sec-7-2">7.2. What do you like least about it?</a></li>
+<li><a href="#sec-7-3">7.3. What tools do you use for language X and why?</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. UNIX</a>
+<ul>
+<li><a href="#sec-8-1">8.1. How do you display running processes?</a></li>
+<li><a href="#sec-8-2">8.2. How do you display running JVM processes?</a></li>
+<li><a href="#sec-8-3">8.3. How do you get word count?</a></li>
+<li><a href="#sec-8-4">8.4. How do you get unique word count for file with duplicates?</a></li>
+<li><a href="#sec-8-5">8.5. Where are log files stored?</a></li>
+<li><a href="#sec-8-6">8.6. How do you read log files?</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9. Testing</a>
+<ul>
+<li><a href="#sec-9-1">9.1. Why do we unit test?</a></li>
+<li><a href="#sec-9-2">9.2. Unit testing vs. Integration Testing</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10. Python</a>
+<ul>
+<li><a href="#sec-10-1">10.1. What is the purpose of sub-classing the class “object” in Python?</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11. Other Programming Concepts</a>
+<ul>
+<li><a href="#sec-11-1">11.1. Parallelism</a>
+<ul>
+<li><a href="#sec-11-1-1">11.1.1. Threads and processes</a></li>
+<li><a href="#sec-11-1-2">11.1.2. Mutexes and semaphores</a></li>
+<li><a href="#sec-11-1-3">11.1.3. Synchronized methods (in Java)</a></li>
+<li><a href="#sec-11-1-4">11.1.4. Deadlock</a></li>
+</ul>
+</li>
+<li><a href="#sec-11-2">11.2. Run Length Encoding</a></li>
+<li><a href="#sec-11-3">11.3. Binary search</a></li>
+<li><a href="#sec-11-4">11.4. Bloom Filter</a></li>
+<li><a href="#sec-11-5">11.5. Bitwise operations</a>
+<ul>
+<li><a href="#sec-11-5-1">11.5.1. Question: Compute 2<sup>x</sup></a></li>
+<li><a href="#sec-11-5-2">11.5.2. How can you quickly determine whether a number is a power of 2?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-12">12. Appendix</a>
+<ul>
+<li><a href="#sec-12-1">12.1. Interviewing Tips</a></li>
+<li><a href="#sec-12-2">12.2. Prep resources</a></li>
+<li><a href="#sec-12-3">12.3. Get that job at</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Algorithms</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Binary Search</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Given a sorted array of integers, how can you find the location of a particular integer x?
+</p>
+
+<p>
+Good answer: Use binary search. Compare the number in the middle of the array with x. If it is equal, we are done. If the number is greater, we know to look in the second half of the array. If it is smaller, we know to look in the first half. We can repeat the search on the appropriate half of the array by comparing the middle element of that array with x, once again narrowing our search by a factor of 2. We repeat this process until we find x. This algorithm takes O(log n) time.
+</p>
+
+<p>
+Not‐so‐good answer: Go through each number in order and compare it to x. This algorithm takes O(n) time.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Sorting</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Often, as part of a solution to a question, you will need to sort a collection of elements. The most important thing to remember about sorting is that it takes O(n log n) time. (That is, the fastest sorting algorithm for arbitrary data takes O(n log n) time.)
+</p>
+</div>
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Mergesort</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Merge sort is a recursive way to sort an array. First, you divide the array in half and recursively sort each half of the array. Then, you combine the two halves into a sorted array. So a merge sort function would look something like this:
+</p>
+<pre class="example">
+int[] mergeSort(int[] array) {
+ if (array.length &lt;= 1)
+ return array;
+ int middle = array.length / 2;
+ int firstHalf = mergeSort(array[0..middle - 1]);
+ int secondHalf = mergeSort(
+ array[middle..array.length - 1]);
+ return merge(firstHalf, secondHalf);
+}
+</pre>
+<p>
+The algorithm relies on the fact that one can quickly combine two sorted arrays into a single sorted array. One can do so by keeping two pointers into the two sorted arrays. One repeatedly adds the smaller of the two numbers pointed to to the new array and advances the pointer.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Quicksort</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Quicksort is another sorting algorithm. It takes O(n<sup>2</sup>) time in the worst case and O(n log n) expected time.To sort an array using quicksort, one first selects a random element of the array to 
+be the "pivot". One then divides the array into two groups: a group of elements that are less than the pivot and a group of elements that are greater than the pivot. After this, there will be an array consisting of elements less than the pivot, followed by the pivot, followed by elements greater than the pivot. Then, one recursively sorts the portion of the array before the pivot and the portion of the array after the pivot. A quicksort function would look like this:
+</p>
+
+<pre class="example">
+void quicksort(int[] array, int startIndex, int endIndex) {
+ if (startIndex &gt;= endIndex) {
+ // Base case (array segment has 1 or 0 elements
+ } else {
+ int pivotIndex = partition(array,
+ startIndex,
+endIndex);
+ quicksort(array, startIndex, pivotIndex - 1);
+ quicksort(array, pivotIndex + 1, endIndex);
+ }
+}
+</pre>
+<p>
+Quicksort is typically very fast in practice, but remember that it has O(n<sup>2</sup>) worst‐case running time, so be sure to mention another sorting algorithm, such as merge sort, if you need guaranteed O(n log n) running time.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> Radix sort</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<pre class="example">
+#=======================================================================
+#  Author: Isai Damier
+#  Title: Radix Sort
+#  Project: geekviewpoint
+#  Package: algorithms
+#
+#  Statement:
+#  Given a disordered list of integers, rearrange them in natural order.
+#
+#  Sample Input: [18,5,100,3,1,19,6,0,7,4,2]
+#
+#  Sample Output: [0,1,2,3,4,5,6,7,18,19,100]
+#
+#  Time Complexity of Solution:
+#  Best Case O(kn); Average Case O(kn); Worst Case O(kn),
+#  where k is the length of the longest number and n is the
+#  size of the input array.
+#
+#  Note: if k is greater than log(n) then an nlog(n) algorithm would
+#  be a better fit. In reality we can always change the radix
+#  to make k less than log(n).
+#
+#  Approach:
+#  radix sort, like counting sort and bucket sort, is an integer based
+#  algorithm (i.e. the values of the input array are assumed to be
+#  integers). Hence radix sort is among the fastest sorting algorithms
+#  around, in theory. The particular distinction for radix sort is
+#  that it creates a bucket for each cipher (i.e. digit); as such,
+#  similar to bucket sort, each bucket in radix sort must be a
+#  growable list that may admit different keys.
+#
+#  For decimal values, the number of buckets is 10, as the decimal
+#  system has 10 numerals/cyphers (i.e. 0,1,2,3,4,5,6,7,8,9). Then
+#  the keys are continuously sorted by significant digits.
+#======================================================================= 
+ def radixsort( aList ):
+  RADIX = 10
+  maxLength = False
+  tmp , placement = -1, 1
+ 
+  while not maxLength:
+    maxLength = True
+    # declare and initialize buckets
+    buckets = [list() for _ in range( RADIX )]
+ 
+    # split aList between lists
+    for  i in aList:
+      tmp = i / placement
+      buckets[tmp % RADIX].append( i )
+      if maxLength and tmp &gt; 0:
+        maxLength = False
+ 
+    # empty lists into aList array
+    a = 0
+    for b in range( RADIX ):
+      buck = buckets[b]
+      for i in buck:
+        aList[a] = i
+        a += 1
+ 
+    # move to next digit
+    placement *= RADIX
+</pre>
+<p>
+[cite] <a href="http://www.geekviewpoint.com/python/sorting/radixsort">http://www.geekviewpoint.com/python/sorting/radixsort</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Hash Table Algorithms</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Collision Resolution</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li><a id="sec-1-3-1-1" name="sec-1-3-1-1"></a>Open Addressing<br  /><div class="outline-text-5" id="text-1-3-1-1">
+<p>
+One method for resolving collisions looks into the hash table and tries to find another open slot to hold the item that caused the collision. A simple way to do this is to start at the original hash value position and then move in a sequential manner through the slots until we encounter the first slot that is empty. Note that we may need to go back to the first slot (circularly) to cover the entire hash table. This collision resolution process is referred to as open addressing in that it tries to find the next open slot or address in the hash table. By systematically visiting each slot one at a time, we are performing an open addressing technique called linear probing.
+</p>
+
+<p>
+A disadvantage to linear probing is the tendency for clustering; items become clustered in the table. This means that if many collisions occur at the same hash value, a number of surrounding slots will be filled by the linear probing resolution. This will have an impact on other items that are being inserted. 
+</p>
+
+<p>
+[cite] <a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html">http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html</a>
+</p>
+</div>
+</li>
+<li><a id="sec-1-3-1-2" name="sec-1-3-1-2"></a>Chaining<br  /><div class="outline-text-5" id="text-1-3-1-2">
+<p>
+An alternative method for handling the collision problem is to allow each slot to hold a reference to a collection (or chain) of items. Chaining allows many items to exist at the same location in the hash table. When collisions happen, the item is still placed in the proper slot of the hash table. As more and more items hash to the same location, the difficulty of searching for the item in the collection increases.
+</p>
+
+<p>
+[cite] <a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html">http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html</a>
+</p>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Hashing Functions</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+The hash function has to be efficient so that it does not become the dominant part of the storage and search process. If the hash function is too complex, then it becomes more work to compute the slot name than it would be to simply do a basic sequential or binary search as described earlier. This would quickly defeat the purpose of hashing.
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-1-3-2-1" name="sec-1-3-2-1"></a>Folding Method<br  /><div class="outline-text-5" id="text-1-3-2-1">
+<p>
+The folding method for constructing hash functions begins by dividing the item into equal-size pieces (the last piece may not be of equal size). These pieces are then added together to give the resulting hash value. For example, if our item was the phone number 436-555-4601, we would take the digits and divide them into groups of 2 (43,65,55,46,01). After the addition, 43+65+55+46+01, we get 210. If we assume our hash table has 11 slots, then we need to perform the extra step of dividing by 11 and keeping the remainder. In this case 210 % 11 is 1, so the phone number 436-555-4601 hashes to slot 1. Some folding methods go one step further and reverse every other piece before the addition. For the above example, we get 43+56+55+64+01=219 which gives 219 % 11=10.
+</p>
+
+<p>
+[cite] <a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html">http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html</a>
+</p>
+</div>
+</li>
+<li><a id="sec-1-3-2-2" name="sec-1-3-2-2"></a>Mid-Square Method<br  /><div class="outline-text-5" id="text-1-3-2-2">
+<p>
+Another numerical technique for constructing a hash function is called the mid-square method. We first square the item, and then extract some portion of the resulting digits. For example, if the item were 44, we would first compute 442=1,936. By extracting the middle two digits, 93, and performing the remainder step, we get 5 (93 % 11).
+</p>
+
+<p>
+[cite] <a href="http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html">http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html</a>
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Data Structures</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Binary Search Tree</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+The important thing to remember is that insertion, removal, and lookup take O(log n) time (where n is the number of elements in the tree), since the height of a well‐balanced binary search tree is O(log n). Although in the worst case, a binary search tree might have a height of O(n), there are "self‐balancing" binary search trees that periodically reorganize a BST to ensure a height of O(log n). Many self‐balancing BST's guarantee that operations take O(log n) time.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Hash Table</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+A hash table is used to associate keys with values, so that each key is associated with one or zero values. Each key should be able to compute a "hash" function, which takes some or all of its information and digests it into a single integer. The hash table consists of an array of hash buckets. To add a key‐value pair to a hash table, one computes the key's hash code and uses it to decide the hash bucket in which the mapping belongs. For example, if the hash value is 53 and there are 8 hash buckets, one might use the mod function to decide to put the mapping in bucket 53 mod 8, which is bucket 5. To lookup the value for a given key, one computes the bucket in which the key would reside and checks whether the key is there; if so, one can return the value stored in that bucket. To remove the mapping for a given key, one likewise locates the key's mapping and removes it from the appropriate bucket. Note that the hash function is generally decided on in advance.
+</p>
+
+<p>
+A problem arises when two keys hash to the same bucket. This event is called a "collision". There are several ways to deal with this. One way is to store a linked list of key‐value pairs for each bucket.
+</p>
+
+<p>
+Insertion, removal, and lookup take expected O(1) time, provided that the hash function is sufficiently "random". In the worst‐case, each key hashes to the same bucket, so each operation takes O(n) time. In practice, it is common to assume constant time.
+</p>
+
+<p>
+Hash tables can often be used as smaller components of answers to questions. <b>In our experience, some interviewers like hash tables and some don't.</b> That is, some interviewers will allow you to assume constant time, while others will not. If you want to use a hash table, we recommend subtly trying to figure out which category your interviewer belongs to. You might, for example, say something like, "Well, I could used a hash table, but that would have bad worst‐case performance." The interviewer might then indicate that he'll allow you to use a hash table.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+</p>
+</div>
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Why should hash functions use a prime number modulus?</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+<a href="http://stackoverflow.com/questions/1145217/why-should-hash-functions-use-a-prime-number-modulus">http://stackoverflow.com/questions/1145217/why-should-hash-functions-use-a-prime-number-modulus</a>
+</p>
+
+<p>
+tldr: Hash functions and bucket size ideally should be co-prime, as this reduces the likelihood of hash collisions. Prime numbers are used is so that when you're repeating over a set space, you're going to provide an even distribution across your hash space. 
+</p>
+
+<p>
+For example, over the space of 1 to 52, using 31 as key:
+</p>
+<pre class="example">
+s = 7 + key % 52 = 34
+s = 34 + key % 52 = 13
+s = 13 + key % 52 = 44
+s = 44 + key % 52 = 23
+...
+s = 49 + key % 52 = 28
+s = 28 + key % 52 = 7
+</pre>
+<p>
+The numbers will eventually loop through the entire space of 1 to 52 (a modulo ring.) The prime number ensures that all values are hit in that space.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Algorithms</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li><a href="#sec-1-3-1">Collision Resolution</a>
+</li>
+<li><a href="#sec-1-3-2">Hashing Functions</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Linked List</h3>
+<div class="outline-text-3" id="text-2-3">
+</div><div id="outline-container-sec-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> How do you find a cycle in a singly-linked list?</h4>
+</div>
+<div id="outline-container-sec-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> How do you delete a node in a singly-linked list when you are given <b>only</b> the variable pointing to that node?</h4>
+</div>
+<div id="outline-container-sec-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> How do you reverse a singly-linked list?</h4>
+</div>
+<div id="outline-container-sec-2-3-4" class="outline-4">
+<h4 id="sec-2-3-4"><span class="section-number-4">2.3.4</span> How do you find the kth element of a singly-linked list?</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Queue</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Can be made from two stacks and with amortized constant time enqueue and dequeue.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Trie</h3>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Classic Questions</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Ransom Note</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Let's say you've just kidnapped Alyssa Hacker you want to leave a ransom note for Ben Bitdiddle, saying that if he ever wants to see her again, he needs to swear to never use Scheme again.  You don't want to write the note by hand, since they would be able to trace your handwriting.  You're standing in Alyssa's apartment and you see a million computer magazines.  You need to write your note by cutting letters out of the magazines and pasting them together to form a letter.  Here's the question: given an arbitrary ransom note string and another string containing all the contents of all the magazines, write a function that will return true if the ransom note can be made from the magazines; otherwise, it will return false.  Remember, every letter found in the magazine string can only be used once in your ransom note.
+</p>
+
+<p>
+For example, if the ransom note string was "no scheme" and the magazine string was "programming interviews are weird", you would return false since you can't form the first string by grabbing and rearranging letters from the second string.
+</p>
+
+<p>
+Pretty‐good answer: Make a data structure to store a count of each letter in the magazine string.  If you're programming in C, you can make an array of length 256 and simply use the ASCII value for each character as its spot in the array, since characters are 1 byte.  If you're programming in Java, you can just use a hash table instead (since characters are 2 bytes in Java).  Then go through the magazine string and for each character, increment the value for that letter in your data structure.  After you go though the whole magazine string, you should have an exact count of how many times each character appears in the magazine string.  Then go through each character in the ransom note string and for every character you encounter, decrement the value for that letter in your data structure.  If you ever find that after you decrement a count to something less than 0, you know you can't make the ransom note, so you immediately return false.  If however you get though the entire ransom note without running out of available letters, you return true.
+</p>
+
+<p>
+Even better answer: Because the magazine string may be very large, we want to reduce the time we spend going through the magazine string.  We use the same idea as above, except we go through the ransom note and the magazine string at the same time.  Keep one pointer for our current character in the ransom note and another pointer for our current character in our magazine string.  First, check to see if the count in our data structure for our current ransom note character is greater than 0.  If it is, decrement it and advance the pointer in our ransom note.  If it isn't, start going through the characters in the magazine string, updating the counts in the data structure for each character encountered, until we reach the character we need for our ransom note.  Then stop advancing the magazine string pointer and start advancing the ransom note pointer again.  If we get to the end of the ransom note, we return true.  If we get to the end of the magazine string (meaning we didn't find enough letters for our ransom note), we return false.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Reverse the words in a string</h3>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Coin Puzzle</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+You have 8 coins which are all the same weight, except for one which is slightly heavier than the others (you don't know which coin is heavier). You also have an old‐style balance, which allows you to weigh two piles of coins to see which one is heavier (or if they are of equal weight). What is the fewest number of weighings that you can make which will tell you which coin is the heavier one?
+</p>
+
+<p>
+Good answer: Weigh 3 coins against 3 coins. If one of the groups is heavier, weigh one of its coins against another one of its coins; this allows you to identify the heavy 
+coin. If the two groups balance, weigh the two leftover coins.
+</p>
+
+<p>
+Not‐so‐good answer: Weigh 4 coins against 4 coins. Discard the lighter coins, and weigh 2 coins against 2 coins. Discard the lighter coins and weigh the remaining two coins.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Write a function to convert a string into an integer</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Write a function to convert a string into an integer. (This function is called A to I (or atoi()) because we are converting an ASCII string into an integer.)
+</p>
+
+<p>
+Good answer: Go through the string from beginning to end. If the first character is a negative sign, remember this fact. Keep a running total, which starts at 0. Each time you reach a new digit, multiply the total by 10 and add the new digit. When you reach the end, return the current total, or, if there was a negative sign, the inverse of the number.
+</p>
+
+<p>
+Okay answer: Another approach is to go through the string from end to beginning, again keeping a running total. Also, remember a number x representing which digit you are currently on; x is initially 1. For each character, add the current digit times x to the running total, and multiply x by 10. When you reach the beginning, return the current total, or, if there was a negative sign, the inverse of the number.
+</p>
+
+<p>
+Note: The interviewer is likely to ask you about the limitations of your approach. You should mention that it only works if the string consists of an optional negative sign followed by digits. Also, mention that if the number is too big, the result will be incorrect due to overflow.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Find the kth element of an unsorted array</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Sometimes, an interviewer will ask you to describe an algorithm to identify the kth smallest element in an array of n elements. To do this, you select a random pivot and partition the array as you would in the quicksort algorithm. Then, based on the index of the pivot element, you know which half of the array the desired element lies in. For example, say k = 15 and n = 30, and after you select your pivot and partition the array, the first half has 10 elements (the half before the pivot). You know that the desired element is the 4th smallest element in the larger half. To identify the element, you partition the second half of the array and continue recursively. The reason that this is not O(n log n) is that the recursive partition call is only on one 
+half of the array, so the expected running time is n + (n/2) + (n/4) + (n/8) + &#x2026; = O(n).
+</p>
+
+<p>
+Note that finding the median of an array is a special case of this where k = n / 2. This is a very important point, as an interviewer will often ask you to find a way to get the median of an array of numbers.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+</p>
+
+<p>
+Here is the algorithm.
+</p>
+<pre class="example">
+QuickSelect(A, k)
+ let r be chosen uniformly at random in the range 1 to length(A)
+ let pivot = A[r]
+ let A1, A2 be new arrays
+ # split into a pile A1 of small elements and A2 of big elements
+ for i = 1 to n
+  if A[i] &lt; pivot then
+   append A[i] to A1
+  else if A[i] &gt; pivot then
+   append A[i] to A2
+  else
+   # do nothing
+ end for
+ if k &lt;= length(A1):
+  # it's in the pile of small elements
+  return QuickSelect(A1, k)
+ else if k &gt; length(A) - length(A2)
+  # it's in the pile of big elements
+  return QuickSelect(A2, k - (length(A) - length(A2))
+ else
+  # it's equal to the pivot
+  return pivot
+</pre>
+<p>
+[cite] <a href="http://www.cs.yale.edu/homes/aspnes/pinewiki/QuickSelect.html">http://www.cs.yale.edu/homes/aspnes/pinewiki/QuickSelect.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> How can we ensure that deadlock does not occur?</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Answer: There are many possible answers to this problem, but the answer the interviewer will be looking for is this: we can prevent deadlock if we assign an order to our locks and require that locks always be acquired in order. For example, if a thread needs to acquire locks 1, 5, and 2, it must acquire lock 1, followed by lock 2, followed by lock 5. That way we prevent one thread trying to acquire lock 1 then lock 2, and another thread trying to acquire lock 2 then lock 1, which could cause deadlock. (Note that this approach is not used very often in practice.)
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Cycle in a linked list</h3>
+</div>
+<div id="outline-container-sec-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> Nearest neighbor</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+Say you have an array containing information regarding n people. Each person is described using a string (their name) and a number (their position along a number line). Each person has three friends, which are the three people whose number is nearest their own. Describe an algorithm to identify each person's three friends.
+</p>
+
+<p>
+Good answer: Sort the array in ascending order of the people's number. For each person, check the three people immediately before and after them. Their three friends will be among these six people. This algorithm takes O(n log n) time, since sorting the people takes that much time.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+Given an English word in the form of a string, how can you quickly find all valid anagrams for that string (all valid rearrangements of the letters that form valid English words)? You are allowed to pre‐compute whatever you want to and store whatever you optionally pre‐compute on disk.
+</p>
+
+<p>
+Answer: We want to use a hash table! If your interviewer really hates hash tables (which they sometimes do for some reason), you can use a tree instead. But let's assume you can use a hash table. Then for the pre‐computing step, go through each word in the dictionary, sort the letters of the word in alphabetical order (so "hacking" would become "acghikn") and add the sorted letters as a key in the table and the original word as one of the values in a list of values for that key. For example, the entry for "opst" would be the list ["opts", "post", "stop", "pots", "tops", "spot"]. Then, whenever you get a string, you simply sort the letters of the string and look up the value in the hash table. The running time is O(n log n) for sorting the string (which is relatively small) and approximately O(1) for the lookup in the hash table.
+</p>
+
+<p>
+There are several other possible answers to this question, but we feel that the answer above is considered an optimal solution.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-9" class="outline-3">
+<h3 id="sec-3-9"><span class="section-number-3">3.9</span> How many zeros are in 100!</h3>
+<div class="outline-text-3" id="text-3-9">
+<p>
+Answer: What you don't want to do is start multiplying it all out! The trick is remembering that the number of zeros at the end of a number is equal to the number of times "10" (or "2*5") appears when you factor the number. Therefore think about the prime factorization of 100! and how many 2s and 5s there are. There are a bunch more 2s than 5s, so the number of 5s is also the number of 10s in the factorization. There is one 5 for every factor of 5 in our factorial multiplication (1*2*&#x2026;*5*&#x2026;*10*&#x2026;*15*&#x2026;) and an extra 5 for 25, 50, 75, and 100. Therefore we have 20+4 = 24 zeros at the end of 100!
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3-10" class="outline-3">
+<h3 id="sec-3-10"><span class="section-number-3">3.10</span> Find a path between two nodes of a binary tree</h3>
+<div class="outline-text-3" id="text-3-10">
+<p>
+Good Answer: There will always be exactly one path: from the starting node to the lowest common ancestor of the nodes to the second node. The goal is to identify the lowest common ancestor.
+</p>
+
+<p>
+For each node, keep track of a set of nodes in the binary tree (using a hash table or a BST) as well as a current node. At each iteration, for each of the two current nodes, change the current node to be its parent and add it to the appropriate set. The first element that is added to one set when it is already present in the other set is the lowest common ancestor. This algorithm takes O(n) time, where n is the length of the path. For example, if we were finding the lowest common ancestor of 3 and 15 in the above tree, our algorithm would do the following:
+</p>
+<pre class="example">
+| Current node 1 | Current node 2 | Set 1    | Set 2     |
+|----------------+----------------+----------+-----------|
+|              3 |             15 | 3        | 15        |
+|              6 |             12 | 3, 6     | 15, 12    |
+|             17 |              6 | 3, 6, 17 | 15, 12, 6 |
+</pre>
+<p>
+To improve the solution, we actually only need to use one set instead of two.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Programming Languages</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> What are first class functions?</h3>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Static vs. dynamic typing</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Statically typed programming languages do type checking (the process of verifying and enforcing the constraints of types) at compile-time as opposed to run-time. Dynamically typed programming languages do type checking at run-time as opposed to Compile-time.
+</p>
+
+<p>
+The ability of the interpreter to deduce type and type conversions makes development time faster, but it also can provoke runtime failures which you just cannot get in a statically typed language where you catch them at compile time.
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages">http://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages</a>
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/125367/dynamic-type-languages-versus-static-type-languages">http://stackoverflow.com/questions/125367/dynamic-type-languages-versus-static-type-languages</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Type inference</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Type inference refers to the automatic deduction of the data type of an expression in a programming language. If some, but not all, type annotations are already present it is referred to as <b>type reconstruction</b>. The opposite operation of type inference is called <b>type erasure</b>. It is a feature present in some strongly statically typed languages. It is often characteristic of, but not limited to, functional programming languages in general. 
+</p>
+
+<p>
+[cite] <a href="http://en.wikipedia.org/wiki/Type_inference">http://en.wikipedia.org/wiki/Type_inference</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Compiled vs. interpreted languages</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+A compiled language is one where the program, once compiled, is expressed in the instructions of the target machine. For example, an addition "+" operation in your source code could be translated directly to the "ADD" instruction in machine code.
+</p>
+
+<p>
+An interpreted language is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program (which normally is written in the language of the native machine). For example, the same "+" operation would be recognized by the interpreter at run time, which would then call its own "add(a,b)" function with the appropriate arguments, which would then execute the machine code "ADD" instruction.
+</p>
+
+<p>
+You can do anything that you can do in an interpreted language in a compiled language and vice-versa - they are both Turing complete. Both however have advantages and disadvantages for implementation and use.
+</p>
+
+<p>
+I'm going to completely generalize (purists forgive me!) but, roughly, here are the advantages of compiled languages:
+</p>
+
+<ul class="org-ul">
+<li>Faster performance by directly using the native code of the target machine
+</li>
+<li>Opportunity to apply quite powerful optimizations during the compile stage
+</li>
+</ul>
+
+<p>
+And here are the advantages of interpreted languages:
+</p>
+
+<ul class="org-ul">
+<li>Easier to implement (writing good compilers is very hard!!)
+</li>
+<li>No need to run a compilation stage: can execute code directly "on the fly"
+</li>
+<li>Can be more convenient for dynamic languages
+</li>
+</ul>
+
+<p>
+Note that modern techniques such as byte code compilation add some extra complexity - what happens here is that the compiler targets a "virtual machine" which is not the same as the underlying hardware. These virtual machine instructions can then be compiled again at a later stage to get native code (e.g. as done by the Java JVM JIT compiler).
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages">http://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Is python compiled or interpreted?</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+First off, interpreted/compiled is not a property of the language but a property of the implementation. For most languages, most if not all implementations fall in one category, so one might save a few words saying the language is interpreted/compiled too, but it's still an important distinction, both because it aids understanding and because there are quite a few languages with usable implementations of both kinds (mostly in the realm of functional languages, see Haskell and ML). In addition, there are C interpreters and projects that attempt to compile a subset of Python to C or C++ code (and subsequently to machine code).
+</p>
+
+<p>
+Second, compilation is not restricted to ahead-of-time compilation to native machine code. A compiler is, more generally, a program that converts a program in one programming language into a program in another programming language (arguably, you can even have a compiler with the same input and output language if significant transformations are applied). And JIT compilers compile to native machine code at runtime, which can give speed very close to or even better than (depending on the benchmark and the quality of the implementations compared) ahead of time compilation.
+</p>
+
+<p>
+But to stop nit-picking and answer the question you meant to ask: Practically (read: using a somewhat popular and mature implementation), Python is compiled. Not compiled to machine code ahead of time (i.e. "compiled" by the restricted and wrong, but alas common definition), "only" compiled to to byte code, but it's still compilation with at least some of the benefits. For example, the statement a = b.c() is compiled to a byte stream which, when "disassembled", looks somewhat like load 0 &lt;b&gt;; load<sub>str</sub> 'c'; get<sub>attr</sub>; call<sub>function</sub> 0; store 1 &lt;a&gt;. This is a simplification, it's actually less readable and a bit more low-level - you can experiment with the standard library dis module and see what the real deal looks like. Interpreting this is faster than interpreting from a higher-level representation.
+</p>
+
+<p>
+That byte code is either interpreted (note that there's a difference, both in theory and in practical performance, between interpreting directly and first compiling to some intermediate representation and interpret that), as with the reference implementation (CPython), or both interpreted and compiled to optimized machine code at runtime, as with PyPy.
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/6889747/is-python-interpreted-or-compiled-or-both">http://stackoverflow.com/questions/6889747/is-python-interpreted-or-compiled-or-both</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> Does Python support polymorphism?</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+Yes, through duck-typing. "Duck-typing" just refers to the idea that "types are their behavior", whereas "polymorphism" is usually more restrictive and doesn't make a lot of sense to mention in python. Everything is polymorphic with everything, because everything is considered to be of type `object`. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7"><span class="section-number-3">4.7</span> What is duck-typing?</h3>
+<div class="outline-text-3" id="text-4-7">
+<div class="org-src-container">
+
+<pre class="src src-python">class Duck:
+        def quack(self):
+                print "Quack, quack!"
+        def fly(self):
+                print "Flap, Flap!"
+
+class Person:
+        def quack(self):
+                print "I'm Quackin'!"
+        def fly(self):
+                print "I'm Flyin'!"
+
+def in_the_forest(mallard):
+        mallard.quack()
+        mallard.fly()
+
+in_the_forest(Duck())
+in_the_forest(Person())
+</pre>
+</div>
+
+<p>
+Output:
+</p>
+
+<pre class="example">
+Quack, quack!
+
+Flap, Flap!
+
+I'm Quackin'!
+
+I'm Flyin'!
+</pre>
+
+<p>
+According to the EAFP principle, instead of checking to see, if some purportedly Duck-like object has a quack() method (using if hasattr(mallard, "quack"): &#x2026;) it's usually preferable to wrap the attempted quack with proper exception handling:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python">try:
+        mallard.quack()
+except (AttributeError, TypeError):
+        print("mallard can't quack()")
+</pre>
+</div>
+
+<p>
+or, a more common use of the principle is to just let the exception "bubble up", that is, to let the exception be raised, and let whatever function or method called the code in question to deal with it (or, if nothing deals with it, to let the exception be raised to the user). This gives better feedback on bad input, and avoids masking bugs.
+</p>
+
+<p>
+[cite] <a href="http://en.wikipedia.org/wiki/Duck_typing#In_Python">http://en.wikipedia.org/wiki/Duck_typing#In_Python</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Design Patterns</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Listener/Observer Pattern</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+This may be the most popular design pattern out there. The idea is this: suppose there were an e‐mail list for Hacking a Google Interview (unfortunately there isn't one, but if we had been a bit more forward‐thinking, perhaps we would have made one). This list would allow for important announcements to be sent to anyone who cared about the class. Every student who put themselves on the list would be a 
+"listener" (or "observer"). The teacher would be the "announcer" (or "subject" in some texts). Every time the teacher wanted to let the students know something, they would go though the e‐mail list and send an announcement e‐mail to each listener.
+</p>
+
+<p>
+In a program, we would have a Listener interface that any class could implement. That Listener interface would have some sort of "update()" method that would be called whenever the announcer wanted to tell the listeners something. The announcer would store a list of all the listeners. If we wanted to add an object "foo" as a listener, we would call "announcer.addListener(foo)", which would cause the announcer to add foo to its list of listeners. Whenever the announcer did something important that it wanted to tell the listeners about, it would go though its list of listeners and call "update()" on each of those objects.
+</p>
+
+<p>
+Going back to the poker game program, you might mention to the interviewer that you could use the listener design pattern for several things. For example, you could have the GUI be a listener to several objects in the game (such as player hands, the pot, etc.) for any changes in game state for which it would need to update the display.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Singleton Pattern</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+The singleton pattern is used when you want to make sure there is exactly one instance of something in your program. If you were making a Lord of the Rings game, you would want to make sure that the One Ring was only instantiated once! We have to give Frodo a chance! In Java, for instance, to make sure there is only one of something, you can do something like this:
+</p>
+<pre class="example">
+public class OnlyOneOfMe {
+ private static OnlyOneOfMe theOneInstance = null;
+
+ private OnlyOneOfMe() {
+ // do stuff to make the object
+ }
+
+ public static OnlyOneOfMe getInstance() {
+ if (theOneInstance == null) {
+ theOneInstance = new OnlyOneOfMe();
+ }
+ return theOneInstance;
+ }
+}
+</pre>
+<p>
+Notice that there is no public constructor. If you want an instance of this class, you have to call "getInstance()", which ensures that only one instance of the class is ever made.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Model­View­Controller</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Model‐view‐controller (MVC) is a design pattern commonly used in user interfaces. Its goal is to keep the "data" separate from the user interface. For example, when designing a program that displays stock information, the code that downloads the stock information should not depend on the code that displays the information.The exact meaning of model‐view‐controller is a bit ambiguous. Essentially, a program that uses model‐view‐controller uses separate programming entities to store the data (the "model"), to display the data (the "view"), and to modify the data (the "controller"). In model‐view‐controller, the view usually makes heavy use of listeners to listen to changes and events in the model or the controller. Model‐view‐controller is a good buzzword to whip out when you're asked a design question relating to a user interface.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Object Oriented</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Aggregation vs Composition</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Simple rules:
+</p>
+
+<p>
+A "owns" B = Composition : B has no meaning or purpose in the system without A
+</p>
+
+<p>
+A "uses" B = Aggregation : B exists independently (conceptually) from A
+</p>
+
+<p>
+Example 1:
+</p>
+
+<p>
+A Company is an aggregation of People. A Company is a composition of Accounts. When a Company ceases to do business its Accounts cease to exist but its People continue to exist.
+</p>
+
+<p>
+Example 2: (very simplified)
+</p>
+
+<p>
+A Text Editor owns a Buffer (composition). A Text Editor uses a File (aggregation). When the Text Editor is closed, the Buffer is destroyed but the File itself is not destroyed.
+</p>
+
+<p>
+[cite] <a href="http://programmers.stackexchange.com/questions/61376/aggregation-vs-composition">http://programmers.stackexchange.com/questions/61376/aggregation-vs-composition</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Give me an example of some design patterns</h3>
+</div>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> What is polymorphism?</h3>
+<div class="outline-text-3" id="text-6-3">
+</div><div id="outline-container-sec-6-3-1" class="outline-4">
+<h4 id="sec-6-3-1"><span class="section-number-4">6.3.1</span> One answer</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+Polymorphism describes a pattern in object oriented programming in which classes have different functionality while sharing a common interface.
+</p>
+
+<p>
+The beauty of polymorphism is that the code working with the different classes does not need to know which class it is using since they’re all used the same way. A real world analogy for polymorphism is a button. Everyone knows how to use a button: you simply apply pressure to it. What a button “does,” however, depends on what it is connected to and the context in which it is used — but the result does not affect how it is used. If your boss tells you to press a button, you already have all the information needed to perform the task.
+</p>
+
+<p>
+In the programming world, polymorphism is used to make applications more modular and extensible. Instead of messy conditional statements describing different courses of action, you create interchangeable objects that you select based on your needs. That is the basic goal of polymorphism.
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/1031273/what-is-polymorphism-what-is-it-for-and-how-is-it-used">http://stackoverflow.com/questions/1031273/what-is-polymorphism-what-is-it-for-and-how-is-it-used</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-3-2" class="outline-4">
+<h4 id="sec-6-3-2"><span class="section-number-4">6.3.2</span> Another answer</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+What is polymorphism?
+Interviewers love to ask people this question point‐blank, and there are several possible answers. For a full discussion of all the types of polymorphism, we recommend looking at its Wikipedia page. However, we believe that a good answer to this question is that polymorphism is the ability of one method to have different behavior depending on the type of object it is being called on or the type of object being passed as a parameter. For example, if we defined our own "MyInteger" class and wanted to define an "add" method for it (to add that integer with another 
+number), we would want the following code to work:
+</p>
+
+<pre class="example">
+MyInteger int1 = new MyInteger(5);
+MyInteger int2 = new MyInteger(7);
+MyFloat float1 = new MyFloat(3.14);
+MyDouble doub1 = new MyDouble(2.71);
+print(int1.add(int2));
+print(int1.add(float1));
+print(int1.add(doub1));
+</pre>
+<p>
+In this example, calling "add" will result in different behavior depending on the type 
+of the input.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> What is a class vs. an object?</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+Class is a template that we use to create new objects.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Tools</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> What language do you use most and why?</h3>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> What do you like least about it?</h3>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> What tools do you use for language X and why?</h3>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> UNIX</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> How do you display running processes?</h3>
+</div>
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> How do you display running JVM processes?</h3>
+</div>
+<div id="outline-container-sec-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> How do you get word count?</h3>
+</div>
+<div id="outline-container-sec-8-4" class="outline-3">
+<h3 id="sec-8-4"><span class="section-number-3">8.4</span> How do you get unique word count for file with duplicates?</h3>
+</div>
+<div id="outline-container-sec-8-5" class="outline-3">
+<h3 id="sec-8-5"><span class="section-number-3">8.5</span> Where are log files stored?</h3>
+<div class="outline-text-3" id="text-8-5">
+<p>
+/var/log
+</p>
+</div>
+</div>
+<div id="outline-container-sec-8-6" class="outline-3">
+<h3 id="sec-8-6"><span class="section-number-3">8.6</span> How do you read log files?</h3>
+<div class="outline-text-3" id="text-8-6">
+<p>
+less, more, tail
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Testing</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Why do we unit test?</h3>
+</div>
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> Unit testing vs. Integration Testing</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+A unit test is a test written by the programmer to verify that a relatively small piece of code is doing what it is intended to do. They are narrow in scope, they should be easy to write and execute, and their effectiveness depends on what the programmer considers to be useful. The tests are intended for the use of the programmer, they are not directly useful to anybody else, though, if they do their job, testers and users downstream should benefit from seeing fewer bugs.
+</p>
+
+<p>
+Part of being a unit test is the implication that things outside the code under test are mocked or stubbed out. Unit tests shouldn't have dependencies on outside systems. They test internal consistency as opposed to proving that they play nicely with some outside system.
+</p>
+
+<p>
+An integration test is done to demonstrate that different pieces of the system work together. Integration tests cover whole applications, and they require much more effort to put together. They usually require resources like database instances and hardware to be allocated for them. The integration tests do a more convincing job of demonstrating the system works (especially to non-programmers) than a set of unit tests can, at least to the extent the integration test environment resembles production.
+</p>
+
+<p>
+Actually "integration test" gets used for a wide variety of things, from full-on system tests against an environment made to resemble production to any test that uses a resource (like a database or queue) that isn't mocked out.
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests">http://stackoverflow.com/questions/5357601/whats-the-difference-between-unit-tests-and-integration-tests</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Python</h2>
+<div class="outline-text-2" id="text-10">
+</div><div id="outline-container-sec-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> What is the purpose of sub-classing the class “object” in Python?</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+In short, it sets free magical ponies.
+</p>
+
+<p>
+In long, Python 2.2 and earlier used "old style classes". They were a particular implementation of classes, and they had a few limitations (for example, you couldn't subclass built in types). The fix for this was to create a new style of class. But, doing this would involve some backwards-incompatible changes. So, to make sure that code which is written for old style classes will still work, the object class was created to act as a superclass for all new-style classes. So, in Python 2.X, class Foo: pass will create an old-style class and class Foo(object): pass will create a new style class.
+</p>
+
+<p>
+In longer, see <a href="http://www.python.org/download/releases/2.2.3/descrintro/">Guido's Unifying types and classes in Python 2.2</a>. 
+</p>
+
+<p>
+And, in general, it's a good idea to get into the habit of making all your classes new-style, because some things (the @property decorator is one that comes to mind) won't work with old-style classes.
+</p>
+
+<p>
+[cite] <a href="http://stackoverflow.com/questions/2588628/what-is-the-purpose-of-subclassing-the-class-object-in-python">http://stackoverflow.com/questions/2588628/what-is-the-purpose-of-subclassing-the-class-object-in-python</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Other Programming Concepts</h2>
+<div class="outline-text-2" id="text-11">
+</div><div id="outline-container-sec-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> Parallelism</h3>
+<div class="outline-text-3" id="text-11-1">
+</div><div id="outline-container-sec-11-1-1" class="outline-4">
+<h4 id="sec-11-1-1"><span class="section-number-4">11.1.1</span> Threads and processes</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<p>
+A computer will often appear to be doing many things simultaneously, such as checking for new e‐mail messages, saving a Word document, and loading a web site. Each program is a separate "process". Each process has one or more "threads." If a process has several threads, they appear to run simultaneously. For example, an e‐mail client may have one thread that checks for new e‐mail messages and one thread for the GUI so that it can show a button being pressed. In fact, only one thread is being run at any given time. The processor switches between threads so quickly that they appear to be running simultaneously.
+</p>
+
+<p>
+Multiple threads in a single process have access to the same memory. By contrast, multiple processes have separate regions of memory and can only communicate by special mechanisms. The processor loads and saves a separate set of registers for each thread.
+</p>
+
+<p>
+Remember, each process has one or more threads, and the processor switches between threads.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-1-2" class="outline-4">
+<h4 id="sec-11-1-2"><span class="section-number-4">11.1.2</span> Mutexes and semaphores</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<p>
+A mutex is like a lock. Mutexes are used in parallel programming to ensure that only one thread can access a shared resource at a time. For example, say one thread is modifying an array. When it has gotten halfway through the array, the processor switches to another thread. If we were not using mutexes, the thread might try to modify the array as well, which is probably not what we want.
+</p>
+
+<p>
+To prevent this, we could use a mutex. Conceptually, a mutex is an integer that starts at 1. Whenever a thread needs to alter the array, it "locks" the mutex. This 
+causes the thread to wait until the number is positive and then decreases it by one. When the thread is done modifying the array, it "unlocks" the mutex, causing the 
+number to increase by 1. If we are sure to lock the mutex before modifying the array and to unlock it when we are done, then we know that no two threads will modify the array at the same time.
+</p>
+
+<p>
+Semaphores are more general than mutexes. They differ only in that a semaphore's integer may start at a number greater than 1. The number at which a semaphore starts is the number of threads that may access the resource at once. Semaphores support "wait" and "signal" operations, which are analogous to the "lock" and "unlock" operations of mutexes.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-1-3" class="outline-4">
+<h4 id="sec-11-1-3"><span class="section-number-4">11.1.3</span> Synchronized methods (in Java)</h4>
+<div class="outline-text-4" id="text-11-1-3">
+<p>
+Another favorite question of interviewers is, "What is a synchronized method in Java?" Each object in Java has its own mutex. Whenever a synchronized method is called, the mutex is locked. When the method is finished, the mutex is unlocked. This ensures that only one synchronized method is called at a time on a given object.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-1-4" class="outline-4">
+<h4 id="sec-11-1-4"><span class="section-number-4">11.1.4</span> Deadlock</h4>
+<div class="outline-text-4" id="text-11-1-4">
+<p>
+Deadlock is a problem that sometimes arises in parallel programming. It is typified by the following, which is supposedly a law that came before the Kansas legislature:
+</p>
+<blockquote>
+<p>
+"When two trains approach each other at a crossing, both shall come to a full stop and neither shall start up again until the other has gone."
+</p>
+</blockquote>
+<p>
+Strange as this sounds, a similar situation can occur when using mutexes. Say we have two threads running the following code:
+</p>
+<pre class="example">
+Thread 1:
+
+acquire(lock1);
+acquire(lock2);
+[do stuff]
+release(lock1);
+release(lock2);
+
+Thread 2:
+
+acquire(lock2);
+acquire(lock1);
+[do stuff]
+release(lock2);
+release(lock1);
+</pre>
+<p>
+Suppose that thread 1 is executed to just after the first statement. Then, the processor switches to thread 2 and executes both statements. Then, the processor switches back to thread 1 and executes the second statement. In this situation, thread 1 will be waiting for thread 2 to release lock1, and thread 2 will be waiting for thread 1 to release lock2. Both threads will be stuck indefinitely. This is called deadlock.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> Run Length Encoding</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+Run-length encoding (RLE) is a very simple form of data compression in which runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run. This is most useful on data that contains many such runs. Consider, for example, simple graphic images such as icons, line drawings, and animations. It is not useful with files that don't have many runs as it could greatly increase the file size.
+</p>
+
+<p>
+A hypothetical scan line, with B representing a black pixel and W representing white, might read as follows:
+</p>
+
+<p>
+WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW
+</p>
+
+<p>
+With a run-length encoding (RLE) data compression algorithm applied to the above hypothetical scan line, it can be rendered as follows:
+</p>
+
+<p>
+12W1B12W3B24W1B14W
+</p>
+
+<p>
+This can be interpreted as a sequence of twelve Ws, one B, twelve Ws, three Bs, etc.
+</p>
+
+<p>
+[cite] <a href="http://en.wikipedia.org/wiki/Run-length_encoding">http://en.wikipedia.org/wiki/Run-length_encoding</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> Binary search</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+Searches a sorted array in O(lg n) time, O(1) space.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> Bloom Filter</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+A Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not, thus a Bloom filter has a 100% recall rate. In other words, a query returns either "possibly in set" or "definitely not in set". Elements can be added to the set, but not removed (though this can be addressed with a "counting" filter). The more elements that are added to the set, the larger the probability of false positives.
+</p>
+
+<p>
+So here's how a bloom filter works. Take a very long vector of 0/1, and set them all to 0. Also choose 10 (for some value of 10) hash functions that map an object to an apparently random place in the vector. When you get given an object, set all those semi-random places to a 1.
+</p>
+
+<p>
+Now when I give you an object, you check to see that all the places are set to 1. If not, then the object I've given you can't be one you've seen. On the other hand, if they are all set to 1, then very likely that's because you've seen this object before. It's not certain, but you can make the probability of error really, really small.
+</p>
+
+<p>
+[cite] <a href="http://en.wikipedia.org/wiki/Bloom_filter">http://en.wikipedia.org/wiki/Bloom_filter</a>
+[cite] <a href="https://news.ycombinator.com/item?id=1862047">https://news.ycombinator.com/item?id=1862047</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-5" class="outline-3">
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> Bitwise operations</h3>
+<div class="outline-text-3" id="text-11-5">
+</div><div id="outline-container-sec-11-5-1" class="outline-4">
+<h4 id="sec-11-5-1"><span class="section-number-4">11.5.1</span> Question: Compute 2<sup>x</sup></h4>
+<div class="outline-text-4" id="text-11-5-1">
+<p>
+1 &lt;&lt; x (1 left‐shifted by x)
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-5-2" class="outline-4">
+<h4 id="sec-11-5-2"><span class="section-number-4">11.5.2</span> How can you quickly determine whether a number is a power of 2?</h4>
+<div class="outline-text-4" id="text-11-5-2">
+<p>
+Check whether x &amp; (x ‐ 1) is 0. If x is not an even power of 2, the highest position of x with a 1 will also have a 1 in x ‐ 1; otherwise, x will be 100&#x2026;0 and x ‐ 1 will be 011&#x2026;1; and'ing them together will return 0.
+</p>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_3.pdf</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> Appendix</h2>
+<div class="outline-text-2" id="text-12">
+</div><div id="outline-container-sec-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Interviewing Tips</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+When asked a question, open a dialog with the interviewer. Let them know what you are thinking. You might, for example, suggest a slow or partial solution (let them know that the solution is not ideal), mention some observations about the problem, or say any ideas you have that might lead to a solution. Often, interviewers will give hints if you appear to be stuck.
+</p>
+
+<p>
+Often, you will be asked to write a program during an interview. For some reason, interviewers usually have people write programs on a blackboard or on a sheet of paper rather than on a computer. It is good to get practice with writing code on the board in order to be prepared for this.
+</p>
+
+<p>
+Here is a list of "do's" and "don't's" when doing a programming interview:
+</p>
+
+<p>
+<b>Do's</b>
+</p>
+<ul class="org-ul">
+<li>Ask for clarification on a problem if you didn't understand something or if there is any ambiguity
+</li>
+<li>Let the interviewer know what you are thinking
+</li>
+<li>Suggest multiple approaches to the problem 
+</li>
+<li>Bounce ideas off the interviewer (such as ideas for data structures or algorithms) 
+</li>
+<li>If you get stuck, don't be afraid to let them know and politely ask for a hint
+</li>
+</ul>
+<p>
+<b>Don't's</b>
+</p>
+<ul class="org-ul">
+<li>Never give up! This says nothing good about your problem solving skills. 
+</li>
+<li>Don't just sit in silence while thinking. The interviewer has limited time to find out as much as possible about you, and not talking with them tells them nothing, except that you can sit there silently. 
+</li>
+<li>If you already know the answer, don't just blurt it out! They will suspect that you already knew the answer and didn't tell them you've seen the question before. At least pretend to be thinking though the problem before you give the answer!
+</li>
+</ul>
+
+<p>
+[cite] <a href="http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf">http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_1.pdf</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-12-2" class="outline-3">
+<h3 id="sec-12-2"><span class="section-number-3">12.2</span> Prep resources</h3>
+<div class="outline-text-3" id="text-12-2">
+<ul class="org-ul">
+<li><a href="http://www.leetcode.com">leetcode.com</a>
+</li>
+<li><a href="http://www.codechef.com">codechef.com</a>
+</li>
+<li><a href="http://www.hackerrank.com">hackerrank.com</a>
+</li>
+<li><a href="http://www.interviewcake.com">interviewcake.com</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-12-3" class="outline-3">
+<h3 id="sec-12-3"><span class="section-number-3">12.3</span> Get that job at</h3>
+<div class="outline-text-3" id="text-12-3">
+<ul class="org-ul">
+<li><a href="https://www.facebook.com/notes/facebook-engineering/get-that-job-at-facebook/10150964382448920">Facebook</a>
+</li>
+<li><a href="https://blogs.janestreet.com/interviewing-at-jane-street/">Jane Street</a>
+</li>
+<li>Palantir (<a href="https://www.palantir.com/2011/09/how-to-ace-an-algorithms-interview/">Part One</a> <a href="https://www.palantir.com/2011/10/the-coding-interview/">Part Two</a>)
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Chris Drane</p>
+<p class="date">Created: 2015-03-11 Wed 14:47</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.0.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

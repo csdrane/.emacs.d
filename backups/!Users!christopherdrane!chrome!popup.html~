@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Forget Thee Not</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+
+      th a.dynatable-sort-header {
+        color: black;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="js/lib/dynatable/jquery.dynatable.css"></link>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+  </head>
+  <body>
+    <table id="contacts-table">
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </body>
+  <script data-main="js/app.js" src="js/lib/requirejs/require.js"></script>
+</html>

@@ -1,0 +1,19 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	modified:   js/app.js
+#	modified:   js/app/displayContacts.js
+#	new file:   js/app/gmail.js
+#	modified:   js/app/main.js
+#	new file:   js/lib/requirejs-plugins/async.js
+#	modified:   popup.html
+#
+# Changes not staged for commit:
+#	modified:   manifest.json
+#
+# Untracked files:
+#	.DS_Store
+#	notes.org
+#

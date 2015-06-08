@@ -1,0 +1,6 @@
+define(['dynatable', 'jquery'], function ($) {
+//    var $ = require('jquery');
+//    require('dynatable');
+//  require('displayContacts');
+    $( "table" ).data( "test", { first: 16, last: "pizza!" } );
+});

@@ -1,0 +1,11 @@
+module LeapYear (isLeapYear) where
+
+divides :: Int -> Int -> Bool
+divides x y = if y `mod` x == 0 then True else False
+
+isLeapYear :: Int -> Bool
+isLeapYear x
+  | (4 `divides` x) && (400 `divides` x) = True
+  | (4 `divides` x) && (100 `divides` x) = False
+  | (4 `divides` x) = True
+  | otherwise = False

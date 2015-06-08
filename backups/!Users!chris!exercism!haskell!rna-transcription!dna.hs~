@@ -1,0 +1,13 @@
+module DNA (toRNA) where
+
+toRNA :: String -> String
+toRNA = map toRNA'
+
+toRNA' :: Char -> Char
+toRNA' x = case x of
+  'C' -> 'G'
+  'G' -> 'C'
+  'A' -> 'U' 
+  'T' -> 'A'
+  _ -> error "Invalid input"
+

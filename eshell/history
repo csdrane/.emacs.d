@@ -1,0 +1,37 @@
+ls
+ls -a
+rm GTD\ Review\ 2014-09-26.org
+rm GTD\ Review\ 2014-09-26.org\~
+ls
+git init
+emacs .gitignore
+find-file .gitignore
+git status
+find-file .gitignore
+git status
+git status
+find-file .gitignore
+git status
+git add .
+git commit -m "Initial commit"
+git mv GTD\ Review\ 2014-10-03.org GTD Review.org
+git mv GTD\ Review\ 2014-10-03.org GTD\ Review.org
+ls
+ls
+rm GTD\ Review 2*
+ls
+rm GTD\ Review\ 2014-10-03.org\~
+rm GTD\ Review\ 2014-10-03.org
+ls
+cd Documents/
+ls
+cd Personal/
+ls
+cd GTD/ 
+ls
+find-file GTD\ Review.org 
+git status
+git commit --amend
+git commit --amend -F
+man curl
+man curl

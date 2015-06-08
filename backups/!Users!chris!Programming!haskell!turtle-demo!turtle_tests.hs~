@@ -1,0 +1,7 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Tests where 
+
+import Turtle
+
+main = echo "hello hacker school!"

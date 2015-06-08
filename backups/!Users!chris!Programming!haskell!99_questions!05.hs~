@@ -1,0 +1,4 @@
+module P05 where
+
+myReverse :: [a] -> [a]
+myReverse xs = foldl ++ [] xs

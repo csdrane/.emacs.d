@@ -1,0 +1,58 @@
+/*
+ * Contacts will be stored as an array of JSON objects.
+ * This array will be stored within chrome.storage.local
+ * under key 'contacts'.
+ *
+ * After writing Dynatable, we can add row with deletion
+ * buttons with jQuery. To delete, we can either try to
+ * create the JSON object using the row data + then
+ * use Array.splice(). Or, we can store an id in each
+ * entry, and deletion would involve searching at most
+ * n entries. 
+ *
+ * TODO adding/deleting/editing contacts will need to
+ * change the vector, rather than just a key/value entry.
+ */
+
+define(['jquery', 'dynatable'], function() {
+    (function () {
+        var store = chrome.storage.local;
+
+        var addDeleteColumn = function() {
+           $('#contacts-table th:last').after("<th>Delete</th>");
+           $('#contacts-table tr:gt(0)').append("<td><a href='#' onClick='deleteRow()'>x</a></td>");
+        };
+        
+        var deleteRow = function() {
+            // TODO
+            return;
+        };
+
+        var displayContacts = function(object) {
+            var json = object.contacts;
+            console.log(json);
+            $('#contacts-table').dynatable({
+                dataset: {
+                    records: json
+                }
+            }
+           );
+            addDeleteColumn();
+        };
+
+// Development functions.
+        var _deleteData = function () {
+            store.clear();
+            };
+
+        var _saveData = function () {
+            store.set({test: "test"}, function() {
+                console.log("Error? ", chrome.runtime.lastError);
+            }); 
+        };
+
+        store.get(null, function(object, items) {
+            displayContacts(object);
+        });
+    }());
+});

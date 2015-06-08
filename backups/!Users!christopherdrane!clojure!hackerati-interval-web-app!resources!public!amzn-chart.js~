@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  g = new Dygraph(
+
+    // containing div
+    document.getElementById("graphdiv"),
+
+    // CSV or path to a CSV file.
+    "/csv"
+
+  );
+</script>

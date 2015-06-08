@@ -1,0 +1,4 @@
+module 01 where
+
+minfree :: [Nat] -> Nat
+minfree xs = head ([0..] \\ xs)

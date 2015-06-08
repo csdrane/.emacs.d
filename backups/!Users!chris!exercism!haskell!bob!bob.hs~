@@ -1,0 +1,24 @@
+module Bob (responseFor) where
+
+import Data.Char (isDigit, isLetter, isUpper)
+
+responseFor :: String -> String
+responseFor [] = "Fine. Be that way!"
+responseFor x
+  | yelling x = "Whoa, chill out!"
+  | question x = "Sure."
+  | garbage x = "Fine. Be that way!"
+  | otherwise = "Whatever."
+
+question :: String -> Bool
+question = (==) '?' . last
+
+yelling :: String -> Bool
+yelling x = and [not $ null filtered, all isUpper filtered]
+          where filtered = filter isLetter x
+
+garbage :: String -> Bool
+garbage x = or [and [not $ any isDigit x, 
+                     not $ any isLetter x], 
+                null x]
+

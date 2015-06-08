@@ -1,0 +1,8 @@
+
+board = [[None] * 3 for _ in range(3)]
+
+print board
+while True:
+	spot = [int(x) for x in split(raw_input)]
+	board[spot[0], spot[1]] = 'x'
+	print board

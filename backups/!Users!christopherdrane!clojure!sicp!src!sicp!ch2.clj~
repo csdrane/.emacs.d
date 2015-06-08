@@ -1,0 +1,31 @@
+(ns sicp.ch2)
+
+;;; Exercise 2.2
+
+(defn make-segment [start end]
+  {:start start :end end})
+
+(defn start-segment [s]
+  (:start s))
+
+(defn end-segment [s]
+  (:end s))
+
+(defn make-point [x y]
+  {:x x :y y})
+
+(defn x-point [p]
+  (:x p))
+
+(defn y-point [p]
+  (:y p))
+
+(defn midpoint-segment [s]
+  (let [s1 (:start s)
+        s2 (:end s)
+        x1 (:x s1)
+        y1 (:y s1)
+        x2 (:x s2)
+        y2 (:y s2)]
+    (make-point (/ (+ x1 x2) 2)
+                (/ (+ y1 y2) 2))))

@@ -1,0 +1,81 @@
+(defn fib-bad [n]
+  (letfn [(helper [n]
+            (condp = n
+              1 1
+              2 1
+              (+ (helper (- n 1))
+                 (helper (- n 2)))))]
+    (helper n)))
+
+(defn fib-good [n]
+  (loop [i 0
+         old-x 0
+         new-x 1]
+    (if (= i n)
+      new-x
+      (recur (inc i) new-x (+' old-x new-x)))))
+
+(defn max'
+  ([nums] (max' (rest nums) (first nums)))
+  ([nums current-max]
+     (loop [nums nums
+            current-max current-max]
+       (if (empty? nums)
+         current-max
+         (let [new-max (if (> (first nums) current-max)
+                         (first nums)
+                         current-max)]
+           (recur (rest nums) new-max))))))
+
+(defn sum' [nums]
+  (loop [nums nums
+         acc 0]
+    (if (empty? nums)
+      acc
+      (recur (rest nums) (+ acc (first nums))))))
+
+(defn last-index-of [n nums]
+  (loop [idx -1
+         ctr 0
+         nums nums]
+    (if (empty? nums)
+      idx
+      (let [new-idx (if (= n (first nums))
+                      ctr
+                      idx)]
+        (recur new-idx (inc ctr) (rest nums))))))
+
+(def tree-1 [1 [2 [3 [] []]
+                  [4 [] []]]
+               [5 [6 [] []]
+                  [7 [] []]]])
+
+(def tree-2 [1 [2 [3 [] []] [4 [] []]] []])
+
+(defn node-val [t] (first t))
+(defn left [t] (second t))
+(defn right [t] (last t ))
+
+
+(defn sum-tree [t]
+  (if (empty? t)
+    0
+    (+ (node-val t)
+       (sum-tree (left t))
+       (sum-tree (right t)))))
+
+((fn print-tree
+   ([t] (print-tree t [[]]))
+   ([t q] 
+      (cond
+       (empty? q) nil
+       (empty? t) (print-tree (peek q) (pop q))
+       :else (let [updated-queue (conj q (right t))]
+               (do (println (node-val t))
+                   (print-tree (left t) updated-queue)))))) tree-1)
+
+(fn permute-2 [s]
+  (cond
+   (char? s) s
+   :else ))
+

@@ -1,0 +1,6 @@
+module P04 where
+
+myCount :: [a] -> a
+myCount [] = 0
+myCount [x] = 1
+myCount (x:xs) = 1 + myCount xs

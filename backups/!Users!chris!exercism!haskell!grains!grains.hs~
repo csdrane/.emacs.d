@@ -1,0 +1,3 @@
+module Grains (square, total) where
+
+data input = square Integer | total

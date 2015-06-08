@@ -1,0 +1,5 @@
+module Ch02 where
+
+msc :: Ord => [a] -> Int
+msc xs = maximum [scount z zs | z:zs <- tails xs]
+scount x xs = length (filter (x <) xs)

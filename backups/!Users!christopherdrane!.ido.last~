@@ -1,0 +1,165 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/christopherdrane/clojure/logic-tutorial/src/" . "logic_tutorial/")
+ ("/Users/christopherdrane/clojure/logic-tutorial/" . "src/")
+ ("/Users/christopherdrane/clojure/land-of-lisp/" . "src/")
+ ("/Users/christopherdrane/clojure/land-of-lisp/src/" . "land_of_lisp/")
+ ("/Users/christopherdrane/clojure/temp/src/" . "temp/")
+ ("/Users/christopherdrane/clojure/temp/" . "src/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/" . "views/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/test/" . "hackerati_interval_web_app/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/public/" . "Chart.js/")
+ ("/Users/christopherdrane/.emacs.d/elpa/" . "cider-20141116.1221/")
+ ("/Users/christopherdrane/Documents/Personal/" . "GTD/")
+ ("/Users/christopherdrane/Documents/" . "Personal/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/" . "public/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/" . "src/")
+ ("/Users/christopherdrane/clojure/overtone-tutorial/src/" . "overtone_tutorial/")
+ ("/Users/christopherdrane/clojure/overtone-tutorial/" . "src/")
+ ("/Users/christopherdrane/.emacs.d/" . "elpa/")
+ ("/Users/christopherdrane/clojure/" . "land-of-lisp/")
+ ("/Users/christopherdrane/" . ".emacs.d/")
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/src/" . "hackerati_interval_web_app/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/christopherdrane/Documents/Personal/GTD/"
+ "/Users/christopherdrane/.emacs.d/"
+ "/Users/christopherdrane/clojure/land-of-lisp/"
+ "/Users/christopherdrane/clojure/land-of-lisp/src/land_of_lisp/"
+ "/Users/christopherdrane/.emacs.d/elpa/cider-20141116.1221/"
+ "/Users/christopherdrane/clojure/logic-tutorial/src/logic_tutorial/"
+ "/Users/christopherdrane/clojure/logic-tutorial/"
+ "/Users/christopherdrane/.lein/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/views/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/"
+ "/Users/christopherdrane/clojure/"
+ "/Users/christopherdrane/.emacs.d/elpa/emacs-color-theme-solarized/"
+ "/Users/christopherdrane/clojure/temp/src/temp/"
+ "/Users/christopherdrane/clojure/temp/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/public/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/newrelic/"
+ "/Users/christopherdrane/clojure/hackerati-interval-web-app/test/hackerati_interval_web_app/"
+ "/Users/christopherdrane/clojure/overtone-tutorial/src/overtone_tutorial/"
+ "/Users/christopherdrane/clojure/overtone-tutorial/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Weight Log.org"
+ "init.el"
+ "Job question for internet 2014-10-16.txt"
+ "project.clj"
+ "ch19.clj"
+ "ch20.clj"
+ "cider-client.el"
+ "cider-apropos.el"
+ "cider-mode.el"
+ "ch5-6.clj"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/christopherdrane/.emacs.d/" (21629 48142 0 0) "thumbs/" "org-clock-save.el" "init.el~" "init.elc" "init.el" "eshell/" "elpa/" "bookmarks" "backups/" "auto-save-list/" ".org-id-locations" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/christopherdrane/" (21629 48153 0 0) "Wine Files/" "virtualenv/" "VirtualBox VMs/" "smashthestack/" "Sites/" "Public/" "Pictures/" "node_modules/" "Nexus/" "Music/" "Movies/" "macports/" "List - emacs questions.txt" "Library/" "level06_addr" "haskell/" "Google Drive/" "exercism/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "clojure/" "cider-temp/" "chrome/" "Calibre Library/" "Burp/" "Applications/" ".Xauthority" ".wireshark/" ".wapi/" ".viminfo" ".vim/" ".Trash/" ".swp" ".subversion/" ".ssh/" ".smex-items" ".sh_history" ".serverauth.430" ".serverauth.1027" ".regetronhist" ".Rapp.history" ".python-eggs/" ".profile.macports-saved_2014-04-18_at_12:40:25" ".profile" ".pip/" ".overtone/" ".octaverc~" ".octaverc" ".octave_hist" ".npm/" ".netrc" ".mysql_history.TMP" ".mysql_history" ".mplayer/" ".mindterm/" ".matplotlib/" ".macports/" ".m2/" ".local/" ".lesshst" ".lein-env" ".lein/" ".ispell_english" ".irb_history" ".ipython/" ".ido.last~" ".ido.last" ".heroku/" ".glGo/" ".gitconfig" ".git-completion.bash" ".ghci" ".ghc/" ".gem/" ".fontconfig/" ".exercism.json" ".emacs.d/" ".dvdcss/" ".DS_Store" ".dropbox/" ".cups/" ".cpan/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bzr.log" ".bash_profile" ".bash_history" ".android/" "../" "./")
+
+ ("/Users/christopherdrane/Documents/Personal/GTD/" (21628 60176 0 0) "work search log.org~" "work search log.org" "Weight Log.org" "journal.org" "Job question for internet 2014-10-16.txt" "GTD Review.org_archive~" "GTD Review.org_archive" "GTD Review.org" "data/" "capture-notes.org~" "capture-notes.org_archive" "capture-notes.org" ".lein-env" ".gitignore~" ".gitignore" ".git/" ".DS_Store" ".#Weight Log.org" "#Weight Log.org#" "#temp.clj#" "../" "./")
+
+ ("/Users/christopherdrane/clojure/land-of-lisp/src/land_of_lisp/" (21622 30926 0 0) "ch9.clj" "ch8.clj" "ch7.clj" "ch5_6.clj" "ch20.clj" "ch19.clj" "ch18.clj" "ch17.clj" "ch15.clj" "ch10.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/land-of-lisp/" (21622 30346 0 0) "target/" "src/" "README.md" "project.clj" ".nrepl-port" ".lein-repl-history" ".lein-env" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/.emacs.d/elpa/cider-20141116.1221/" (21622 25006 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-repl.elc" "cider-repl.el" "cider-pkg.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/Users/christopherdrane/.emacs.d/elpa/" (21611 32861 0 0) "use-package-readme.txt" "use-package-20140918.1333/" "smex-readme.txt~" "smex-readme.txt" "smex-20140425.1314/" "s-1.9.0/" "rainbow-delimiters-1.3.11/" "queue-0.1.1/" "projectile-0.11.0/" "popwin-20140902.1727/" "pkg-info-0.5/" "paredit-23/" "magit-readme.txt" "magit-20141016.1055/" "js2-mode-readme.txt" "js2-mode-20140908.1242/" "ido-ubiquitous-20140904.1547/" "heroku-theme-readme.txt" "heroku-readme.txt" "heroku-20120629.1113/" "guide-key-readme.txt" "guide-key-20140828.807/" "git-rebase-mode-20140928.1547/" "git-commit-mode-20141014.1634/" "epl-0.7/" "emacs-color-theme-solarized/" "eldoc-eval-0.1/" "edit-server-readme.txt~" "edit-server-readme.txt" "edit-server-20140908.717/" "diminish-20091203.1012/" "dash-2.8.0/" "company-readme.txt~" "company-readme.txt" "company-0.8.5/" "color-theme-sanityinc-solarized-readme.txt" "clojure-mode-3.0.0/" "clojure-cheatsheet-readme.txt" "cider-readme.txt~" "cider-readme.txt" "cider-20141116.1221/" "bind-key-readme.txt" "bind-key-20140620.1343/" "archives/" "ada-ref-man-readme.txt" "ac-cider-readme.txt" "../" "./")
+
+ ("/Users/" (20538 51371 0 0) "Shared/" "Guest/" "christopherdrane/" ".localized" "../" "./")
+
+ ("/Users/christopherdrane/.emacs.d/elpa/emacs-color-theme-solarized/" (21622 22935 0 0) "solarized-light-theme.elc" "solarized-light-theme.el" "solarized-definitions.elc" "solarized-definitions.el" "solarized-dark-theme.elc" "solarized-dark-theme.el" "README.md" "makepkg.sh" "LICENSE" "color-theme-solarized.el" "color-theme-solarized-pkg.elc" "color-theme-solarized-pkg.el" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/christopherdrane/clojure/logic-tutorial/" (21619 30108 0 0) "test/" "src/" "README.md" "random_walk.svg" "project.clj" ".lein-repl-history" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/.lein/" (21615 21978 0 0) "repl-history" "profiles.clj~" "profiles.clj" ".lein-env" "../" "./")
+
+ ("/Users/christopherdrane/clojure/logic-tutorial/src/logic_tutorial/" (21617 594 0 0) "tut3.clj" "tut2.clj" "tut1.clj" "core.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/logic-tutorial/src/" (21615 21855 0 0) "logic_tutorial/" "../" "./")
+
+ ("/Users/christopherdrane/clojure/" (21615 21854 0 0) "xterm-colors/" "what-does-tools-trace-do.clj" "tools/" "temp/" "target/" "scratch-work-4clojure.clj" "salarly-scrape/" "regex-parse/" "project.clj" "pom.xml" "overtone-tutorial/" "logic-tutorial/" "lein-ring-bug/" "land-of-lisp/" "hackerati-interval-web-app/" "enlive-tutorial/" "clojure-koans/" "clojure-cookbook/" "ants.clj" ".lein-repl-history" ".lein-env" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/.emacs.d/auto-save-list/" (21613 608 0 0) ".saves-54563-csd~" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/" (21605 1057 0 0) "views/" "util.clj" "scrape.clj" "schema.clj" "jdbc.clj" "dbutility.clj" "core.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/land-of-lisp/src/" (21603 47157 0 0) "land_of_lisp/" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/views/" (21604 53906 0 0) "views.clj" "util.clj" "template.clj" "csv.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/" (21604 53796 0 0) "test/" "target/" "src/" "resources/" "README.md" "project_notes.org~" "project_notes.org" "project_ideas.org~" "project_ideas.org" "project.clj~" "project.clj" "profiles.clj" "Procfile" "LICENSE" "doc/" ".secret" ".nrepl-port" ".lein-repl-history" ".lein-env" ".gitignore" ".git/" ".emacs.desktop" ".DS_Store" "#scratch2#" "../" "./")
+
+ ("/Users/christopherdrane/clojure/temp/" (21591 53375 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-env" ".gitignore" "../" "./")
+
+ ("/Users/christopherdrane/clojure/temp/src/temp/" (21591 53118 0 0) "core.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/temp/src/" (21591 52015 0 0) "temp/" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/public/" (21589 10129 0 0) "main.js" "main.css" "dygraph-combined.js" "bootstrap3-editable/" "bootstrap/" "amzn-chart.js" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/.git/" (21587 57394 0 0) "refs/" "ORIG_HEAD" "objects/" "logs/" "info/" "index" "hooks/" "HEAD" "FETCH_HEAD" "description" "config" "COMMIT_EDITMSG" "branches/" ".#COMMIT_EDITMSG" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/newrelic/" (21546 60882 0 0) "README.txt" "nrcerts" "newrelic.yml" "newrelic.jar" "newrelic-api.jar" "newrelic-api-sources.jar" "LICENSE" "extension.xsd" "extension-example.xml" "CHANGELOG" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/test/hackerati_interval_web_app/" (21585 650 0 0) "scrape_test.clj~" "scrape_test.clj" "schema_test.clj~" "schema_test.clj" "core_test.clj" ".DS_Store" "#schema_test.clj#" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/target/" (21583 57873 0 0) "uberjar/" "base+system+user+dev+test/" "base+system+user+dev+repl/" "base+system+user+dev/" "../" "./")
+
+ ("/Users/christopherdrane/Desktop/" (21559 59216 0 0) "Screen Shot 2014-08-06 at 4.15.38 PM.png" "python/" "Music/" "D3 Test_files/" "D3 Test.html" "CGoban 3" ".localized" ".jpg" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/" (21577 24440 0 0) "test/" "public/" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/resources/public/Chart.js/" (21577 18922 0 0) "trunk/" "tags/" "branches/" ".git/" "../" "./")
+
+ ("/usr/" (21034 36937 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "llvm-gcc-4.2/" "libexec/" "lib/" "include/" "bin/" "../" "./")
+
+ ("/usr/local/" (21557 22766 0 0) "var/" "SUPPORTERS.md" "share/" "README.md" "plugins/" "opt/" "mysql-5.5.27-osx10.6-x86_64/" "mysql/" "mkspecs/" "LICENSE.txt" "Library/" "libexec/" "lib/" "include/" "git/" "Frameworks/" "etc/" "CONTRIBUTING.md" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".gitignore" ".git/" "../" "./")
+
+ ("/usr/local/Cellar/" (21557 22522 0 0) "xz/" "wget/" "webp/" "texinfo/" "tbb/" "szip/" "swig/" "suite-sparse/" "sdl_ttf/" "sdl_mixer/" "sdl_image/" "sdl/" "readline/" "qt5/" "qt/" "qrupdate/" "qhull/" "portmidi/" "pkg-config/" "pcre/" "openssl/" "octave/" "node/" "nettle/" "mpfr/" "mercurial/" "lua/" "libtool/" "libtiff/" "libtasn1/" "libpng/" "libmpc/" "libgpg-error/" "libgcrypt/" "libffi/" "leiningen/" "jpeg/" "ispell/" "isl/" "hdf5/" "graphicsmagick/" "gnutls/" "gnuplot/" "gnu-sed/" "gmp/" "glpk/" "glib/" "gfortran/" "gettext/" "geoip/" "gd/" "freetype/" "fontconfig/" "fltk/" "fftw/" "exercism/" "emacs/" "dotwrp/" "cmake/" "cloog/" "c-ares/" "bazaar/" "automake/" "autoconf/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/" (21528 54944 0 0) "24.3/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/" (21528 55255 0 0) "var/" "share/" "README" "libexec/" "INSTALL_RECEIPT.json" "Emacs.app/" "COPYING" "ChangeLog" "bin/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/share/" (21528 55163 0 0) "man/" "info/" "icons/" "emacs/" "applications/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/share/emacs/" (21528 55208 0 0) "site-lisp/" "24.3/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/share/emacs/24.3/" (21528 55208 0 0) "site-lisp/" "lisp/" "leim/" "etc/" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/share/emacs/24.3/lisp/" (21530 60615 0 0) "xt-mouse.elc" "xt-mouse.el.gz" "xml.elc" "xml.el.gz" "x-dnd.elc" "x-dnd.el.gz" "woman.elc" "woman.el.gz" "winner.elc" "winner.el.gz" "window.elc" "window.el.gz" "windmove.elc" "windmove.el.gz" "widget.elc" "widget.el.gz" "wid-edit.elc" "wid-edit.el.gz" "wid-browse.elc" "wid-browse.el.gz" "whitespace.elc" "whitespace.el.gz" "wdired.elc" "wdired.el.gz" "w32-vars.elc" "w32-vars.el.gz" "w32-fns.elc" "w32-fns.el.gz" "w32-common-fns.elc" "w32-common-fns.el.gz" "vt100-led.elc" "vt100-led.el.gz" "vt-control.elc" "vt-control.el.gz" "view.elc" "view.el.gz" "version.elc" "version.el.gz" "vcursor.elc" "vcursor.el.gz" "vc/" "userlock.elc" "userlock.el.gz" "url/" "uniquify.elc" "uniquify.el.gz" "type-break.elc" "type-break.el.gz" "tutorial.elc" "tutorial.el.gz" "tree-widget.elc" "tree-widget.el.gz" "tooltip.elc" "tooltip.el.gz" "tool-bar.elc" "tool-bar.el.gz" "tmm.elc" "tmm.el.gz" "timezone.elc" "timezone.el.gz" "time.elc" "time.el.gz" "time-stamp.elc" "time-stamp.el.gz" "thumbs.elc" "thumbs.el.gz" "thingatpt.elc" "thingatpt.el.gz" "textmodes/" "terminal.elc" "terminal.el.gz" "term.elc" "term.el.gz" "term/" "tempo.elc" "tempo.el.gz" "tar-mode.elc" "tar-mode.el.gz" "talk.elc" "talk.el.gz" "tabify.elc" "tabify.el.gz" "t-mouse.elc" "t-mouse.el.gz" "subr.elc" "subr.el.gz" "subdirs.el" "strokes.elc" "strokes.el.gz" "startup.elc" "startup.el.gz" "speedbar.elc" "speedbar.el.gz" "soundex.elc" "soundex.el.gz" "sort.elc" "sort.el.gz" "skeleton.elc" "skeleton.el.gz" "simple.elc" "simple.el.gz" "shell.elc" "shell.el.gz" "shadowfile.elc" "shadowfile.el.gz" "ses.elc" "ses.el.gz" "server.elc" "server.el.gz" "select.elc" "select.el.gz" "scroll-lock.elc" "scroll-lock.el.gz" "scroll-bar.elc" "scroll-bar.el.gz" "scroll-all.elc" "scroll-all.el.gz" "sb-image.elc" "sb-image.el.gz" "saveplace.elc" "saveplace.el.gz" "savehist.elc" "savehist.el.gz" "ruler-mode.elc" "ruler-mode.el.gz" "rot13.elc" "rot13.el.gz" "rfn-eshadow.elc" "rfn-eshadow.el.gz" "reveal.elc" "reveal.el.gz" "reposition.elc" "reposition.el.gz" "replace.elc" "replace.el.gz" "repeat.elc" "repeat.el.gz" "register.elc" "register.el.gz" "rect.elc" "rect.el.gz" "recentf.elc" "recentf.el.gz" "README" "ps-samp.elc" "ps-samp.el.gz" "ps-print.elc" "ps-print.el.gz" "ps-mule.elc" "ps-mule.el.gz" "ps-def.elc" "ps-def.el.gz" "ps-bdf.elc" "ps-bdf.el.gz" "progmodes/" "profiler.elc" "profiler.el.gz" "proced.elc" "proced.el.gz" "printing.elc" "printing.el.gz" "play/" "pcomplete.elc" "pcomplete.el.gz" "pcmpl-unix.elc" "pcmpl-unix.el.gz" "pcmpl-rpm.elc" "pcmpl-rpm.el.gz" "pcmpl-linux.elc" "pcmpl-linux.el.gz" "pcmpl-gnu.elc" "pcmpl-gnu.el.gz" "pcmpl-cvs.elc" "pcmpl-cvs.el.gz" "password-cache.elc" "password-cache.el.gz" "paren.elc" "paren.el.gz" "outline.elc" "outline.el.gz" "org/" "obsolete/" "nxml/" "novice.elc" "novice.el.gz" "notifications.elc" "notifications.el.gz" "newcomment.elc" "newcomment.el.gz" "net/" "mwheel.elc" "mwheel.el.gz" "msb.elc" "msb.el.gz" "mpc.elc" "mpc.el.gz" "mouse.elc" "mouse.el.gz" "mouse-drag.elc" "mouse-drag.el.gz" "mouse-copy.elc" "mouse-copy.el.gz" "misearch.elc" "misearch.el.gz" "misc.elc" "misc.el.gz" "minibuffer.elc" "minibuffer.el.gz" "minibuf-eldef.elc" "minibuf-eldef.el.gz" "midnight.elc" "midnight.el.gz" "mh-e/" "menu-bar.elc" "menu-bar.el.gz" "md4.elc" "md4.el.gz" "mb-depth.elc" "mb-depth.el.gz" "master.elc" "master.el.gz" "man.elc" "man.el.gz" "makesum.elc" "makesum.el.gz" "mail/" "macros.elc" "macros.el.gz" "ls-lisp.elc" "ls-lisp.el.gz" "lpr.elc" "lpr.el.gz" "longlines.elc" "longlines.el.gz" "locate.elc" "locate.el.gz" "loadup.el" "loadhist.elc" "loadhist.el.gz" "loaddefs.el" "linum.elc" "linum.el.gz" "ldefs-boot.el" "language/" "kmacro.elc" "kmacro.el.gz" "kermit.elc" "kermit.el.gz" "json.elc" "json.el.gz" "jka-compr.elc" "jka-compr.el.gz" "jka-cmpr-hook.elc" "jka-cmpr-hook.el.gz" "jit-lock.elc" "jit-lock.el.gz" "iswitchb.elc" "iswitchb.el.gz" "isearchb.elc" "isearchb.el.gz" "isearch.elc" "isearch.el.gz" "international/" "informat.elc" "informat.el.gz" "info.elc" "info.el.gz" "info-xref.elc" "info-xref.el.gz" "info-look.elc" "info-look.el.gz" "indent.elc" "indent.el.gz" "imenu.elc" "imenu.el.gz" "image.elc" "image.el.gz" "image-mode.elc" "image-mode.el.gz" "image-file.elc" "image-file.el.gz" "image-dired.elc" "image-dired.el.gz" "iimage.elc" "iimage.el.gz" "ielm.elc" "ielm.el.gz" "ido.elc" "ido.el.gz" "icomplete.elc" "icomplete.el.gz" "ibuffer.elc" "ibuffer.el.gz" "ibuf-macs.elc" "ibuf-macs.el.gz" "ibuf-ext.elc" "ibuf-ext.el.gz" "htmlfontify.elc" "htmlfontify.el.gz" "hl-line.elc" "hl-line.el.gz" "hippie-exp.elc" "hippie-exp.el.gz" "hilit-chg.elc" "hilit-chg.el.gz" "hi-lock.elc" "hi-lock.el.gz" "hfy-cmap.elc" "hfy-cmap.el.gz" "hexl.elc" "hexl.el.gz" "hex-util.elc" "hex-util.el.gz" "help.elc" "help.el.gz" "help-mode.elc" "help-mode.el.gz" "help-macro.elc" "help-macro.el.gz" "help-fns.elc" "help-fns.el.gz" "help-at-pt.elc" "help-at-pt.el.gz" "gs.elc" "gs.el.gz" "gnus/" "generic-x.elc" "generic-x.el.gz" "fringe.elc" "fringe.el.gz" "frame.elc" "frame.el.gz" "forms.elc" "forms.el.gz" "format.elc" "format.el.gz" "format-spec.elc" "format-spec.el.gz" "font-lock.elc" "font-lock.el.gz" "font-core.elc" "font-core.el.gz" "follow.elc" "follow.el.gz" "foldout.elc" "foldout.el.gz" "flow-ctrl.elc" "flow-ctrl.el.gz" "finder.elc" "finder.el.gz" "finder-inf.el" "find-lisp.elc" "find-lisp.el.gz" "find-file.elc" "find-file.el.gz" "find-dired.elc" "find-dired.el.gz" "find-cmd.elc" "find-cmd.el.gz" "filesets.elc" "filesets.el.gz" "files.elc" "files.el.gz" "files-x.elc" "files-x.el.gz" "filecache.elc" "filecache.el.gz" "ffap.elc" "ffap.el.gz" "faces.elc" "faces.el.gz" "facemenu.elc" "facemenu.el.gz" "face-remap.elc" "face-remap.el.gz" "ezimage.elc" "ezimage.el.gz" "expand.elc" "expand.el.gz" "eshell/" "erc/" "epg.elc" "epg.el.gz" "epg-config.elc" "epg-config.el.gz" "epa.elc" "epa.el.gz" "epa-mail.elc" "epa-mail.el.gz" "epa-hook.elc" "epa-hook.el.gz" "epa-file.elc" "epa-file.el.gz" "epa-dired.elc" "epa-dired.el.gz" "env.elc" "env.el.gz" "emulation/" "emacs-lock.elc" "emacs-lock.el.gz" "emacs-lisp/" "elide-head.elc" "elide-head.el.gz" "electric.elc" "electric.el.gz" "ehelp.elc" "ehelp.el.gz" "edmacro.elc" "edmacro.el.gz" "echistory.elc" "echistory.el.gz" "ebuff-menu.elc" "ebuff-menu.el.gz" "dynamic-setting.elc" "dynamic-setting.el.gz" "double.elc" "double.el.gz" "dos-w32.elc" "dos-w32.el.gz" "dos-vars.elc" "dos-vars.el.gz" "dos-fns.elc" "dos-fns.el.gz" "doc-view.elc" "doc-view.el.gz" "dnd.elc" "dnd.el.gz" "disp-table.elc" "disp-table.el.gz" "dirtrack.elc" "dirtrack.el.gz" "dired.elc" "dired.el.gz" "dired-x.elc" "dired-x.el.gz" "dired-aux.elc" "dired-aux.el.gz" "dframe.elc" "dframe.el.gz" "desktop.elc" "desktop.el.gz" "descr-text.elc" "descr-text.el.gz" "delsel.elc" "delsel.el.gz" "delim-col.elc" "delim-col.el.gz" "dabbrev.elc" "dabbrev.el.gz" "custom.elc" "custom.el.gz" "cus-theme.elc" "cus-theme.el.gz" "cus-start.elc" "cus-start.el.gz" "cus-load.el" "cus-face.elc" "cus-face.el.gz" "cus-edit.elc" "cus-edit.el.gz" "cus-dep.elc" "cus-dep.el.gz" "COPYING" "composite.elc" "composite.el.gz" "completion.elc" "completion.el.gz" "comint.elc" "comint.el.gz" "color.elc" "color.el.gz" "cmuscheme.elc" "cmuscheme.el.gz" "chistory.elc" "chistory.el.gz" "cedet/" "cdl.elc" "cdl.el.gz" "case-table.elc" "case-table.el.gz" "calendar/" "calculator.elc" "calculator.el.gz" "calc/" "button.elc" "button.el.gz" "buff-menu.elc" "buff-menu.el.gz" "bs.elc" "bs.el.gz" "bookmark.elc" "bookmark.el.gz" "bindings.elc" "bindings.el.gz" "battery.elc" "battery.el.gz" "avoid.elc" "avoid.el.gz" "autorevert.elc" "autorevert.el.gz" "autoinsert.elc" "autoinsert.el.gz" "autoarg.elc" "autoarg.el.gz" "array.elc" "array.el.gz" "arc-mode.elc" "arc-mode.el.gz" "apropos.elc" "apropos.el.gz" "ansi-color.elc" "ansi-color.el.gz" "allout.elc" "allout.el.gz" "allout-widgets.elc" "allout-widgets.el.gz" "align.elc" "align.el.gz" "abbrev.elc" "abbrev.el.gz" "../" "./")
+
+ ("/usr/local/Cellar/emacs/24.3/share/emacs/24.3/lisp/org/" (21528 55238 0 0) "org.elc" "org.el.gz" "org-xoxo.elc" "org-xoxo.el.gz" "org-wl.elc" "org-wl.el.gz" "org-w3m.elc" "org-w3m.el.gz" "org-vm.elc" "org-vm.el.gz" "org-version.el" "org-timer.elc" "org-timer.el.gz" "org-taskjuggler.elc" "org-taskjuggler.el.gz" "org-table.elc" "org-table.el.gz" "org-src.elc" "org-src.el.gz" "org-special-blocks.elc" "org-special-blocks.el.gz" "org-rmail.elc" "org-rmail.el.gz" "org-remember.elc" "org-remember.el.gz" "org-publish.elc" "org-publish.el.gz" "org-protocol.elc" "org-protocol.el.gz" "org-plot.elc" "org-plot.el.gz" "org-pcomplete.elc" "org-pcomplete.el.gz" "org-odt.elc" "org-odt.el.gz" "org-mouse.elc" "org-mouse.el.gz" "org-mobile.elc" "org-mobile.el.gz" "org-mks.elc" "org-mks.el.gz" "org-mhe.elc" "org-mhe.el.gz" "org-mew.elc" "org-mew.el.gz" "org-macs.elc" "org-macs.el.gz" "org-mac-message.elc" "org-mac-message.el.gz" "org-lparse.elc" "org-lparse.el.gz" "org-loaddefs.el" "org-list.elc" "org-list.el.gz" "org-latex.elc" "org-latex.el.gz" "org-jsinfo.elc" "org-jsinfo.el.gz" "org-irc.elc" "org-irc.el.gz" "org-install.el" "org-inlinetask.elc" "org-inlinetask.el.gz" "org-info.elc" "org-info.el.gz" "org-indent.elc" "org-indent.el.gz" "org-id.elc" "org-id.el.gz" "org-icalendar.elc" "org-icalendar.el.gz" "org-html.elc" "org-html.el.gz" "org-habit.elc" "org-habit.el.gz" "org-gnus.elc" "org-gnus.el.gz" "org-freemind.elc" "org-freemind.el.gz" "org-footnote.elc" "org-footnote.el.gz" "org-feed.elc" "org-feed.el.gz" "org-faces.elc" "org-faces.el.gz" "org-exp.elc" "org-exp.el.gz" "org-exp-blocks.elc" "org-exp-blocks.el.gz" "org-eshell.elc" "org-eshell.el.gz" "org-entities.elc" "org-entities.el.gz" "org-element.elc" "org-element.el.gz" "org-docview.elc" "org-docview.el.gz" "org-docbook.elc" "org-docbook.el.gz" "org-datetree.elc" "org-datetree.el.gz" "org-ctags.elc" "org-ctags.el.gz" "org-crypt.elc" "org-crypt.el.gz" "org-compat.elc" "org-compat.el.gz" "org-colview.elc" "org-colview.el.gz" "org-clock.elc" "org-clock.el.gz" "org-capture.elc" "org-capture.el.gz" "org-bibtex.elc" "org-bibtex.el.gz" "org-beamer.elc" "org-beamer.el.gz" "org-bbdb.elc" "org-bbdb.el.gz" "org-attach.elc" "org-attach.el.gz" "org-ascii.elc" "org-ascii.el.gz" "org-archive.elc" "org-archive.el.gz" "org-agenda.elc" "org-agenda.el.gz" "ob.elc" "ob.el.gz" "ob-tangle.elc" "ob-tangle.el.gz" "ob-table.elc" "ob-table.el.gz" "ob-sqlite.elc" "ob-sqlite.el.gz" "ob-sql.elc" "ob-sql.el.gz" "ob-shen.elc" "ob-shen.el.gz" "ob-sh.elc" "ob-sh.el.gz" "ob-screen.elc" "ob-screen.el.gz" "ob-scheme.elc" "ob-scheme.el.gz" "ob-scala.elc" "ob-scala.el.gz" "ob-sass.elc" "ob-sass.el.gz" "ob-ruby.elc" "ob-ruby.el.gz" "ob-ref.elc" "ob-ref.el.gz" "ob-R.elc" "ob-R.el.gz" "ob-python.elc" "ob-python.el.gz" "ob-plantuml.elc" "ob-plantuml.el.gz" "ob-picolisp.elc" "ob-picolisp.el.gz" "ob-perl.elc" "ob-perl.el.gz" "ob-org.elc" "ob-org.el.gz" "ob-octave.elc" "ob-octave.el.gz" "ob-ocaml.elc" "ob-ocaml.el.gz" "ob-mscgen.elc" "ob-mscgen.el.gz" "ob-maxima.elc" "ob-maxima.el.gz" "ob-matlab.elc" "ob-matlab.el.gz" "ob-lob.elc" "ob-lob.el.gz" "ob-lisp.elc" "ob-lisp.el.gz" "ob-lilypond.elc" "ob-lilypond.el.gz" "ob-ledger.elc" "ob-ledger.el.gz" "ob-latex.elc" "ob-latex.el.gz" "ob-keys.elc" "ob-keys.el.gz" "ob-js.elc" "ob-js.el.gz" "ob-java.elc" "ob-java.el.gz" "ob-io.elc" "ob-io.el.gz" "ob-haskell.elc" "ob-haskell.el.gz" "ob-gnuplot.elc" "ob-gnuplot.el.gz" "ob-fortran.elc" "ob-fortran.el.gz" "ob-exp.elc" "ob-exp.el.gz" "ob-eval.elc" "ob-eval.el.gz" "ob-emacs-lisp.elc" "ob-emacs-lisp.el.gz" "ob-dot.elc" "ob-dot.el.gz" "ob-ditaa.elc" "ob-ditaa.el.gz" "ob-css.elc" "ob-css.el.gz" "ob-comint.elc" "ob-comint.el.gz" "ob-clojure.elc" "ob-clojure.el.gz" "ob-calc.elc" "ob-calc.el.gz" "ob-C.elc" "ob-C.el.gz" "ob-awk.elc" "ob-awk.el.gz" "ob-asymptote.elc" "ob-asymptote.el.gz" "../" "./")
+
+ ("/Users/christopherdrane/clojure/overtone-tutorial/" (21571 54183 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".gitignore" "../" "./")
+
+ ("/Users/christopherdrane/clojure/overtone-tutorial/src/overtone_tutorial/" (21571 54171 0 0) "core.clj" "../" "./")
+
+ ("/Users/christopherdrane/clojure/overtone-tutorial/src/" (21570 58752 0 0) "overtone_tutorial/" "../" "./")
+
+ ("/Users/christopherdrane/.emacs.d/thumbs/" (21528 56015 0 0) "../" "./")
+
+ ("/Users/christopherdrane/Documents/" (21532 11771 0 0) "TV Shows/" "smashthestack.txt" "Reading/" "Personal/" "My Games/" "Movies/" "Lateral Thinking Notes.txt" "Investing/" "Instructional Videos/" "Documents/" "Digital Editions/" "Career/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/Documents/Personal/" (21541 32159 0 0) "Writings/" "Vacation/" "Unemployment Benefits/" "Taxes/" "SecureSafeRecoveryCode.pdf" "Photos/" "Morgan Stanley/" "Lists/" "Insurance/" "GTD/" "Apartment/" ".DS_Store" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/src/" (21532 17502 0 0) "hackerati_interval_web_app/" "../" "./")
+
+ ("/Users/christopherdrane/clojure/hackerati-interval-web-app/test/" (21535 20133 0 0) "hackerati_interval_web_app/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

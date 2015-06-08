@@ -1,0 +1,73 @@
+* Useful functions
+** DONE Wrapper for working with sessions. 
+   Session would template response map to make it easier to work with sessions.
+** DONE Debug function to make it easy to display session in HTTP response.
+** DONE get-username -- grab from either params or session. right after the user logs in, the session hasn't yet been created.
+* Project structure
+** Web front-end
+*** Nice-to-have functionality
+- Admin page
+*** Needed functionality
+**** DONE Delete links
+CLOSED: [2014-10-30 Thu 14:28]
+:LOGBOOK:
+- State "DONE"       from ""           [2014-10-30 Thu 14:28]
+:END:
+**** DONE Charting library, to show data
+CLOSED: [2014-10-30 Thu 14:28]
+:LOGBOOK:
+- State "DONE"       from ""           [2014-10-30 Thu 14:28]
+:END:
+** SQL back-end
+   - Needed functionality
+     - Track Amazon product ID
+       - There could be multiple URL, each slightly different, for the same product.
+       - Could result in multiple products being registered in our database.
+       - Would make scraping less efficient (potential for redundant work).
+       - Implementing should just be a matter of parsing URL
+** Scraping process
+   - Concurrency
+     - <justin_smith> csd_: the issue with pmap is it does unexpected things with
+               chunking, and is optimized for CPU bound taskes (scraping web
+               pages is not CPU bound)
+     - <justin_smith> csd_: what about a queue on which you place URLs to scrape, and
+               a pool of worker threads that each run (loop (when-not
+               (should-bail?) (let [page (.take queue)] (process (slurp
+               page)))))
+   - Scrape prices daily
+   - Existing functionality
+     - List of URLs => list of prices
+     - Store list of prices in DB
+     - Scheduling process
+       - Potential solutions
+	 - Cron
+	 - Scheduling library (Quartzite or similar)
+	   - [13:24] <justin_smith> csd_: so how about one jar with one -main which calls either scrape-main or access-main depending on args?
+	   - [13:26] <justin_smith> could the scraper be a scheduled task embedded in the same process?
+	   - [13:28] <justin_smith> csd_: you could check out java.util.concurrent.ScheduledThreadPoolExecutor
+	   - [13:30] <justin_smith> csd_: call .SceduleAtFixedRate on a (ScheduledThreadPoolExecutor.) - you can pass an fn of no args as the first method arg
+	   - [13:31] <justin_smith> csd_: well, I forgot to include the pool size in the constructor, but I think you will see that the API is straightforward
+* Existing functions
+** get-links
+- Thinking this should return a map in the form {url productid}
+- This will make it easier to iterate over in tracked-links-html in views.clj
+* Linting (lein eastwood)
+** Doesn't work properly with JDBC and Hiccup libraries
+* Project wind-down
+** Sanitize input
+*** hiccup.util/escape-html
+*** DONE Usernames should be alphanumeric
+CLOSED: [2014-10-30 Thu 15:29]
+:LOGBOOK:
+- State "DONE"       from ""           [2014-10-30 Thu 15:29]
+:END:
+*** DONE Validate email
+CLOSED: [2014-10-30 Thu 15:29]
+:LOGBOOK:
+- State "DONE"       from ""           [2014-10-30 Thu 15:29]
+:END:
+\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b
+http://www.regular-expressions.info/email.html
+** Editing of descriptions
+** Break out scraper as 2nd app
+** 

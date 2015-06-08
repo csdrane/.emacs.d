@@ -1,0 +1,6 @@
+function a() {
+    return new Promise(
+        function(resolve, reject) {
+            resolve('a');
+        });
+}

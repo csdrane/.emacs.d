@@ -1,0 +1,8 @@
+module P06 where
+
+isPal :: [a] -> Bool
+isPal [] = True
+isPal [x] = True
+isPal (x:xs)
+      | x = (last xs) = isPal $ tail $ init xs
+      | otherwise = False

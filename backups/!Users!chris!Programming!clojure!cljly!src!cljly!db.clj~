@@ -1,0 +1,8 @@
+(ns cljly.db
+  (:require [korma.db :refer :all]
+            [korba.core :refer :all]))
+
+(defdb db (mysql {:host "localhost"
+                  :db "cljly"
+                  :user "project"
+                  :password "project"}))

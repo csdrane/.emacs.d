@@ -1,0 +1,4 @@
+(ns modern-cljs.utils
+  (:require [cljs.reader :refer [read-string]])
+  (:refer-clojure :exclude [read-string]))
+

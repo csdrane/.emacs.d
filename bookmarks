@@ -1,0 +1,29 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-refile-last-stored"
+ (filename . "~/Documents/Personal/GTD/GTD Review.org")
+ (front-context-string . "** TODO Think ab")
+ (rear-context-string . "--------------|\n")
+ (position . 8125))
+("org-capture-last-stored"
+ (filename . "~/Documents/Personal/GTD/GTD Review.org")
+ (front-context-string . "** TODO Pick up ")
+ (rear-context-string . "ort: 0:30\n:END:\n")
+ (position . 41164))
+("(emacs) Highlight Interactively"
+ (front-context-string . "\n14.13 Interacti")
+ (rear-context-string . "k,  Up: Display\n")
+ (position . 275108)
+ (filename . "/usr/local/Cellar/emacs/24.3/share/info/emacs/emacs")
+ (info-node . "Highlight Interactively")
+ (handler . Info-bookmark-jump))
+("(emacs) Bookmarks"
+ (front-context-string . "\n\"Bookmarks\" are")
+ (rear-context-string . "\n==============\n")
+ (position . 236221)
+ (filename . "/usr/local/Cellar/emacs/24.3/share/info/emacs/emacs")
+ (info-node . "Bookmarks")
+ (handler . Info-bookmark-jump))
+)

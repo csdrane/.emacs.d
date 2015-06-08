@@ -1,0 +1,7 @@
+def is_pal(n):
+    nstr = str(n)
+    return nstr == nstr[::-1]
+    
+for x in xrange(100,1000):
+    for y in xrange(100,1000):
+        yield x * y

@@ -1,0 +1,8 @@
+(ns graphs.scratch)
+
+;; What are graphs?
+;; - An ordered collection of vertices and edges.
+;; What's a graph, and what's a tree?
+;; - Trees are a subclass of graphs. They are an undirected graph in which only one path connects any two vertices.
+;; Describe what a directed graph is versus undirected
+;; - A directed graph is a graph with directed edges. Directed edges could be described as one in which vertex A points to B, but B does not map to A.

@@ -1,0 +1,65 @@
+
+* 2014
+** 2014-10 October
+*** 2014-10-13 Monday
+**** Morning
+Columbus Day. Thought Wix might not be open so I held off on going in. Instead went climbing.
+**** Afternoon
+Did a bit of coding but got hung up on a [[http://stackoverflow.com/questions/26346858/clojure-jdbc-mysql-errors-when-creating-table-with-composite-unique-constraint#26347812][JDBC Issue]].  
+**** Dinner
+Steak sandwich and baked potato. I think the cut was sirloin. Does not make a good sandwich. Gristle made each bite difficult to chew.
+Entered on [2014-10-13 Mon 19:20]
+*** 2014-10-14 Tuesday
+- As I've gotten older I've started to really appreciate Autechre.
+  [[file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/core.clj::(GET%20"/link/:linkid"%20request%20(views/link-view))][file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/core.clj::(GET "/link/:linkid" request (views/link-view))]]
+*** 2014-10-18 Saturday
+**** Bug bites?
+I have what are either bug bites or hives all over:
+- Left elbow
+- Right elbow
+- Right middle finger
+- Below right hip
+- Above arch of right foot
+[[file://Users/christopherdrane/Documents/Personal/Photos/Personal/Bug%20Bites?][- Took some photos]]
+
+I have had these for a number of days and I am now starting to get concerned. Brainstorm:
+- Most likely not bed bugs: no pain; bites not in a row
+- Don't look like mosquito bites: not as raised, seem to have persisted longer, haven't seen enough mosquitos for this to be the case
+- Could it be an allegic reaction to Inga's pet dander? I seem to develop these in bed, so her dander would have had to have accumulated into the bed too. 
+
+Entered on [2014-10-18 Sat 08:53]
+  
+  [[file:~/.emacs.d/init.el::SCHEDULED:%20%25^t][file:~/.emacs.d/init.el::SCHEDULED: %^t]]
+*** 2014-10-19 Sunday
+**** Bug bites?
+This morning only noticing "bites" on arch of right foot and right hip. No new bites, best as I can tell.
+Entered on [2014-10-19 Sun 09:24]
+  
+  [[file:~/Documents/Personal/GTD/journal.org::*Bug%20bites?][Bug bites?]]
+**** Laptop
+Spent a good part of this morning cleaning my laptop. Last night it had sounded like it was on the fritz. The fans sounded like a racecar changing gears. So today I opened up the case and sprayed it down with compressed gas. Now it's idling 30 F lower and the awful noise is gone.
+Entered on [2014-10-19 Sun 13:00]
+  
+  [[file:~/Documents/Personal/GTD/GTD%20Review.org::*Take%20Jen%20up%20on%20her%20offer%20about%20posting%20about%20me%20on%20her%20facebook][Take Jen up on her offer about posting about me on her facebook]]
+**** Amzn scraper
+CIDER C-x C-e and C-M-x stop responding without throwing error message. Occurred while trying to debug refresh-prices in schema.clj.
+Entered on [2014-10-19 Sun 14:25]
+  
+  [[file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/schema.clj::(refresh-prices)]]
+*** 2014-10-20 Monday
+**** Neck
+Woke up with my neck feeling stiff and in pain. Felt it coming on yesterday but much worse this morning. 
+Entered on [2014-10-20 Mon 09:30]
+  
+  [[file:~/Documents/Personal/GTD/GTD%20Review.org::*Next%20Actions,%20Unemployment%20Related][Next Actions, Unemployment Related]]
+**** Clojure things learned today
+- println won't work properly necessarily when using threads. Instead, use (.println System/out <text>)
+  Entered on [2014-10-20 Mon 12:44]
+  
+  [[file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/schema.clj::(add-price!%20@a))))][file:~/clojure/hackerati-interval-web-app/src/hackerati_interval_web_app/schema.clj::(add-price! @a))))]]
+*** 2014-10-22 Wednesday
+**** X-Editable
+Spent way too long fucking around with this today. Wasted hours could have been avoided by a simple message warning that necessary options weren't specified.
+Entered on [2014-10-22 Wed 19:24]
+  
+  [[file:~/clojure/hackerati-interval-web-app/resources/public/main.js::$('#msg').addClass('alert-success').removeClass('hide').removeClass('alert-error').html(msg).show()%3B][file:~/clojure/hackerati-interval-web-app/resources/public/main.js::$('#msg').addClass('alert-success').removeClass('hide').removeClass('alert-error').html(msg).show();]]

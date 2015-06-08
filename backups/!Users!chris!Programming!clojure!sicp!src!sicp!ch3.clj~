@@ -1,0 +1,277 @@
+(ns sicp.ch3)
+
+;;; Exercise 3.1
+
+(defn accumulator [x]
+  (let [value (atom x)]
+    (fn [x] (swap! value + x))))
+
+;;; Exercise 3.2
+
+(defn make-monitored [f]
+  (let [calls (atom 0)]
+    (fn [x]
+      (if (= x 'how-many-calls?) @calls
+          (do
+            (swap! calls inc)
+            (f x))))))
+
+;;; Exercise 3.3
+
+(defn make-account [balance password]
+  (let [balance (atom balance)]
+    (letfn [(withdraw [amount]
+              (if (>= @balance amount)
+                (do (swap! balance - amount)
+                    @balance)
+                "Insufficient funds"))
+            (deposit [amount]
+              (swap! balance + amount)
+              @balance)
+            (dispatch [m p]
+              (if (= p password)
+                (cond (= m 'withdraw) withdraw
+                      (= m 'deposit) deposit
+                      :else (println "Unknown request: MAKE-ACCOUNT"
+                                     m))
+                (throw (Exception. "Invalid password."))))]
+      dispatch)))
+
+;;; Exercise 3.4
+
+(defn make-account [balance password]
+  (let [balance (atom balance)
+        times-accessed (atom 0)]
+    (letfn [(call-the-cops []
+              (println "You are under arrest."))
+            (withdraw [amount]
+              (if (>= @balance amount)
+                (do (swap! balance - amount)
+                    @balance)
+                "Insufficient funds"))
+            (deposit [amount]
+              (swap! balance + amount)
+              @balance)
+            (dispatch [m p]
+              (if (= p password)
+                (do
+                  (reset! times-accessed 0)
+                  (cond (= m 'withdraw) withdraw
+                        (= m 'deposit) deposit
+                        :else (println "Unknown request: MAKE-ACCOUNT"
+                                       m)))
+                (do
+                  (swap! times-accessed inc)
+                  (if (> @times-accessed 7)
+                    (call-the-cops))
+                  (throw (Exception. "Invalid password.")))))]
+      dispatch)))
+
+;;; Exercise 3.5
+
+(declare monte-carlo)
+
+(defn gcd 
+  "(gcd a b) computes the greatest common divisor of a and b."
+  [a b]
+  (if (zero? b)
+    a
+    (recur b (mod a b))))
+
+(defn cesaro-test []
+  (= (gcd (rand-int Integer/MAX_VALUE) (rand-int Integer/MAX_VALUE)) 1))
+
+(defn estimate-pi [trials]
+  (Math/sqrt (/ 6 (monte-carlo trials cesaro-test))))
+
+(defn monte-carlo [trials experiment]
+  (letfn [(iter [trials-remaining trials-passed]
+            (cond (= trials-remaining 0) (/ trials-passed trials)
+                  (experiment) (iter (- trials-remaining 1)
+                                     (+ trials-passed 1))
+                  :else (iter (- trials-remaining 1)
+                              trials-passed)))]
+    (iter trials 0)))
+
+(defn random-in-range [low high]
+  (+ low (* (rand) (- high low))))
+
+(defn integral-pred [])
+
+(defn estimate-integral [pred x1 x2 y1 y2 trials]
+  (let [area (* (- x2 x1) (- y2 y1))]
+    (* area 
+       (monte-carlo trials
+                    (pred (random-in-range x1 x2)
+                          (random-in-range y1 y2))))))
+
+; do not understand this exercise... from https://github.com/gregsexton/SICP-Clojure/blob/master/src/sicp/ch3.clj
+
+;;; 
+
+(defn make-account [balance password]
+  (let [balance (atom balance)
+        times-accessed (atom 0)]
+    (letfn [(call-the-cops []
+              (println "You are under arrest."))
+            (withdraw [amount]
+              (if (>= @balance amount)
+                (do (swap! balance - amount)
+                    @balance)
+                "Insufficient funds"))
+            (deposit [amount]
+              (swap! balance + amount)
+              @balance)
+            (dispatch [m p]
+              (if (= p password)
+                (do
+                  (reset! times-accessed 0)
+                  (cond (= m 'withdraw) withdraw
+                        (= m 'deposit) deposit
+                        (= m 'validate) true
+                        :else (println "Unknown request: MAKE-ACCOUNT"
+                                       m)))
+                (do
+                  (swap! times-accessed inc)
+                  (if (> @times-accessed 7)
+                    (call-the-cops))
+                  (throw (Exception. "Invalid password.")))))]
+      dispatch)))
+
+(defn make-joint [main-account main-account-pw joint-account-pw]
+  (if (main-account 'validate main-account-pw)
+    (fn [op joint-pw]
+      (if (= joint-pw joint-account-pw)
+        (main-account op main-account-pw)
+        (fn [_] (println "Error: invalid password"))))))
+
+;;; 
+
+(declare make-agenda)
+
+(def the-agenda (make-agenda))
+(def inverter-delay 2)
+(def and-gate-delay 3)
+(def or-gate-delay 5)
+
+(def input-1 (make-wire))
+(def input-2 (make-wire))
+(def sum (make-wire))
+(def carry (make-wire))
+
+(defn logical-not [s]
+  (cond (= s 0) 1
+        (= s 1) 0
+        :else (throw (Exception. (str "Invalid signal" s)))))
+
+(defn inverter [input output]
+  (letfn [(invert-input []
+            (let [new-value (logical-not (get-signal input))]
+              (after-delay inverter-delay
+                           (fn [] (set-signal! output new-value)))))]
+    (add-action! input invert-input)) 'ok)
+
+(defn logical-and [s1 s2]
+  (cond (= s1 s2 1) 1
+        (not= s1 s2 1) 0
+        :else (throw (Exception. (str "Invalid signal" s1 " " s2)))))
+
+(defn and-gate [a1 a2 output]
+  (letfn [(and-action-procedure []
+            (let [new-value
+                  (logical-and (get-signal a1) (get-signal a2))]
+              (after-delay
+               and-gate-delay
+               (fn [] (set-signal! output new-value)))))])
+  (add-action! a1 and-action-procedure)
+  (add-action! a2 and-action-procedure)
+  'ok)
+
+(defn logical-or [s1 s2]
+  (cond (or (= s1 1) (= s2 1)) 1
+        (and (= s1 0) (= s2 0)) 0
+        :else (throw (Exception. (str "Invalid signal" s1 " " s2)))))
+
+(defn or-gate [a1 a2 output]
+  (letfn [(or-action-procedure []
+            (let [new-value
+                  (logical-or (get-signal a1) (get-signal a2))]
+              (after-delay
+               or-gate-delay
+               (fn [] (set-signal! output new-value)))))]
+    (add-action! a1 or-action-procedure)
+    (add-action! a2 or-action-procedure)
+    'ok))
+
+(defn or-gate [a1 a2 output]
+  (letfn [(or-action-procedure []
+            (let [new-value
+                  (logical-not
+                   (logical-and (logical-not s1)
+                                (logical-not s2)))]
+              (after-delay
+               or-gate-delay
+               (fn [] (set-signal! output new-value)))))]
+    (add-action! a1 or-action-procedure)
+    (add-action! a2 or-action-procedure)
+    'ok))
+
+(defn make-wire []
+  (let [signal-value (atom 0) action-procedures (atom '())]
+    (letfn [(set-my-signal! [new-value]
+              (if (not= signal-value new-value)
+                (do (reset! signal-value new-value)
+                    (call-each action-procedures))
+                'done))
+            (accept-action-procedure! [proc]
+              (reset! action-procedures
+                    (cons proc action-procedures))
+              (proc))
+            (dispatch [m]
+              (cond (= m 'get-signal) signal-value
+                    (= m 'set-signal!) set-my-signal!
+                    (= m 'add-action!) accept-action-procedure!
+                    :else (throw (Exception. (str "Unknown operation: WIRE" m)))))]
+      dispatch)))
+
+(defn call-each [procedures]
+  (if (empty? procedures)
+    'done
+    (do ((first procedures))
+        (call-each (rest procedures)))))
+
+(defn get-signal [wire]
+  (wire 'get-signal))
+
+(defn set-signal! [wire new-value]
+  ((wire 'set-signal!) new-value))
+
+(defn add-action! [wire action-procedure]
+  ((wire 'add-action!) action-procedure))
+
+(defn after-delay [delay action]
+  (add-to-agenda! (+ delay (current-time the-agenda))
+                  action
+                  the-agenda))
+
+(defn segments [agenda] (rest agenda))
+
+(defn empty-agenda? [agenda]
+  (empty? (segments agenda)))
+
+(defn propagate []
+  (if (empty-agenda? the-agenda)
+    'done
+    (let [first-item (first-agenda-item the-agenda)]
+      (first-item)
+      (remove-first-agenda-item! the-agenda)
+      (propagate))))
+
+(defn probe [name wire]
+  (add-action! wire
+               (fn []
+                 (println name) (println " ")
+                 (println (current-time the-agenda))
+                 (println " New-value = ")
+                 (println (get-signal wire)))))
+

@@ -1,0 +1,35 @@
+* chestnut
+- https://github.com/plexus/chestnut
+- Integrates following packages
+  - Figwheel
+  - Weasel
+  - Om
+  - Ring
+* lein-figwheel
+- https://github.com/bhauman/lein-figwheel
+- "Figwheel builds your ClojureScript code and hot loads it into the browser as you are coding!"
+* weasel
+- https://github.com/tomjakubowski/weasel
+- Alternative BREPL; alternative to Austin
+- Deps:
+  - piggieback
+* om
+- https://github.com/swannodette/om/
+- "ClojureScript interface to Facebook's React"
+- Developed by David Nolen
+* austin
+- https://github.com/cemerick/austin
+- "Austin is largely a refactoring of the original ClojureScript REPL."
+- Deps:
+  - Piggieback
+* piggieback
+- https://github.com/cemerick/piggieback
+- nREPL middleware that enables the bootstrap of a ClojureScript REPL on top of an nREPL session.
+* lein-cljsbuild
+- https://github.com/emezeske/lein-cljsbuild
+- Provides basic support for BREPL, tests auto-compile, etc.
+* ring
+- https://github.com/ring-clojure/
+- Clojure HTTP server abstraction
+- not CLJS
+

@@ -1,0 +1,3 @@
+module Accumulate (accumulate) where
+
+accumulate :: (a -> a) -> [a] -> [a]

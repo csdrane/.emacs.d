@@ -1,0 +1,12 @@
+from itertools import repeat
+
+primes = {}
+
+def append_primes(n):
+    primes = dict(zip(range(1, 21), repeat(0)))
+    while i < n:
+        if n % i == 0:
+            primes[i] = primes.get(
+    
+for x in xrange(1,21):
+    append_primes(x)

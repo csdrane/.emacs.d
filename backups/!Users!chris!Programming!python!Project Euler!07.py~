@@ -1,0 +1,19 @@
+from math import ceil
+
+def sieve(n):
+    bound = int( ceil ( sqrt(n)))
+    p = 2
+    range_ = set(range(2, bound + 1))
+    while p <= bound:
+#        print "p = %s" % p
+        n = 2*p
+        while n < bound:
+#            print "n = %s" % n
+            if (n % p == 0):
+                range_.discard(n)
+            n += 1
+        p += 1 # we can do better
+    return range_ 
+
+x = sieve(xrange(1000))
+x[10001]

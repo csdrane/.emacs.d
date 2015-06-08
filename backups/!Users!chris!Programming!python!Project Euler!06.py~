@@ -1,0 +1,4 @@
+from operator import add, pow
+
+def sum_of_sq(xs):
+    reduce(operator.add, map(lambda x: pow(x, 2), xs))

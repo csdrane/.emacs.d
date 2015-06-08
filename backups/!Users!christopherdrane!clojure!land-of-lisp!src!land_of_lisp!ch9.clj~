@@ -1,0 +1,65 @@
+;; Land of Lisp, ch. 9
+;; Translated into Clojure from Common Lisp
+;; http://landoflisp.com/orc-battle.lisp
+
+(ns land-of-lisp.ch9
+  (:use[clojure.pprint :only (fresh-line)]))
+
+(def ^:dynamic *player-health* (atom nil)) 
+(def ^:dynamic *player-agility* (atom nil)) 
+(def ^:dynamic *player-strength* (atom nil))
+
+(def ^:dynamic *monsters* nil) 
+(def ^:dynamic *monster-builders* nil)
+(def ^:dynamic *monster-num* 12)
+
+(defn init-player []
+  (reset! *player-health* 30)
+  (reset! *player-agility* 30)
+  (reset! *player-strength* 30))
+
+(defn player-dead []
+  (<= @*player-health* 0))
+
+(defn show-player []
+  (fresh-line)
+  (println "You are a valiant knight with a health of " @*player-health* ", "
+           "an agility of " @*player-agility* ", and a strength of " 
+           @*player-strength*))
+
+(defn player-attack []
+  (fresh-line)
+  (println "Attack style: [s] [d]ouble swing [r]oundhouse:")
+  (case (read)
+    (s (monster-hit (pick-monster)
+                    (+ 2 (rand-int (bit-shift-right @*player-strength* 1)))))
+    (d (let [x (rand-int (Math/floor (/ @*player-strength* 6)))]
+         (println "Your double swing has a strength of " x)
+         (fresh-line)
+         (monster-hit (pick-monster) x)
+         (when-not (monsters-dead)
+           (monster-hit (pick-monster) x))))
+    (dotimes [x (inc (rand-int (Math/floor (/ @*player-strength* 3))))]
+      (when-not (monsters-dead)
+        (monster-hit (random-monster 1))))))
+
+(defn game-loop []
+  (when-not (or (player-dead) (monsters-dead))
+    (show-player)
+    (dotimes [k ((comp inc Math/floor) (/ (max 0 @*player-agility*) 15))]
+      (when-not (monsters-dead)
+        (show-monsters)
+        (player-attack)))
+    (fresh-line)
+    (map (fn [m] (or (monsters-dead m) (monsters-attack m)))
+         *monsters*)
+    (game-loop)))
+
+(defn orc-battle []
+  (init-monsters)
+  (init-player)
+  (game-loop)
+  (when (player-dead)
+    (println "You have been killed. Game Over."))
+  (when (monsters-dead)
+    (println "Congratulations! You have vanquished all of your foes.")))

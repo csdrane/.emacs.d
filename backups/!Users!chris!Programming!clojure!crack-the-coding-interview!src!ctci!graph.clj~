@@ -1,0 +1,19 @@
+(ns ctci.graph)
+
+(def tree [1 [2 [4] [5]] [3 [6]]])
+
+(defn bfs [tree]
+  (loop [ret [] q (conj clojure.lang.PersistentQueue/EMPTY tree)]
+    (if (seq q)
+      (let [[node & children] (peek q)]
+        (recur (conj ret node)
+               (into (pop q) children))) ; without `into` (e.g. with
+                                        ; `conj`), will conj nil into
+                                        ; queue and create infinite
+                                        ; loop
+      ret)))
+
+(bfs tree)
+
+()
+

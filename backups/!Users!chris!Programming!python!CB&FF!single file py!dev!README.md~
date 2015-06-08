@@ -1,0 +1,13 @@
+# Corner of BerkScraper and FunFacts
+
+CBFF is the first web app I ever wrote. At the time, I was interested in value investing and I posted occassionally on a message board called [Corner of Berkshire and Fairfax](http://www.cornerofberkshireandfairfax.ca).
+
+The board had a forum for members to submit investment ideas. Ideas were posted with a consistent format that allowed for stock tickers to be easily parsed. CBFF scraped investment ideas forum. It added board members to a SQL database along with their investment ideas. It then pulled stock price data from Yahoo Finance to evaluate investment performance.
+
+The results of this project can be found at [cobff.chrisdrane.com](http://cobff.chrisdrane.com/) (no longer maintainced).
+
+## Dependencies
+
+* [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) for parsing. 
+* [SQLAlchemy](http://www.sqlalchemy.org/) as the intermediary between Python and the database
+* [MySQL](http://www.mysql.com)

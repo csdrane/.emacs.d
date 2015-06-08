@@ -1,5 +1,0 @@
-# http://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files
-
-*
-!init.el
-!.gitignore

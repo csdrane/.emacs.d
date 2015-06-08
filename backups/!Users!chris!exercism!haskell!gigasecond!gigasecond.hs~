@@ -1,0 +1,5 @@
+module Gigasecond (fromDay) where
+import Date.DateTime (addSeconds)
+
+fromDay :: UTCTime -> UTCTime
+fromDay = addSeconds 1e9

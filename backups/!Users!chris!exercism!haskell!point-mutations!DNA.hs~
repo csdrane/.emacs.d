@@ -1,0 +1,4 @@
+module DNA (hammingDistance) where
+
+hammingDistance :: [Char] -> [Char]
+hammingDistance a b = length . filter (== False) $ zipWith (==) a b

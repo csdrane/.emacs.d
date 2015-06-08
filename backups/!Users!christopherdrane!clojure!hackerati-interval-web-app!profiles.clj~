@@ -1,0 +1,4 @@
+{:dev {:env {:db-host "127.0.0.1"
+             :db-name "hackerati"
+             :db-user "project"
+             :db-password "project"}}}

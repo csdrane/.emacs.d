@@ -1,0 +1,6 @@
+module P02 where
+
+butLast :: [a] -> a
+butLast (x:y:[]) = x
+butLast (x:xs) = butLast xs
+butLast _ = []

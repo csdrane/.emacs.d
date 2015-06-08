@@ -1,0 +1,8 @@
+module P09 where
+
+pack :: [a] -> [[a]]
+pack [] = [[]]
+pack xs = xx ++ xxs
+     where m   = head xs
+           xx  = takeWhile (= m) xs 
+           xxs = dropWhile (= m) xs

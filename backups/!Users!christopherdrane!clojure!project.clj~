@@ -1,0 +1,7 @@
+(defproject project-template "project-template"
+  :description "Project template"
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [org.clojure/tools.trace "0.7.8"]]
+  :dev-dependencies []
+  :plugins [[cider/cider-nrepl "0.7.0-SNAPSHOT"]])
+

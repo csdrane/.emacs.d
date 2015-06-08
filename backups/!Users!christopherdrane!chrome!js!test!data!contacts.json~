@@ -1,0 +1,4 @@
+{'name': 'John Doe',
+ 'email': 'foo@bar.com',
+ 'last-emailed': null}
+)

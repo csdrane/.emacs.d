@@ -1,0 +1,117 @@
+/*
+ * TODO make function that returns date sent for array of messages, and another which returns the newest message.
+ *
+ *
+ */
+define(['async!https://apis.google.com/js/client.js!onload'], function() {
+    var apiKey = "AIzaSyApblpjaX_UgX4LLNAQlym9uKsh_R7m9Sk",
+        clientId = "710445922832-2ue0mb51uiefdabpbbgmcpaof7c70cip.apps.googleusercontent.com",
+        scopes = "https://mail.google.com";
+    var listEmailMessages = function() {
+        gapi.client.gmail.users.messages.list({
+            userId: 'me'
+        }).then(function(resp) {
+            console.log(resp.result);
+        }, function(reason) {
+            console.log("Error: " + reason.result.error.message);
+        });
+    };
+    /*
+     * Returns all messages sent from email address.
+     */
+    var findMessageFrom = function(email) {
+        return gapi.client.gmail.users.messages.list({
+            userId: 'me',
+            includeSpamTrash: true,
+            q: "from:" + email
+        }).then(function(resp) {
+            // console.log(resp.result);
+            return resp.result.messages;
+        }, function(reason) {
+            console.log("Error: " + reason.result.error.message);
+        });
+    };
+    /*
+     * Returns newest message given array of Promises representing messages.
+     */
+    var getNewestEmail = function(arr) {
+        return Promise.all(arr).then(function(x) {
+            x.reduce(
+                function(previousValue, currentValue, index, array) {
+                    console.log("currentValue.id " + currentValue.id);
+                    console.log("previousValue.id " + previousValue.id);
+                    return getEmailDateSent(currentValue.id) > getEmailDateSent(previousValue.id) ? currentValue : previousValue;
+                }
+            );
+        });
+        // for (var i = 1; i < arr.length; i++) {
+        //     otherDate = getEmailDateSent(arr[i].id);
+
+        //     console.log("Email: " + i);
+        //     if (otherDate > newestEmailDate) {
+        //         newestEmailDate = otherDate;
+        //     }
+        // }
+        // console.log("Most recent email sent: " + newestEmailDate);
+        // return newestEmailDate;
+    };
+    /*
+     * Returns Promise of date message sent for given message ID.
+     */
+    var getEmailDateSent = function(id) {
+        return gapi.client.gmail.users.messages.get({
+            userId: 'me',
+            id: id
+        }).then(function(resp) {
+                var headers = resp.result.payload.headers,
+                    i = 0,
+                    date;
+                while (i < headers.length) {
+                    // console.log(i);
+                    if (headers[i].name == "Date") {
+                        date = headers[i].value;
+                        break;
+                    }
+                    i++;
+                }
+                if (typeof date !== 'undefined') {
+                    // console.log("Message sent: " + date);
+                    return date;
+                } else {
+                    console.error("Error: Date could not be found in headers!");
+                }
+            },
+            function(reason) {
+                console.error("Error: " + reason.result.error.message);
+            });
+    };
+    var getEmail = function(id) {
+        gapi.client.gmail.users.messages.get({
+            userId: 'me',
+            id: id
+        }).then(function(resp) {
+            console.log(resp);
+            return resp;
+        }, function(reason) {
+            console.log("Error: " + reason.result.error.message);
+        });
+    };
+    var handleAuthResult = function(authResult) {
+        if (authResult && !authResult.error) {
+            // console.log("Received valid token.");
+            gapi.client.load('gmail', 'v1', function() {
+                            // findMessageFrom('sdrane@dfllaw.com').then(console.log.bind(console));
+                //             getEmailDateSent("14a137b59952c9a4").then(console.log.bind(console));
+                findMessageFrom('sdrane@dfllaw.com').then(getNewestEmail).then(console.log.bind(console));
+//                getEmail("145b2e58d28a5894");
+            });
+        }
+    };
+    gapi.client.setApiKey(apiKey);
+    gapi.auth.authorize({
+            client_id: clientId,
+            scope: scopes,
+            immediate: true
+        },
+        handleAuthResult);
+});
